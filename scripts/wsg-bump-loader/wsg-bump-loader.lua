@@ -61,12 +61,21 @@ if o.videos then EXTENSIONS = SetUnion(EXTENSIONS, EXTENSIONS_VIDEO) end
 if o.audio then EXTENSIONS = SetUnion(EXTENSIONS, EXTENSIONS_AUDIO) end
 if o.images then EXTENSIONS = SetUnion(EXTENSIONS, EXTENSIONS_IMAGES) end
 
-function add_files_at(index, files)
+function add_files_at(index, files, wsgFiles)
     index = index - 1
     local oldcount = mp.get_property_number("playlist-count", 1)
-    for i = 1, #files do
+    local playlistSize = #files + #wsgFiles
+    for i = 1, playlistSize do
+      print("adding " .. wsgFiles[i] .. " to playlist")
+      mp.commandv("loadfile", wsgFiles[i], "append")
+      print("adding " .. wsgFiles[i+1] .. " to playlist")
+      mp.commandv("loadfile", wsgFiles[i+1], "append")
+        print("adding " .. files[i] .. " to playlist")
         mp.commandv("loadfile", files[i], "append")
-        mp.commandv("playlist-move", oldcount + i - 1, index + i - 1)
+
+        mp.commandv("playlist-move", oldcount + i - 3, index + i - 3)
+
+
     end
 end
 
@@ -96,7 +105,14 @@ function shuffle(tbl)
   return tbl
 end
 --
-
+-- download recent /wsg/ bumps
+function downloadWSGbumps()
+  -- check which OS this script is running to decide where to download bumps to
+  print("which OS " .. package.config:sub(1,1))
+  if package.config:sub(1,1) == '\\' then wsgDir = "" end
+  os.execute("wget -P $HOME/Videos/wsgBumps -nd -nc -r -l 1 -H -D i.4cdn.org -A webm https://boards.4channel.org/wsg/thread/3201021")
+  --
+end
 
 -- splitbynum and alnumcomp from alphanum.lua (C) Andre Bogus
 -- Released under the MIT License
@@ -133,14 +149,15 @@ local autoloaded = nil
 
 function find_and_add_entries()
     local path = mp.get_property("path", "")
+
     -- wsgFiles directory should be located at ~/.config/mpv
-    local wsgDir = "/home/jd/config/mpv/wsgBumps"
+    local wsgDir = "/home/jd/.config/mpv/wsgBumps/"
     --
+
+
     local dir, filename = utils.split_path(path)
     msg.trace(("dir: %s, filename: %s"):format(dir, filename))
-    if o.bump then
-        msg.verbose("adding /wsg/ bumps")
-    elseif o.disabled then
+    if o.disabled then
         msg.verbose("stopping: autoload disabled")
         return
     elseif #dir == 0 then
@@ -163,8 +180,15 @@ function find_and_add_entries()
     msg.trace(("playlist-pos-1: %s, playlist: %s"):format(pl_current,
         utils.to_string(pl)))
     -- read wsg folders content aswell
-    if o.bump then local wsgFiles = utiles.readdir(wsgDir, "wsgFiles") end
+    -- if o.bump then ... end
+    local wsgFiles = utils.readdir(wsgDir)
     --
+    -- debug: see if files loaded into wsgFiles array
+    -- for i = 1, #wsgFiles do
+    --   print("iterating through wsgDir", wsgFiles[i])
+    --  end
+    --
+
     local files = utils.readdir(dir, "files")
     if files == nil then
         msg.verbose("no other files in directory")
@@ -182,7 +206,12 @@ function find_and_add_entries()
     end)
 
     -- randomize wsgFiles order of elements
-    if o.bump then local shuffle(wsgFiles) end
+    shuffle(wsgFiles)
+    -- &
+    -- append wsgDir to wsgFiles for full path to file
+    for i = 1, #wsgFiles do
+     wsgFiles[i] = wsgDir .. wsgFiles[i]
+    end
     --
 
     table.sort(files, alnumcomp)
@@ -229,13 +258,14 @@ function find_and_add_entries()
                 end
             else
                 msg.info("Adding " .. file)
-                table.insert(append[1], filepath)
+               table.insert(append[1], filepath)
             end
         end
     end
 
-    add_files_at(pl_current + 1, append[1])
-    add_files_at(pl_current, append[-1])
-end
+    add_files_at(pl_current + 1, append[1], wsgFiles)
+    add_files_at(pl_current, append[-1], wsgFiles)
 
+end
+mp.register_event("start-file", downloadWSGbumps)
 mp.register_event("start-file", find_and_add_entries)
