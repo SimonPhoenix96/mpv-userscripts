@@ -22,6 +22,11 @@ local msg = require 'mp.msg'
 local options = require 'mp.options'
 local utils = require 'mp.utils'
 
+-- change to recent  [wsg] - [as] Style Bumps Thread
+wsgThread = 'https://boards.4channel.org/wsg/thread/3201021'
+--
+
+
 o = {
     disabled = false,
     images = true,
@@ -107,12 +112,23 @@ end
 --
 -- download recent /wsg/ bumps
 function downloadWSGbumps()
-  -- check which OS this script is running to decide where to download bumps to
+  -- check which OS this script is running on to decide where to download bumps to
   print("which OS " .. package.config:sub(1,1))
-  if package.config:sub(1,1) == '\\' then wsgDir = "" end
+  if package.config:sub(1,1) == "\\" then wsgDir = "%userprofile%\\Videos\\wsgBumps" 
+  print("Windows: wsgDir Path = " .. wsgDir)
+  print("Script Path = " .. script_path())
+  print("powershell.exe -file '" .. script_path() .. "webm-scraper.ps1'")
+  os.execute('powershell.exe -file "' .. script_path() .. 'webm-scraper.ps1"')
+  end
   os.execute("wget -P $HOME/Videos/wsgBumps -nd -nc -r -l 1 -H -D i.4cdn.org -A webm https://boards.4channel.org/wsg/thread/3201021")
   --
 end
+-- get script path
+function script_path()
+   local str = debug.getinfo(2, "S").source:sub(2)
+   return str:match("(.*/)")
+end
+--
 
 -- splitbynum and alnumcomp from alphanum.lua (C) Andre Bogus
 -- Released under the MIT License
