@@ -1,31 +1,105 @@
--- This script automatically loads playlist entries before and after the
--- the currently played file. It does so by scanning the directory a file is
--- located in when starting playback. It sorts the directory entries
--- alphabetically, and adds entries before and after the current file to
--- the internal playlist. (It stops if the it would add an already existing
--- playlist entry at the same position - this makes it "stable".)
--- Add at most 5000 * 2 files when starting a file (before + after).
+-- Author: 	    wm4 + simonphoenix96 
+--
+-- Description: This Script scrapes all webm files from a given web page, and uses https://github.com/wm4 
+--              autoload (https://github.com/mpv-player/mpv/blob/master/TOOLS/lua/autoload.lua) script to add downloaded webms inbetween episodes in playlist
+--
+-- Config: 		webPage in downloadWebms function defines, where it'll download webms from
+--				webmCount defines ammount of webms to be played after episode finishes
+--				webmDir defines where to save webm files || default location is mpv script folder
+--				
+-- !!! change following link to page you want to download webms from
+webPage = 'https://boards.4channel.org/wsg/thread/3201021' 
+--
+-- !!! change following variable to amount of desired webms to be between episodes
+webmCount = 3
+--
 
---[[
-To configure this script use file autoload.conf in director script-opts (the "script-opts"
-directory must be in the mpv configuration directory, typically ~/.config/mpv/).
-Example configuration would be:
-disabled=false
-images=false
-videos=true
-audio=true
---]]
+-- downloads webms off webPage
+function downloadWebms()
+  
+  webmDir = script_path() .. 'webmDir' -- !!! change this to desired webm save directory, on windows seperate path with double backslash, on linux with single forward slash
+ 
+  -- check which OS this script is running on to decide which download function to use
+  if package.config:sub(1,1) == "\\" then 
+ 	os.execute('powershell.exe -file "' .. script_path() .. 'webm-scraper.ps1" "' .. webPage .. '" "' .. webmDir .. '"') -- change regex pattern in 4chan-webm-scraper.ps1 to website other than the chan 	
+  else
+    os.execute("wget -P " .. webmDir ..  " -nd -nc -r -l 1 -H -D i.4cdn.org -A webm " .. webPage)  -- change i.4cdn.org to wtv if you want to use different website, dont axe me
+  end
+  --
+  find_and_add_entries()
+end
+--
 
+-- wm4's modified function
+function add_files_at(index, files)
+	
+    index = index - 1
+    local oldcount = mp.get_property_number("playlist-count", 1)
+    local playlistSize = #files + (webmCount  * #files)
+    	
+	for i = 1, playlistSize do
+    
+	if(files[i] == nil) then return end
+	
+	local webmFileCounter = 1 
+	
+	math.randomseed(os.time() * os.time())
+	j = math.random(#webmFiles)
+	
+	
+	while(webmFileCounter <= webmCount) do
+	
+	  mp.commandv("loadfile", webmFiles[j], "append")
+	  webmFileCounter = webmFileCounter + 1
+	  table.remove(webmFiles, j)
+	  print("removing: " .. webmFiles[j] .. "from list. Current webmFiles size == " .. #webmFiles)
+	  
+	end	
+	
+     
+	  
+	  print("adding " .. files[i] .. " to playlist")
+	  mp.commandv("loadfile", files[i], "append")
+      mp.commandv("playlist-move", oldcount + i - webmCount, index + i - webmCount)
+
+
+    end
+end
+--
+
+-- get script path
+function script_path()
+   local str = debug.getinfo(2, "S").source:sub(2)
+   return str:match("(.*/)")
+end
+--
+
+-- read files in webmDir to webmFiles
+function count_files()
+   return #webmFiles
+end
+
+-- Shuffle webmFiles
+function shuffle(t)
+  local tbl = {}
+  for i = 1, #t do
+    tbl[i] = t[i]
+  end
+  for i = #tbl, 2, -1 do
+	math.randomseed(os.time())
+	local j = math.random(i)
+    tbl[i], tbl[j] = tbl[j], tbl[i]
+  end
+  return tbl
+end
+--
+
+-- from here modified wm4 stuff
 MAXENTRIES = 5000
 
 local msg = require 'mp.msg'
 local options = require 'mp.options'
 local utils = require 'mp.utils'
-
--- change to recent  [wsg] - [as] Style Bumps Thread
-wsgThread = 'https://boards.4channel.org/wsg/thread/3201021'
---
-
 
 o = {
     disabled = false,
@@ -66,23 +140,7 @@ if o.videos then EXTENSIONS = SetUnion(EXTENSIONS, EXTENSIONS_VIDEO) end
 if o.audio then EXTENSIONS = SetUnion(EXTENSIONS, EXTENSIONS_AUDIO) end
 if o.images then EXTENSIONS = SetUnion(EXTENSIONS, EXTENSIONS_IMAGES) end
 
-function add_files_at(index, files, wsgFiles)
-    index = index - 1
-    local oldcount = mp.get_property_number("playlist-count", 1)
-    local playlistSize = #files + #wsgFiles
-    for i = 1, playlistSize do
-      print("adding " .. wsgFiles[i] .. " to playlist")
-      mp.commandv("loadfile", wsgFiles[i], "append")
-      print("adding " .. wsgFiles[i+1] .. " to playlist")
-      mp.commandv("loadfile", wsgFiles[i+1], "append")
-        print("adding " .. files[i] .. " to playlist")
-        mp.commandv("loadfile", files[i], "append")
 
-        mp.commandv("playlist-move", oldcount + i - 3, index + i - 3)
-
-
-    end
-end
 
 function get_extension(path)
     match = string.match(path, "%.([^%.]+)$" )
@@ -101,34 +159,7 @@ table.filter = function(t, iter)
     end
 end
 
--- Shuffle wsgFiles
-function shuffle(tbl)
-  for i = #tbl, 2, -1 do
-    local j = math.random(i)
-    tbl[i], tbl[j] = tbl[j], tbl[i]
-  end
-  return tbl
-end
---
--- download recent /wsg/ bumps
-function downloadWSGbumps()
-  -- check which OS this script is running on to decide where to download bumps to
-  print("which OS " .. package.config:sub(1,1))
-  if package.config:sub(1,1) == "\\" then wsgDir = "%userprofile%\\Videos\\wsgBumps" 
-  print("Windows: wsgDir Path = " .. wsgDir)
-  print("Script Path = " .. script_path())
-  print("powershell.exe -file '" .. script_path() .. "webm-scraper.ps1'")
-  os.execute('powershell.exe -file "' .. script_path() .. 'webm-scraper.ps1"')
-  end
-  os.execute("wget -P $HOME/Videos/wsgBumps -nd -nc -r -l 1 -H -D i.4cdn.org -A webm https://boards.4channel.org/wsg/thread/3201021")
-  --
-end
--- get script path
-function script_path()
-   local str = debug.getinfo(2, "S").source:sub(2)
-   return str:match("(.*/)")
-end
---
+
 
 -- splitbynum and alnumcomp from alphanum.lua (C) Andre Bogus
 -- Released under the MIT License
@@ -166,11 +197,6 @@ local autoloaded = nil
 function find_and_add_entries()
     local path = mp.get_property("path", "")
 
-    -- wsgFiles directory should be located at ~/.config/mpv
-    local wsgDir = "/home/jd/.config/mpv/wsgBumps/"
-    --
-
-
     local dir, filename = utils.split_path(path)
     msg.trace(("dir: %s, filename: %s"):format(dir, filename))
     if o.disabled then
@@ -195,16 +221,10 @@ function find_and_add_entries()
     local pl_current = mp.get_property_number("playlist-pos-1", 1)
     msg.trace(("playlist-pos-1: %s, playlist: %s"):format(pl_current,
         utils.to_string(pl)))
-    -- read wsg folders content aswell
-    -- if o.bump then ... end
-    local wsgFiles = utils.readdir(wsgDir)
-    --
-    -- debug: see if files loaded into wsgFiles array
-    -- for i = 1, #wsgFiles do
-    --   print("iterating through wsgDir", wsgFiles[i])
-    --  end
-    --
-
+   
+	-- read wsg folders content aswell
+	webmFiles = utils.readdir(webmDir)
+		
     local files = utils.readdir(dir, "files")
     if files == nil then
         msg.verbose("no other files in directory")
@@ -221,14 +241,23 @@ function find_and_add_entries()
         return EXTENSIONS[string.lower(ext)]
     end)
 
-    -- randomize wsgFiles order of elements
-    shuffle(wsgFiles)
+    -- randomize webmFiles order of elements
+    -- shuffle(webmFiles)
     -- &
-    -- append wsgDir to wsgFiles for full path to file
-    for i = 1, #wsgFiles do
-     wsgFiles[i] = wsgDir .. wsgFiles[i]
-    end
-    --
+    -- append webmDir to webmFiles for full path to file
+	-- check which OS this script is running on to decide which download function to use
+	if package.config:sub(1,1) == "\\" then 
+		for i = 1, #webmFiles do
+		webmFiles[i] = webmDir .. "\\" .. webmFiles[i]
+		end      
+	else
+		for i = 1, #webmFiles do
+		webmFiles[i] = webmDir .. "/" .. webmFiles[i]
+		end   
+	end
+	--
+   
+    
 
     table.sort(files, alnumcomp)
 
@@ -279,9 +308,9 @@ function find_and_add_entries()
         end
     end
 
-    add_files_at(pl_current + 1, append[1], wsgFiles)
-    add_files_at(pl_current, append[-1], wsgFiles)
+    add_files_at(pl_current + 1, append[1])
+    add_files_at(pl_current, append[-1])
 
 end
-mp.register_event("start-file", downloadWSGbumps)
-mp.register_event("start-file", find_and_add_entries)
+mp.register_event("start-file", downloadWebms)
+-- mp.register_event("start-file", find_and_add_entries)
