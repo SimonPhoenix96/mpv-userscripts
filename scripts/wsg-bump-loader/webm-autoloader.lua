@@ -1,14 +1,14 @@
--- Author: 	    wm4 + simonphoenix96 
+-- Author: 	    wm4 + simonphoenix96
 --
--- Description: This Script scrapes all webm files from a given web page, and uses https://github.com/wm4 
+-- Description: This Script scrapes all webm files from a given web page, and uses https://github.com/wm4
 --              autoload (https://github.com/mpv-player/mpv/blob/master/TOOLS/lua/autoload.lua) script to add downloaded webms inbetween episodes in playlist
 --
--- Config: 		webPage in downloadWebms function defines, where it'll download webms from
+-- Usage: 		webPage in downloadWebms function defines, where it'll download webms from
 --				webmCount defines ammount of webms to be played after episode finishes
 --				webmDir defines where to save webm files || default location is mpv script folder
---				
+--
 -- !!! change following link to page you want to download webms from
-webPage = 'https://boards.4channel.org/wsg/thread/3201021' 
+webPage = 'https://boards.4channel.org/wsg/thread/3201021'
 --
 -- !!! change following variable to amount of desired webms to be between episodes
 webmCount = 3
@@ -16,50 +16,49 @@ webmCount = 3
 
 -- downloads webms off webPage
 function downloadWebms()
-  
+
   webmDir = script_path() .. 'webmDir' -- !!! change this to desired webm save directory, on windows seperate path with double backslash, on linux with single forward slash
- 
+
   -- check which OS this script is running on to decide which download function to use
-  if package.config:sub(1,1) == "\\" then 
- 	os.execute('powershell.exe -file "' .. script_path() .. 'webm-scraper.ps1" "' .. webPage .. '" "' .. webmDir .. '"') -- change regex pattern in 4chan-webm-scraper.ps1 to website other than the chan 	
+  if package.config:sub(1,1) == "\\" then
+ 	os.execute('powershell.exe -file "' .. script_path() .. 'webm-scraper.ps1" "' .. webPage .. '" "' .. webmDir .. '"') -- change regex pattern in 4chan-webm-scraper.ps1 to website other than the chan
   else
     os.execute("wget -P " .. webmDir ..  " -nd -nc -r -l 1 -H -D i.4cdn.org -A webm " .. webPage)  -- change i.4cdn.org to wtv if you want to use different website, dont axe me
   end
   --
-  -- find_and_add_entries()
+
 end
 --
 
 -- wm4's modified function
 function add_files_at(index, files)
-	
+
     index = index - 1
     local oldcount = mp.get_property_number("playlist-count", 1)
     local playlistSize = #files + (webmCount  * #files)
-    	
+
+
+
 	for i = 1, playlistSize do
-    
-	if package.config:sub(1,1) == "/" and files[i] == nil then
-  	 return -- with this disabled script will run into error, but it doesnt matter since it happens at the end of playlist generation unless on linux
-  	end
-	
-	local webmFileCounter = 1 
-	
+
+  local webmFileCounter = 1
+
 	math.randomseed(os.time() * os.time())
 	j = math.random(#webmFiles)
-	
-	
-	while(webmFileCounter <= webmCount) do
-	
+
+
+	while(webmFileCounter <= webmCount ) do
+    print("adding " .. webmFiles[j] .. " to playlist")
 	  mp.commandv("loadfile", webmFiles[j], "append")
 	  webmFileCounter = webmFileCounter + 1
-	  table.remove(webmFiles, j)
-	  print("removing: " .. webmFiles[j] .. "from list. Current webmFiles size == " .. #webmFiles)
-	  
-	end	
-	
-     
-	  
+    print("removing: " .. webmFiles[j] .. " from list. Current webmFiles size == " .. #webmFiles)
+    table.remove(webmFiles, j)
+	end
+
+webmFileCounter = 1
+print("webmFileCounter " .. webmFileCounter)
+
+
 	  print("adding " .. files[i] .. " to playlist")
 	  mp.commandv("loadfile", files[i], "append")
       mp.commandv("playlist-move", oldcount + i - webmCount, index + i - webmCount)
@@ -76,10 +75,6 @@ function script_path()
 end
 --
 
--- read files in webmDir to webmFiles
-function count_files()
-   return #webmFiles
-end
 
 -- -- Shuffle webmFiles
 -- function shuffle(t)
@@ -223,10 +218,10 @@ function find_and_add_entries()
     local pl_current = mp.get_property_number("playlist-pos-1", 1)
     msg.trace(("playlist-pos-1: %s, playlist: %s"):format(pl_current,
         utils.to_string(pl)))
-   
+
 	-- read wsg folders content aswell
 	webmFiles = utils.readdir(webmDir)
-		
+
     local files = utils.readdir(dir, "files")
     if files == nil then
         msg.verbose("no other files in directory")
@@ -246,20 +241,19 @@ function find_and_add_entries()
     -- randomize webmFiles order of elements
     -- shuffle(webmFiles)
     -- &
-    -- append webmDir to webmFiles for full path to file
-	-- check which OS this script is running on to decide which download function to use
-	if package.config:sub(1,1) == "\\" then 
+    -- append webmDir to webmFiles for full path to file if using windows use double backslash
+	if package.config:sub(1,1) == "\\" then
 		for i = 1, #webmFiles do
 		webmFiles[i] = webmDir .. "\\" .. webmFiles[i]
-		end      
+		end
 	else
 		for i = 1, #webmFiles do
 		webmFiles[i] = webmDir .. "/" .. webmFiles[i]
-		end   
+		end
 	end
 	--
-   
-    
+
+
 
     table.sort(files, alnumcomp)
 
