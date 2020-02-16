@@ -39,7 +39,9 @@ function add_files_at(index, files)
     	
 	for i = 1, playlistSize do
     
-	-- if(files[i] == nil) then return end -- with this disabled script will run into error, but it doesnt matter since it happens at the end of playlist generation 
+	if package.config:sub(1,1) == "/" and files[i] == nil then
+  	 return -- with this disabled script will run into error, but it doesnt matter since it happens at the end of playlist generation unless on linux
+  	end
 	
 	local webmFileCounter = 1 
 	
