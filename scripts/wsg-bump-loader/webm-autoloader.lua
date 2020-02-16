@@ -26,7 +26,7 @@ function downloadWebms()
     os.execute("wget -P " .. webmDir ..  " -nd -nc -r -l 1 -H -D i.4cdn.org -A webm " .. webPage)  -- change i.4cdn.org to wtv if you want to use different website, dont axe me
   end
   --
-  find_and_add_entries()
+  -- find_and_add_entries()
 end
 --
 
@@ -39,7 +39,7 @@ function add_files_at(index, files)
     	
 	for i = 1, playlistSize do
     
-	if(files[i] == nil) then return end
+	-- if(files[i] == nil) then return end -- with this disabled script will run into error, but it doesnt matter since it happens at the end of playlist generation 
 	
 	local webmFileCounter = 1 
 	
@@ -79,19 +79,19 @@ function count_files()
    return #webmFiles
 end
 
--- Shuffle webmFiles
-function shuffle(t)
-  local tbl = {}
-  for i = 1, #t do
-    tbl[i] = t[i]
-  end
-  for i = #tbl, 2, -1 do
-	math.randomseed(os.time())
-	local j = math.random(i)
-    tbl[i], tbl[j] = tbl[j], tbl[i]
-  end
-  return tbl
-end
+-- -- Shuffle webmFiles
+-- function shuffle(t)
+  -- local tbl = {}
+  -- for i = 1, #t do
+    -- tbl[i] = t[i]
+  -- end
+  -- for i = #tbl, 2, -1 do
+	-- math.randomseed(os.time())
+	-- local j = math.random(i)
+    -- tbl[i], tbl[j] = tbl[j], tbl[i]
+  -- end
+  -- return tbl
+-- end
 --
 
 -- from here modified wm4 stuff
@@ -313,4 +313,4 @@ function find_and_add_entries()
 
 end
 mp.register_event("start-file", downloadWebms)
--- mp.register_event("start-file", find_and_add_entries)
+mp.register_event("start-file", find_and_add_entries)
