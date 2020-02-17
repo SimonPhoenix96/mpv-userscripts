@@ -17,15 +17,15 @@ webmCount = 3
 -- downloads webms off webPage
 function downloadWebms()
 
-  webmDir = script_path() .. 'webmDir' -- !!! change this to desired webm save directory, on windows seperate path with double backslash, on linux with single forward slash
+    webmDir = script_path() .. 'webmDir' -- !!! change this to desired webm save directory, on windows seperate path with double backslash, on linux with single forward slash
 
-  -- check which OS this script is running on to decide which download function to use
-  if package.config:sub(1,1) == "\\" then
- 	os.execute('powershell.exe -file "' .. script_path() .. 'webm-scraper.ps1" "' .. webPage .. '" "' .. webmDir .. '"') -- change regex pattern in 4chan-webm-scraper.ps1 to website other than the chan
-  else
-    os.execute("wget -P " .. webmDir ..  " -nd -nc -r -l 1 -H -D i.4cdn.org -A webm " .. webPage)  -- change i.4cdn.org to wtv if you want to use different website, dont axe me
-  end
-  --
+    -- check which OS this script is running on to decide which download function to use
+    if package.config:sub(1,1) == "\\" then
+        os.execute('powershell.exe -file "' .. script_path() .. 'webm-scraper.ps1" "' .. webPage .. '" "' .. webmDir .. '"') -- change regex pattern in 4chan-webm-scraper.ps1 to website other than the chan
+    else
+        os.execute("wget -P " .. webmDir ..  " -nd -nc -r -l 1 -H -D i.4cdn.org -A webm " .. webPage)  -- change i.4cdn.org to wtv if you want to use different website, dont axe me
+    end
+    --
 
 end
 --
@@ -39,29 +39,29 @@ function add_files_at(index, files)
 
 
 
-	for i = 1, playlistSize do
+    for i = 1, playlistSize do
 
-  local webmFileCounter = 1
+        local webmFileCounter = 1
 
-	math.randomseed(os.time() * os.time())
-	j = math.random(#webmFiles)
-
-
-	while(webmFileCounter <= webmCount ) do
-    print("adding " .. webmFiles[j] .. " to playlist")
-	  mp.commandv("loadfile", webmFiles[j], "append")
-	  webmFileCounter = webmFileCounter + 1
-    print("removing: " .. webmFiles[j] .. " from list. Current webmFiles size == " .. #webmFiles)
-    table.remove(webmFiles, j)
-	end
-
-webmFileCounter = 1
-print("webmFileCounter " .. webmFileCounter)
+        math.randomseed(os.time() * os.time())
+        j = math.random(#webmFiles)
 
 
-	  print("adding " .. files[i] .. " to playlist")
-	  mp.commandv("loadfile", files[i], "append")
-      mp.commandv("playlist-move", oldcount + i - webmCount, index + i - webmCount)
+        while(webmFileCounter <= webmCount ) do
+            print("adding " .. webmFiles[j] .. " to playlist")
+            mp.commandv("loadfile", webmFiles[j], "append")
+            webmFileCounter = webmFileCounter + 1
+            print("removing: " .. webmFiles[j] .. " from list. Current webmFiles size == " .. #webmFiles)
+            table.remove(webmFiles, j)
+        end
+
+        webmFileCounter = 1
+        print("webmFileCounter " .. webmFileCounter)
+
+
+        print("adding " .. files[i] .. " to playlist")
+        mp.commandv("loadfile", files[i], "append")
+        mp.commandv("playlist-move", oldcount + i - webmCount, index + i - webmCount)
 
 
     end
@@ -70,24 +70,24 @@ end
 
 -- get script path
 function script_path()
-   local str = debug.getinfo(2, "S").source:sub(2)
-   return str:match("(.*/)")
+    local str = debug.getinfo(2, "S").source:sub(2)
+    return str:match("(.*/)")
 end
 --
 
 
 -- -- Shuffle webmFiles
 -- function shuffle(t)
-  -- local tbl = {}
-  -- for i = 1, #t do
-    -- tbl[i] = t[i]
-  -- end
-  -- for i = #tbl, 2, -1 do
-	-- math.randomseed(os.time())
-	-- local j = math.random(i)
-    -- tbl[i], tbl[j] = tbl[j], tbl[i]
-  -- end
-  -- return tbl
+-- local tbl = {}
+-- for i = 1, #t do
+-- tbl[i] = t[i]
+-- end
+-- for i = #tbl, 2, -1 do
+-- math.randomseed(os.time())
+-- local j = math.random(i)
+-- tbl[i], tbl[j] = tbl[j], tbl[i]
+-- end
+-- return tbl
 -- end
 --
 
@@ -207,7 +207,7 @@ function find_and_add_entries()
     local pl_count = mp.get_property_number("playlist-count", 1)
     -- check if this is a manually made playlist
     if (pl_count > 1 and autoloaded == nil) or
-       (pl_count == 1 and EXTENSIONS[string.lower(get_extension(filename))] == nil) then
+        (pl_count == 1 and EXTENSIONS[string.lower(get_extension(filename))] == nil) then
         msg.verbose("stopping: manually made playlist")
         return
     else
@@ -219,8 +219,8 @@ function find_and_add_entries()
     msg.trace(("playlist-pos-1: %s, playlist: %s"):format(pl_current,
         utils.to_string(pl)))
 
-	-- read wsg folders content aswell
-	webmFiles = utils.readdir(webmDir)
+    -- read wsg folders content aswell
+    webmFiles = utils.readdir(webmDir)
 
     local files = utils.readdir(dir, "files")
     if files == nil then
@@ -242,16 +242,16 @@ function find_and_add_entries()
     -- shuffle(webmFiles)
     -- &
     -- append webmDir to webmFiles for full path to file if using windows use double backslash
-	if package.config:sub(1,1) == "\\" then
-		for i = 1, #webmFiles do
-		webmFiles[i] = webmDir .. "\\" .. webmFiles[i]
-		end
-	else
-		for i = 1, #webmFiles do
-		webmFiles[i] = webmDir .. "/" .. webmFiles[i]
-		end
-	end
-	--
+    if package.config:sub(1,1) == "\\" then
+        for i = 1, #webmFiles do
+            webmFiles[i] = webmDir .. "\\" .. webmFiles[i]
+        end
+    else
+        for i = 1, #webmFiles do
+            webmFiles[i] = webmDir .. "/" .. webmFiles[i]
+        end
+    end
+    --
 
 
 
@@ -299,9 +299,9 @@ function find_and_add_entries()
                 end
             else
                 msg.info("Adding " .. file)
-               table.insert(append[1], filepath)
+                table.insert(append[1], filepath)
             end
-        end
+    end
     end
 
     add_files_at(pl_current + 1, append[1])
