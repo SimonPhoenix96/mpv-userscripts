@@ -1,5 +1,3 @@
-# Author: 	    
-wm4 + simonphoenix96 
 #  Description
 This Script scrapes all webm files from a given web page, and uses https://github.com/wm4 
 autoload (https://github.com/mpv-player/mpv/blob/master/TOOLS/lua/autoload.lua) script to add downloaded webms inbetween episodes in playlist
@@ -19,3 +17,6 @@ defines ammount of webms to be played after episode finishes || default is 3
 
 **webmDir** 
 defines where to save webm files || default location is mpv script folder
+
+# External/Modified Scripts: 	    
+wm4 (https://github.com/mpv-player/mpv/blob/master/TOOLS/lua/autoload.lua)
