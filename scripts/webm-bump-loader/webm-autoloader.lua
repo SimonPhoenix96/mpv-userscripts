@@ -4,22 +4,28 @@
 --              autoload (https://github.com/mpv-player/mpv/blob/master/TOOLS/lua/autoload.lua) script to add downloaded webms inbetween episodes in playlist
 --
 -- Usage: 		webPage in downloadWebms function defines, where it'll download webms from
---				webmCount defines ammount of webms to be played after episode finishes
+--				bumpCount defines ammount of webms to be played after episode finishes
 --				webmDir defines where to save webm files || default location is mpv script folder
+--
 --
 -- !!! change this to false if u just want to use availible files in webmDir
 onlineMode = true
 --
 -- !!! change following link to page you want to download webms from
-webPage = 'https://boards.4channel.org/wsg/thread/3201021'
+webPage = 'https://boards.4channel.org/wsg/thread/3201021' -- 'https://www.bumpworthy.com/bumps/' 
 --
 -- !!! change following variable to amount of desired webms to be between episodes
-webmCount = 2
+bumpCount = 2
 --
--- !!! change this to desired webm save directory, on windows seperate path with double backslash, on linux with single forward slash if 0 default location is in the MPVs Script Folder
-webmDir = 0
+-- !!! change this to desired webm save directory, on windows seperate path with double backslash, on linux with single forward slash  
+--     Default: 0 || which means webmDir points the MPVs Script Folder
+webmDir = "F:\\Videos\\bumps"
 --
--- downloads webms off webPage
+-- downloads webms off single webPage currently only 4chan thread support
+singlePage = true
+-- bumpworthy.com support
+bumpWorthy = true
+--
 function downloadWebms()
 
     -- sets default webmDir value
@@ -29,8 +35,15 @@ function downloadWebms()
     end
 
   -- check which OS this script is running on to decide which download function to use
-  if package.config:sub(1,1) == "\\" then
- 	os.execute('powershell.exe -file -nonewwindow "' .. script_path() .. 'webm-scraper.ps1" "' .. webPage .. '" "' .. webmDir .. '"') -- change regex pattern in 4chan-webm-scraper.ps1 to website other than the chan
+  if package.config:sub(1,1) == "\\" 
+  then
+    if(bumpWorthy) then
+    print('powershell.exe -file "' .. script_path() .. 'webm-scraper.ps1" "' .. webPage .. '" "' .. webmDir .. '" "bumpworthy"') 
+    os.execute('powershell.exe -file "' .. script_path() .. 'webm-scraper.ps1" "https://www.bumpworthy.com/bumps/" "' .. webmDir .. '" "bumpworthy"')
+    else
+        print('powershell.exe -file "' .. script_path() .. 'webm-scraper.ps1" "' .. webPage .. '" "' .. webmDir .. '" "singlePage"') 
+ 	os.execute('powershell.exe -file "' .. script_path() .. 'webm-scraper.ps1" "' .. webPage .. '" "' .. webmDir .. '" "singlePage"') -- change regex pattern in webm-scraper.ps1 to website other than the chan
+    end  
   else
     os.execute("wget -P " .. webmDir ..  " -nd -nc -r -l 1 -H -D i.4cdn.org -A webm " .. webPage)  -- change i.4cdn.org to wtv if you want to use different website, dont axe me
   end
@@ -49,35 +62,35 @@ function add_files_at(index, files)
 	playlistSize = 1 
 	print("playlistsize" .. playlistSize)
 	else 
-	playlistSize = #files + (webmCount  * #files)
-print("playlistsize" ..playlistSize)	
+	playlistSize = #files + (bumpCount  * #files)
+    print("playlistsize" .. playlistSize)	
 	end
 
 
 
 	for i = 1, playlistSize do
 
-  local webmFileCounter = 1
+  local bumpFileCounter = 1
 
 	math.randomseed(os.time() * os.time())
-	j = math.random(#webmFiles)
+	j = math.random(#bumpFiles)
 
 
-	while(webmFileCounter <= webmCount ) do
-    print("adding " .. webmFiles[j] .. " to playlist")
-	  mp.commandv("loadfile", webmFiles[j], "append")
-	  webmFileCounter = webmFileCounter + 1
-    print("removing: " .. webmFiles[j] .. " from list. Current webmFiles size == " .. #webmFiles)
-    table.remove(webmFiles, j)
+	while(bumpFileCounter <= bumpCount ) do
+    print("adding " .. bumpFiles[j] .. " to playlist")
+	  mp.commandv("loadfile", bumpFiles[j], "append")
+	  bumpFileCounter = bumpFileCounter + 1
+    print("removing: " .. bumpFiles[j] .. " from list. Current bumpFiles size == " .. #bumpFiles)
+    table.remove(bumpFiles, j)
 	end
 
-webmFileCounter = 1
-print("webmFileCounter " .. webmFileCounter)
+bumpFileCounter = 1
+print("bumpFileCounter " .. bumpFileCounter)
 
 
-	  print("adding " .. files[i] .. " to playlist")
-	  mp.commandv("loadfile", files[i], "append")
-      mp.commandv("playlist-move", oldcount + i - webmCount, index + i - webmCount)
+      print("adding " .. files[i] .. " to playlist")
+      mp.commandv("loadfile", files[i], "append")
+      mp.commandv("playlist-move", oldcount + i - bumpCount, index + i - bumpCount)
 
 
     end
@@ -92,7 +105,7 @@ end
 --
 
 
--- -- Shuffle webmFiles
+-- -- Shuffle bumpFiles
 -- function shuffle(t)
   -- local tbl = {}
   -- for i = 1, #t do
@@ -236,13 +249,25 @@ function find_and_add_entries()
         utils.to_string(pl)))
 
 	-- read wsg folders content aswell
-	webmFiles = utils.readdir(webmDir)
+    bumpFiles = utils.readdir(webmDir)
+    -- filter aswel
+    table.filter(bumpFiles, function (v, k)
+        if string.match(v, "^%.") then
+            return false
+        end
+        local ext = get_extension(v)
+        if ext == nil then
+            return false
+        end
+        return EXTENSIONS[string.lower(ext)]
+    end)
 
     local files = utils.readdir(dir, "files")
     if files == nil then
         msg.verbose("no other files in directory")
         return
     end
+
     table.filter(files, function (v, k)
         if string.match(v, "^%.") then
             return false
@@ -254,17 +279,17 @@ function find_and_add_entries()
         return EXTENSIONS[string.lower(ext)]
     end)
 
-    -- randomize webmFiles order of elements
-    -- shuffle(webmFiles)
+    -- randomize bumpFiles order of elements
+    -- shuffle(bumpFiles)
     -- &
-    -- append webmDir to webmFiles for full path to file if using windows use double backslash
+    -- append webmDir to bumpFiles for full path to file if using windows use double backslash
 	if package.config:sub(1,1) == "\\" then
-		for i = 1, #webmFiles do
-		webmFiles[i] = webmDir .. "\\" .. webmFiles[i]
+		for i = 1, #bumpFiles do
+		bumpFiles[i] = webmDir .. "\\" .. bumpFiles[i]
 		end
 	else
-		for i = 1, #webmFiles do
-		webmFiles[i] = webmDir .. "/" .. webmFiles[i]
+		for i = 1, #bumpFiles do
+		bumpFiles[i] = webmDir .. "/" .. bumpFiles[i]
 		end
 	end
 	--
