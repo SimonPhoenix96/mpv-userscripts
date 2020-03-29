@@ -11,7 +11,7 @@
 onlineMode = true
 --
 -- !!! change following link to page you want to download webms from
-webPage = 'https://boards.4channel.org/wsg/thread/3201021'
+webPage = 'https://boards.4channel.org/wsg/thread/3313674'
 --
 -- !!! change following variable to amount of desired webms to be between episodes
 webmCount = 2
