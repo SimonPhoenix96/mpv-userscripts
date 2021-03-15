@@ -15,7 +15,7 @@ onlineMode = false
 -- webPage = 'https://boards.4channel.org/wsg/thread/3768662' -- 'https://www.bumpworthy.com/bumps/'
 --
 -- !!! change following variable to amount of desired webms to be between episodes
-bumpCount = 2
+bumpCount = 3
 --
 -- !!! change this to desired webm save directory, on windows seperate path with double backslash, on linux with single forward slash
 --     Default: 0 || which means webmDir points the MPVs Script Folder
@@ -64,7 +64,7 @@ end
 -- wm4's modified function
 function add_files_at(index, files)
 
-   index = index - 1
+   index = index  - 1
    local oldcount = mp.get_property_number("playlist-count", 1)
 
    if #files <= 1 then
@@ -79,13 +79,22 @@ function add_files_at(index, files)
 
    for i = 1, playlistSize do
 
-      local bumpFileCounter = 1
+    bumpFileCounter = 1
+    
+
 
       math.randomseed(os.time() * os.time())
       j = math.random(#bumpFiles)
+      
+
 
       -- APB
       while(bumpFileCounter <= bumpCount ) do
+         
+        
+
+
+         print("bumpFilesCopy Size: " .. #bumpFilesCopy)
 
          if(has_value(alreadyPlayedBumpsLines, bumpFiles[j])) then
             print("removing: " .. bumpFiles[j] .. " from list.")
@@ -96,26 +105,35 @@ function add_files_at(index, files)
 
          else
 
+            -- add bump to playlist between episodes
             print("adding " .. bumpFiles[j] .. " to playlist")
             mp.commandv("loadfile", bumpFiles[j], "append")
+            
             bumpFileCounter = bumpFileCounter + 1
+            
             print("removing: " .. bumpFiles[j] .. " from list.")
             table.remove(bumpFiles, j)
             print("Current bumpFiles size == " .. #bumpFiles)
-            -- appends played filename to the last line of alreadyPlayedBumps.txt
-            print("adding " .. bumpFiles[j] .. " to " .. alreadyPLayedBumpsPath)
-            -- Opens a file in append mode
-
-            writeFile = io.open(alreadyPLayedBumpsPath, "a")
-            io.output(writeFile)
-            io.write(bumpFiles[j] .. "\n" )
-            -- closes the open file
-            io.close(writeFile)
+            
+            -- -- appends played filename to the last line of alreadyPlayedBumps.txt
+            -- print("adding " .. bumpFiles[j] .. " to " .. alreadyPLayedBumpsPath)
+            -- -- Opens a file in append mode
+            -- writeFile = io.open(alreadyPLayedBumpsPath, "a")
+            -- io.output(writeFile)
+            -- io.write(bumpFiles[j] .. "\n" )
+            -- -- closes the open file
+            -- io.close(writeFile)
 
 
 
          end
-
+         -- use copy of bumpFiles for further adding between episodes NEED TO SET FLAG TO RESET alreadyPlayedBumpLines ASWELL
+         -- WARNING: when reusing bumpFiles and alreadyPlayedBumpsPath contains solely same files as in bumpfiles we'll get in a infinit loop
+         if(#bumpFiles == 0) then 
+            print("reusing old bumpfiles")
+            bumpFiles = shallowCopy(bumpFilesCopy) 
+            
+         end 
          -- APB skip bumpfile if in alreadyPlayedBumps
          ::continue::
 
@@ -123,9 +141,9 @@ function add_files_at(index, files)
 
       -- APB
       print("bumpFileCounter " .. bumpFileCounter)
-      bumpFileCounter = 1
 
-      print("adding " .. files[i] .. " to playlist")
+      -- add episode to playlist between bumps
+      print("adding " .. files[i] .. " to playlist index: " .. index)
       mp.commandv("loadfile", files[i], "append")
       mp.commandv("playlist-move", oldcount + i - bumpCount, index + i - bumpCount)
 
@@ -171,6 +189,20 @@ function has_value (tab, val)
    return false
 end
 --
+-- APB
+function shallowcopy(orig)
+    local orig_type = type(orig)
+    local copy
+    if orig_type == 'table' then
+        copy = {}
+        for orig_key, orig_value in pairs(orig) do
+            copy[orig_key] = orig_value
+        end
+    else -- number, string, boolean, etc
+        copy = orig
+    end
+    return copy
+end
 
 -- from here modified wm4 stuff
 MAXENTRIES = 5000
@@ -303,6 +335,10 @@ utils.to_string(pl)))
 
 -- read wsg folders content aswell
 bumpFiles = utils.readdir(webmDir)
+
+-- incase not enough bumpFiles to put between episodes use bumpFilesCopy to re-add same bumps between episodes
+bumpFilesCopy = shallowcopy(bumpFiles)
+
 -- filter aswel
 table.filter(bumpFiles, function (v, k)
 if string.match(v, "^%.") then
