@@ -1,11 +1,21 @@
+
+# Page to get bumps from 4chan/bumpworthy
+$webPage = $args[0]
+
 # Create directory for files to be downloaded into
 $bumpDir = $args[1] 
 
+if($webPage -eq "4chan") {
+# get bump thread from my github
+$bumpThreadUrl = Invoke-WebRequest -Uri https://raw.githubusercontent.com/SimonPhoenix96/recent-bump-thread/main/recent-bump-thread.txt | select content -ExpandProperty content
+}
 
+# create bump directory 
 if(-not (Test-Path($bumpDir))) {
-    New-Item -Path $bumpDir   -ItemType directory
+    New-Item -Path $bumpDir -ItemType directory
     Write-Host "Directory has been created." -ForegroundColor Green
 }
+
 
 
 
@@ -17,23 +27,23 @@ $skip = $false
 # Main - Invoking the web request, making first contact with the site.
 Write-Host "Attempting to call website." -ForegroundColor Green
 
-if($args[2] -eq "singlePage"){  #Page Retrieval single 4chan thread
-$page=Invoke-WebRequest -Uri $args[0] 
+if($args[0] -eq "4chan"){  #Page Retrieval single 4chan thread
+$page=Invoke-WebRequest -Uri $bumpThreadUrl 
 } 
-elseif ($args[2]-eq "bumpworthy") {  #Page Retrieval crawl through of www.bumpworthy.com
+elseif ($args[0] -eq "bumpworthy") {  #Page Retrieval crawl through of www.bumpworthy.com
 $count= 3
 [Net.ServicePointManager]::SecurityProtocol = "Tls12, Tls11, Tls, Ssl3"
 [System.Collections.ArrayList] $page = @()
 $page.GetType()
 
-if(-not (Test-Path("$bumpDir\scrapedLinksList.txt"))) {
-    New-Item -itemType File -Path "$bumpDir\scrapedLinksList.txt"
+if(-not (Test-Path("$bumpDir\scrapedLinks.txt"))) {
+    New-Item -itemType File -Path "$bumpDir\scrapedLinks.txt"
     $count = 100
     }
 
-For ($i=([IO.File]::ReadAllLines("$bumpDir\scrapedLinksList.txt")).length; $i -le ([IO.File]::ReadAllLines("$bumpDir\scrapedLinksList.txt")).length+$count; $i++) {
+For ($i=([IO.File]::ReadAllLines("$bumpDir\scrapedLinks.txt")).length; $i -le ([IO.File]::ReadAllLines("$bumpDir\scrapedLinks.txt")).length+$count; $i++) {
   
-    $webDir = "$($args[0])$($i)"
+    $webDir = "$($bumpThreadUrl)$($i)"
     $pageTemp = Invoke-WebRequest -Uri $webDir 
    
     if(-not ($pageTemp -match 'A vast repository of Adult Swim bumps dating back to 2001, including audio and video downloads, live streaming, and musical artist information for each bump.')){
@@ -52,14 +62,18 @@ $src = ([regex]$srcrpattern).Matches($page) | ForEach-Object {
 }
 
 
-$scrapedLinks = [IO.File]::ReadAllText("$bumpDir\scrapedLinksList.txt")
-
-if ($args[2]-eq "bumpworthy") {
+if ($args[0] -eq "bumpworthy") {
+# create scrapedLinks.txt for bumpworthy, as files get downloaded at random
+if(-not (Test-Path("$bumpDir\scrapedLinks.txt"))) {
+    New-Item "$bumpDir\scrapedLinks.txt" -ItemType file
+    Write-Host "Directory has been created." -ForegroundColor Green
+}
+$scrapedLinks = [IO.File]::ReadAllText("$bumpDir\scrapedLinks.txt")
 @($src).foreach({
 
    if(-not $skip){
     if(-not ($scrapedLinks -match $_)) {
-        $_ | Out-File -Append -FilePath  "$bumpDir\scrapedLinksList.txt"
+        $_ | Out-File -Append -FilePath  "$bumpDir\scrapedLinks.txt"
     }
     $skip = $true
    } elseif ($skip){ $skip = $false}
