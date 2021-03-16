@@ -14,8 +14,8 @@
 # get bump thread url
 if($webPage -eq "4chan") {
     # get bump thread from my github
-    # $bumpThreadUrl = Invoke-WebRequest -Uri https://raw.githubusercontent.com/SimonPhoenix96/recent-bump-thread/main/recent-bump-thread.txt | select content -ExpandProperty content
-    $bumpThreadUrl = "https://yuki.la/wsg/3594830#p3594830"
+    $bumpThreadUrl = Invoke-WebRequest -Uri https://raw.githubusercontent.com/SimonPhoenix96/recent-bump-thread/main/recent-bump-thread.txt | select content -ExpandProperty content
+    # $bumpThreadUrl = "https://yuki.la/wsg/3594830#p3594830"
 }
 elseif ($webPage -eq "bumpworthy") {
     $bumpThreadUrl = "https://www.bumpworthy.com/bumps/"
@@ -37,10 +37,10 @@ if(-not (Test-Path($bumpDir))) {
 # default bumpworthy download count
 [int]$count= 3 
 
-# create scrapedLinks.txt
-if(-not (Test-Path("$bumpDir\scrapedLinks.txt"))) {
-    New-Item "$bumpDir\scrapedLinks.txt" -ItemType file
-    Write-Host "scrapedLinks has been created." -ForegroundColor Green
+# create downloadedLinks.txt
+if(-not (Test-Path("$bumpDir\downloadedLinks.txt"))) {
+    New-Item "$bumpDir\downloadedLinks.txt" -ItemType file
+    Write-Host "downloadedLinks has been created." -ForegroundColor Green
     $count = 50
 }
 
@@ -66,7 +66,7 @@ function get-webm-links {
     [System.Collections.ArrayList] $page = @()
     $page.GetType()
 
-    For ($i=([IO.File]::ReadAllLines("$bumpDir\scrapedLinks.txt")).length; $i -le ([IO.File]::ReadAllLines("$bumpDir\scrapedLinks.txt")).length+$count; $i++) {
+    For ($i=([IO.File]::ReadAllLines("$bumpDir\downloadedLinks.txt")).length; $i -le ([IO.File]::ReadAllLines("$bumpDir\downloadedLinks.txt")).length+$count; $i++) {
     
         $webDir = "$($bumpThreadUrl)$($i)"
         $pageTemp = Invoke-WebRequest -Uri $webDir 
@@ -93,8 +93,8 @@ function get-webms {
         [Parameter(Mandatory=$true)][String[]]$links
     )
     
-    # read links in scrapedLinks 
-    $scrapedLinks = [IO.File]::ReadAllText("$bumpDir\scrapedLinks.txt")
+    # read links in downloadedLinks 
+    $downloadedLinks = [IO.File]::ReadAllText("$bumpDir\downloadedLinks.txt")
 
     [boolean]$successfulyDownloadedWebms = $False
 
@@ -102,15 +102,15 @@ function get-webms {
     # TODO: if all files already downloaded, get files from previous thread
     @($links).foreach({
         
-        if ($scrapedLinks -match $_){
+        if ($downloadedLinks -match $_){
             Write-Host 'Skipping file, already downloaded' -ForegroundColor Yellow
         } 
         else {
             $fileName = $_ | Split-Path -Leaf
             Write-Host "Downloading image file $fileName"
             Invoke-WebRequest -Uri $_ -OutFile "$bumpDir\$fileName"
-            Write-Host 'File download complete append to scrapedLinks.txt' 
-            $_ | Out-File -Append -FilePath  "$bumpDir\scrapedLinks.txt"
+            Write-Host 'File download complete append to downloadedLinks.txt' 
+            $_ | Out-File -Encoding UTF8 -Append -FilePath  "$bumpDir\downloadedLinks.txt"
             $successfulyDownloadedWebms = $True
         }
     })
@@ -130,20 +130,27 @@ function write-links-file {
         New-Item "$linksPath" -ItemType file
         Write-Host "streamLinks has been created." -ForegroundColor Green
     }
-    # read links in scrapedLinks 
-    $scrapedLinks = [IO.File]::ReadAllText("$linksPath")
+    # read links in downloadedLinks 
+    $downloadedLinks = [IO.File]::ReadAllText("$linksPath")
+
+    # clean up links as they contain everyline doubly
+    $links = $links | sort | get-unique 
+
 
     # TODO: if all files already downloaded, get files from previous thread
     @($links).foreach({
         
-        if ($scrapedLinks -match $_){
+        if ($downloadedLinks -match $_){
             Write-Host 'Skipping file, already added to streamLinks.txt' -ForegroundColor Yellow
         } 
         else {
             Write-Host 'append streamLink to streamLinks.txt' 
-            $_ | Out-File -Append -FilePath  "$linksPath"
+            "https://$($_)" | Out-File -Encoding UTF8 -Append -FilePath  "$linksPath"
         }
     })
+
+    # TODO add https:// to front of everyline as mpv requires this to be able to stream
+
 
 }
 
@@ -186,13 +193,13 @@ else {
 
 
 
-# OLD PROBABLY (bumpworthy) - Compare with links in scrapedLinks, if exists skip link else write to scrapedLink
+# OLD PROBABLY (bumpworthy) - Compare with links in downloadedLinks, if exists skip link else write to scrapedLink
 # if($webPage -eq "bumpworthy") {
 #     @($links).foreach({
 
 #     if(-not $skip){
-#         if(-not ($scrapedLinks -match $_)) {
-#             $_ | Out-File -Append -FilePath  "$bumpDir\scrapedLinks.txt"
+#         if(-not ($downloadedLinks -match $_)) {
+#             $_ | Out-File -Append -FilePath  "$bumpDir\downloadedLinks.txt"
 #         }
 #         $skip = $true
 #     } elseif ($skip){ $skip = $false}
