@@ -39,34 +39,39 @@ end
 alreadyPlayedBumpsPath = webmDir .. "\\alreadyPlayedBumps.txt"
 --
 streamLinksPath = webmDir .. "\\streamLinks.txt"
---    
+--  
+ranDownloadedWebms = false
 
 function downloadWebms()
-
-   -- sets default webmDir value if webmDir left empty
-   if(webmDir == 0)
-   then
-      webmDir =  script_path() .. 'webmDir'
-   end
-
-   -- check which OS this script is running on to decide which download function to use
-   if package.config:sub(1,1) == "\\"
-   then
-      -- Windows Version
-      if(bumpWorthy) then
-         print('powershell.exe -file "' .. script_path() .. 'webm-scraper.ps1" "' .. "bumpworthy" .. '" "' .. webmDir .. '" ' .. tostring(streamMode))
-         os.execute('powershell.exe -file "' .. script_path() .. 'webm-scraper.ps1" "bumpworthy" "' .. webmDir .. '" ' .. tostring(streamMode))
-      else
-         print('powershell.exe -file "' .. script_path() .. 'webm-scraper.ps1" "' .. "4chan" .. '" "' .. webmDir .. '" ' .. tostring(streamMode))
-         os.execute('powershell.exe -file "' .. script_path() .. 'webm-scraper.ps1" "' .. "4chan" .. '" "' .. webmDir .. '" ' .. tostring(streamMode)) -- change regex pattern in webm-scraper.ps1 to website other than the chan
+   print("ran downloadedwebms: " .. tostring(ranDownloadedWebms))
+   if(ranDownloadedWebms == false) then
+      -- sets default webmDir value if webmDir left empty
+      if(webmDir == 0)
+      then
+         webmDir =  script_path() .. 'webmDir'
       end
-   else
-      --Linux Version
-      -- TODO implement stream mode for linux version
-      os.execute("wget -P " .. webmDir ..  " -nd -nc -r -l 1 -H -D i.4cdn.org -A webm " .. webPage)  -- change i.4cdn.org to wtv if you want to use different website, dont axe me
-   end
-   --
 
+      -- check which OS this script is running on to decide which download function to use
+      if package.config:sub(1,1) == "\\"
+      then
+         -- Windows Version
+         if(bumpWorthy) then
+            print('powershell.exe  -file "' .. script_path() .. 'webm-scraper.ps1" "' .. "bumpworthy" .. '" "' .. webmDir .. '" ' .. tostring(streamMode))
+            os.execute('powershell.exe -file "' .. script_path() .. 'webm-scraper.ps1" "bumpworthy" "' .. webmDir .. '" ' .. tostring(streamMode))
+         else
+            print('powershell.exe -file "' .. script_path() .. 'webm-scraper.ps1" "' .. "4chan" .. '" "' .. webmDir .. '" ' .. tostring(streamMode))
+            -- print('if(((Get-Process mpv -ErrorAction SilentlyContinue) -eq $null)){powershell.exe -windowstyle hidden -file "' .. script_path() .. 'webm-scraper.ps1" "' .. "4chan" .. '" "' .. webmDir .. '" ' .. tostring(streamMode) .. "}" )
+            -- os.execute('if(-not((Get-Process mpv -ErrorAction SilentlyContinue) -eq $null)){powershell.exe -windowstyle hidden -file "' .. script_path() .. 'webm-scraper.ps1" "' .. "4chan" .. '" "' .. webmDir .. '" ' .. tostring(streamMode) .. "}" ) -- change regex pattern in webm-scraper.ps1 to website other than the chan
+            os.execute('powershell.exe -file "' .. script_path() .. 'webm-scraper.ps1" "' .. "4chan" .. '" "' .. webmDir .. '" ' .. tostring(streamMode))
+         end
+      else
+         --Linux Version
+         -- TODO implement stream mode for linux version
+         os.execute("wget -P " .. webmDir ..  " -nd -nc -r -l 1 -H -D i.4cdn.org -A webm " .. webPage)  -- change i.4cdn.org to wtv if you want to use different website, dont axe me
+      end
+      --
+   end
+   ranDownloadedWebms = true
 end
 --
 --
@@ -514,15 +519,24 @@ end
 
 
 
-
+function file_check(file_name)
+   local file_found=io.open(file_name, "r")      
+   
+   if file_found==nil then
+     file_found=false
+   else
+     file_found=true
+   end
+   return file_found
+ end
 
 -- MAIN
-
 if (onlineMode) then
-   mp.register_event("start-file", downloadWebms)
-end
 
-mp.register_event("start-file", find_and_add_entries)
+      mp.register_event("start-file", downloadWebms)
+      mp.register_event("start-file", find_and_add_entries)
+   
+end
 
 
 -- DEBUG stuff APB
