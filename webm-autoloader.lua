@@ -35,12 +35,17 @@ else
    webmDir = webmDir .. "\\4chan"
 end
 --
+--
+--
+-- !DONT change these!
 -- alreadyPlayedBumps.txt Path
 alreadyPlayedBumpsPath = webmDir .. "\\alreadyPlayedBumps.txt"
 --
 streamLinksPath = webmDir .. "\\streamLinks.txt"
 --  
 ranDownloadedWebms = false
+--
+addedToPlayedBumps = 0
 
 function downloadWebms()
    print("ran downloadedwebms: " .. tostring(ranDownloadedWebms))
@@ -534,36 +539,63 @@ function file_check(file_name)
 if (onlineMode) then
 
       mp.register_event("start-file", downloadWebms)
-      mp.register_event("start-file", find_and_add_entries)
+      
+end
    
+   mp.register_event("start-file", find_and_add_entries)
+
+--DEBUG stuff APB
+function loading_next_playlist_file()
+   local current_playlist_pos = tonumber(mp.get_property('playlist-current-pos'))
+   print ( "current playlist pos : " .. tostring(current_playlist_pos))
+   if addedToPlayedBumps == bumpCount then
+      print("resetting addedtoplayedbumps")
+      addedToPlayedBumps = 0 
+      resetAddedToPlayedBumps = true
+   end
+   
+   if (current_playlist_pos >= 1  and addedToPlayedBumps ~= bumpCount and  resetAddedToPlayedBumps ~= true) then
+      local current_playlist_filename =  mp.get_property('playlist/' .. current_playlist_pos.. '/filename')
+      print("Loading next playlist file " .. current_playlist_filename .. " at playlist index " ..  current_playlist_pos)
+      -- print("Current bumpFiles size == " .. #bumpFiles)
+      -- appends played filename to the last line of alreadyPlayedBumps.txt
+      print("adding " .. current_playlist_filename .. " to " .. alreadyPlayedBumpsPath)
+
+      -- Opens a file in append mode
+      if (streamMode) then 
+         -- prevents when skipping fast through playlist in streamMode non bump files get added to alreadyplayedbumps
+         if( string.sub(current_playlist_filename,1,4) == "http") then
+         writeFile = io.open(alreadyPlayedBumpsPath, "a")
+         io.output(writeFile)
+         io.write(current_playlist_filename .. "\n" )
+         -- closes the open file
+         io.close(writeFile)
+         addedToPlayedBumps = addedToPlayedBumps + 1
+         print("addedtoplayedbumps " .. addedToPlayedBumps)
+         end
+      else
+         writeFile = io.open(alreadyPlayedBumpsPath, "a")
+         io.output(writeFile)
+         io.write(current_playlist_filename .. "\n" )
+         -- closes the open file
+         io.close(writeFile)
+         addedToPlayedBumps = addedToPlayedBumps + 1
+         print("addedtoplayedbumps " .. addedToPlayedBumps)
+      
+      end
+   end
+   
+   resetAddedToPlayedBumps = false
+
+
 end
 
+function loop_append_to_apb()
+   -- mp.add_key_binding("ctrl+a", "loop_append_to_apb", loop_append_to_apb)
+   print("loop_append_to_apb triggered")
+   mp.register_event("file-loaded", loading_next_playlist_file)
+   -- mp.register_event("file-loaded", loading_next_playlist_file)
+end
 
--- DEBUG stuff APB
--- function loading_next_playlist_file()
---    local current_playlist_pos = tonumber(mp.get_property('playlist-pos-1'))
---    print("fxxx " .. current_playlist_pos)
---    if (current_playlist_pos > 1) then
---       local current_playlist_filename =  mp.get_property('playlist/' .. current_playlist_pos.. '/filename')
---       print("Loading next playlist file " .. current_playlist_filename .. " at playlist index " ..  current_playlist_pos)
---       -- print("Current bumpFiles size == " .. #bumpFiles)
---       -- appends played filename to the last line of alreadyPlayedBumps.txt
---       print("adding " .. current_playlist_filename .. " to " .. alreadyPlayedBumpsPath)
---       -- Opens a file in append mode
---       writeFile = io.open(alreadyPlayedBumpsPath, "a")
---       io.output(writeFile)
---       io.write(current_playlist_filename .. "\n" )
---       -- closes the open file
---       io.close(writeFile)
---    end
--- end
-
--- function loop_append_to_apb()
---    -- mp.add_key_binding("ctrl+a", "loop_append_to_apb", loop_append_to_apb)
---    -- print("loop_append_to_apb triggered")
---    mp.register_event("start-file", loading_next_playlist_file)
---    -- mp.register_event("file-loaded", loading_next_playlist_file)
--- end
-
--- local mp_event_loop = loop_append_to_apb()
+local mp_event_loop = loop_append_to_apb()
 
