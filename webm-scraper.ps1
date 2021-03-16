@@ -1,13 +1,24 @@
 
+
+
+# TODO: functionize everything
 # Page to get bumps from 4chan/bumpworthy
-$webPage = $args[0]
+[string]$webPage = $args[0]
 
 # Create directory for files to be downloaded into
-$bumpDir = $args[1] 
+[string]$bumpDir = $args[1]
 
+# Check streamMode 
+[string]$streamMode = $args[2]
+
+# get bump thread url
 if($webPage -eq "4chan") {
-# get bump thread from my github
-$bumpThreadUrl = Invoke-WebRequest -Uri https://raw.githubusercontent.com/SimonPhoenix96/recent-bump-thread/main/recent-bump-thread.txt | select content -ExpandProperty content
+    # get bump thread from my github
+    # $bumpThreadUrl = Invoke-WebRequest -Uri https://raw.githubusercontent.com/SimonPhoenix96/recent-bump-thread/main/recent-bump-thread.txt | select content -ExpandProperty content
+    $bumpThreadUrl = "https://yuki.la/wsg/3594830#p3594830"
+}
+elseif ($webPage -eq "bumpworthy") {
+    $bumpThreadUrl = "https://www.bumpworthy.com/bumps/"
 }
 
 # create bump directory 
@@ -17,83 +28,173 @@ if(-not (Test-Path($bumpDir))) {
 }
 
 
-
-
 # change this to download from another page, other than the chan
-$srcrpattern = '((i.4cdn.org|static.bumpworthy.com)([/|.|\w|\s|-])*\.(?:webm|mp4))' 
+[string]$srcrpattern = '((ii.yuki.la|i.4cdn.org|static.bumpworthy.com)([/|.|\w|\s|-])*\.(?:webm|mp4))' 
+
 # default
-$skip = $false
+[bool]$skip = $false
 
-# Main - Invoking the web request, making first contact with the site.
-Write-Host "Attempting to call website." -ForegroundColor Green
+# default bumpworthy download count
+[int]$count= 3 
 
-if($args[0] -eq "4chan"){  #Page Retrieval single 4chan thread
-$page=Invoke-WebRequest -Uri $bumpThreadUrl 
-} 
-elseif ($args[0] -eq "bumpworthy") {  #Page Retrieval crawl through of www.bumpworthy.com
-$count= 3
-[Net.ServicePointManager]::SecurityProtocol = "Tls12, Tls11, Tls, Ssl3"
-[System.Collections.ArrayList] $page = @()
-$page.GetType()
-
-if(-not (Test-Path("$bumpDir\scrapedLinks.txt"))) {
-    New-Item -itemType File -Path "$bumpDir\scrapedLinks.txt"
-    $count = 100
-    }
-
-For ($i=([IO.File]::ReadAllLines("$bumpDir\scrapedLinks.txt")).length; $i -le ([IO.File]::ReadAllLines("$bumpDir\scrapedLinks.txt")).length+$count; $i++) {
-  
-    $webDir = "$($bumpThreadUrl)$($i)"
-    $pageTemp = Invoke-WebRequest -Uri $webDir 
-   
-    if(-not ($pageTemp -match 'A vast repository of Adult Swim bumps dating back to 2001, including audio and video downloads, live streaming, and musical artist information for each bump.')){
-    $page.Add($pageTemp)
-       
-    }
-
-    }
-    
-}
-
-
-$src = ([regex]$srcrpattern).Matches($page) | ForEach-Object { 
-    $_.Groups[1].Value
-    
-}
-
-
-if ($args[0] -eq "bumpworthy") {
-# create scrapedLinks.txt for bumpworthy, as files get downloaded at random
+# create scrapedLinks.txt
 if(-not (Test-Path("$bumpDir\scrapedLinks.txt"))) {
     New-Item "$bumpDir\scrapedLinks.txt" -ItemType file
-    Write-Host "Directory has been created." -ForegroundColor Green
+    Write-Host "scrapedLinks has been created." -ForegroundColor Green
+    $count = 50
 }
-$scrapedLinks = [IO.File]::ReadAllText("$bumpDir\scrapedLinks.txt")
-@($src).foreach({
 
-   if(-not $skip){
-    if(-not ($scrapedLinks -match $_)) {
-        $_ | Out-File -Append -FilePath  "$bumpDir\scrapedLinks.txt"
+
+
+
+function get-webm-links {
+    
+    param (
+        [Parameter(Mandatory=$true)][String[]]$webPage
+    )
+
+    Write-Host "Attempting to call website." -ForegroundColor Green
+
+    if($webPage -eq "4chan"){  #Page Retrieval single 4chan thread
+    $page=Invoke-WebRequest -Uri $bumpThreadUrl 
     }
-    $skip = $true
-   } elseif ($skip){ $skip = $false}
-})
+
+    elseif ($webPage -eq "bumpworthy") {  #Page Retrieval crawl through of www.bumpworthy.com
+
+
+    [Net.ServicePointManager]::SecurityProtocol = "Tls12, Tls11, Tls, Ssl3"
+    [System.Collections.ArrayList] $page = @()
+    $page.GetType()
+
+    For ($i=([IO.File]::ReadAllLines("$bumpDir\scrapedLinks.txt")).length; $i -le ([IO.File]::ReadAllLines("$bumpDir\scrapedLinks.txt")).length+$count; $i++) {
+    
+        $webDir = "$($bumpThreadUrl)$($i)"
+        $pageTemp = Invoke-WebRequest -Uri $webDir 
+    
+        if(-not ($pageTemp -match 'A vast repository of Adult Swim bumps dating back to 2001, including audio and video downloads, live streaming, and musical artist information for each bump.')){
+        $page.Add($pageTemp)
+        
+        }
+
+        }
+        
+    }
+    
+    $links = ([regex]$srcrpattern).Matches($page) | ForEach-Object { 
+        $_.Groups[1].Value
+    }
+
+    return $links
 }
 
-#Step 4 - Download webms, skip if file already exists
-@($src).foreach({
-  
-$fileName = $_ | Split-Path -Leaf
-if (Test-Path("$bumpDir\$fileName")){
-Write-Host 'Skipping file, already downloaded' -ForegroundColor Yellow
-return
-}
-else 
-{
-Write-Host "Downloading image file $fileName"
-Invoke-WebRequest -Uri $_ -OutFile "$bumpDir\$fileName"
-Write-Host 'Image download complete'
+function get-webms {
+    
+    param (
+        [Parameter(Mandatory=$true)][String[]]$links
+    )
+    
+    # read links in scrapedLinks 
+    $scrapedLinks = [IO.File]::ReadAllText("$bumpDir\scrapedLinks.txt")
+
+    [boolean]$successfulyDownloadedWebms = $False
+
+    
+    # TODO: if all files already downloaded, get files from previous thread
+    @($links).foreach({
+        
+        if ($scrapedLinks -match $_){
+            Write-Host 'Skipping file, already downloaded' -ForegroundColor Yellow
+        } 
+        else {
+            $fileName = $_ | Split-Path -Leaf
+            Write-Host "Downloading image file $fileName"
+            Invoke-WebRequest -Uri $_ -OutFile "$bumpDir\$fileName"
+            Write-Host 'File download complete append to scrapedLinks.txt' 
+            $_ | Out-File -Append -FilePath  "$bumpDir\scrapedLinks.txt"
+            $successfulyDownloadedWebms = $True
+        }
+    })
+    
+    return $successfulyDownloadedWebms
 }
 
-})
+function write-links-file {
+    
+    param (
+        [Parameter(Mandatory=$true)][String[]]$links,
+        [Parameter(Mandatory=$true)][String[]]$linksPath
+    )
 
+    # create streamLinks.txt if doesnt exist yet
+    if(-not (Test-Path("$linksPath"))) {
+        New-Item "$linksPath" -ItemType file
+        Write-Host "streamLinks has been created." -ForegroundColor Green
+    }
+    # read links in scrapedLinks 
+    $scrapedLinks = [IO.File]::ReadAllText("$linksPath")
+
+    # TODO: if all files already downloaded, get files from previous thread
+    @($links).foreach({
+        
+        if ($scrapedLinks -match $_){
+            Write-Host 'Skipping file, already added to streamLinks.txt' -ForegroundColor Yellow
+        } 
+        else {
+            Write-Host 'append streamLink to streamLinks.txt' 
+            $_ | Out-File -Append -FilePath  "$linksPath"
+        }
+    })
+
+}
+
+
+
+
+
+
+# MAIN
+# Step 1  - Invoking the web request, get link
+$links = (get-webm-links -webPage $webPage)
+
+
+# Step 2 - Download webms, skip if file already exists 
+#        - if $downloadedWebms return false then download previous thread files
+# OR     - stream webms if streaming option chosen
+
+
+if ($streamMode -eq $False){
+    $successfulyDownloadedWebms = (get-webms -links $links) 
+}
+else {
+
+    write-links-file -links $links -linksPath "$($bumpDir)/streamLinks.txt"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# OLD PROBABLY (bumpworthy) - Compare with links in scrapedLinks, if exists skip link else write to scrapedLink
+# if($webPage -eq "bumpworthy") {
+#     @($links).foreach({
+
+#     if(-not $skip){
+#         if(-not ($scrapedLinks -match $_)) {
+#             $_ | Out-File -Append -FilePath  "$bumpDir\scrapedLinks.txt"
+#         }
+#         $skip = $true
+#     } elseif ($skip){ $skip = $false}
+#     })
+# }
