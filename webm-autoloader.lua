@@ -109,9 +109,9 @@ end
 -- APB: check if table contains value
 function has_value (tab, val)
    for index, value in ipairs(tab) do
-      print("check if alreadyPLayedBumps contains: " .. value .. "index: " .. index)
+      print("comparing " .. value .. #value ..  ' ' .. val .. #val .. ' ' .. tostring(value == val) )
       if value == val then
-         print( value  .. " contained in alreadyPLayedBumps")
+         print("table has value " .. value ..  ' ' .. val )
          return true
       end
    end
@@ -178,18 +178,20 @@ function add_files_at(index, files)
          -- print("bumpFilesCopy Size: " .. #bumpFilesCopy)
          math.randomseed(os.time() * os.time())
          j = math.random(#bumpFiles)
-
-         if(has_value(alreadyPlayedBumpsLines, bumpFiles[j])) then
-            print("removing: " .. bumpFiles[j] .. " from list.")
+         -- remove carriage return symbol
+         bumpFileWithoutNR = string.gsub(bumpFiles[j], "m\r", "m")
+         print("no. bump alreafy played? " .. #alreadyPlayedBumpsLines)
+         print("bump alreafy played? " .. tostring(has_value(alreadyPlayedBumpsLines, bumpFileWithoutNR)))
+         if(has_value(alreadyPlayedBumpsLines, bumpFileWithoutNR)) then
+            print("bump already played removing: " .. bumpFileWithoutNR .. " from list.")
             table.remove(bumpFiles, j)
             print("Current bumpFiles size == " .. #bumpFiles)
             print("going to continue mark")
-            goto continue
+            -- goto continue
 
          else
 
-            -- remove carriage return symbol
-            bumpFileWithoutNR = string.gsub(bumpFiles[j], "m\r", "m")
+
             -- add bump to playlist between episodes
             print("appending bump " .. bumpFileWithoutNR .. " to playlist")
             mp.commandv("loadfile",  bumpFileWithoutNR, "append")
@@ -197,7 +199,7 @@ function add_files_at(index, files)
 
             bumpFileCounter = bumpFileCounter + 1
 
-            print("removing: " .. bumpFiles[j] .. " from list.")
+            print("removing: " .. bumpFileWithoutNR .. " from list.")
             table.remove(bumpFiles, j)
 
 
@@ -205,7 +207,7 @@ function add_files_at(index, files)
          end
 
          -- APB skip bumpfile if in alreadyPlayedBumps
-         ::continue::
+         -- ::continue::
          -- use copy of bumpFiles for further adding between episodes NEED TO SET FLAG TO RESET alreadyPlayedBumpLines ASWELL
          -- WARNING: when reusing bumpFiles and alreadyPlayedBumpsPath contains solely same files as in bumpfiles we'll get in a infinit loop
          -- if(#bumpFiles <= 1) then
@@ -481,11 +483,14 @@ function find_and_add_entries()
    alreadyPlayedBumpsLines = lines_from(alreadyPlayedBumpsPath)
 
    -- APB
-   -- print("Nr. of Bumps in bumpFolder: " .. #bumpFiles .. "Nr. of already played Bumps: " .. #alreadyPlayedBumpsLines)
-   -- if(#bumpFiles == #alreadyPlayedBumpsLines)
-   -- then
-   --    os.remove (alreadyPlayedBumpsPath)
-   -- end
+   numNeededBumpFiles = (#append[1] * bumpCount) + bumpCount
+   print("number of bump files: " .. #bumpFiles .." needed bump files: " .. numNeededBumpFiles) 
+   print("Nr. of Bumps in bumpFiles: " .. #bumpFiles .. "Nr. of already played Bumps: " .. #alreadyPlayedBumpsLines)
+   if((#alreadyPlayedBumpsLines + numNeededBumpFiles > #bumpFiles ) == true)
+   then
+      print("reset already played bumps!")
+      io.open(alreadyPlayedBumpsPath,"w"):close()
+   end
    
 
  
@@ -511,7 +516,6 @@ function find_and_add_entries()
    -- print("number of bump files: " .. #bumpFiles)
    
    print("adding files onward from played file")
-   print("fucks: " .. os.time())
    add_files_at(pl_current + 1, append[1])
    -- print("adding files backward from played file")
    -- add_files_at(pl_current, append[-1]) 
