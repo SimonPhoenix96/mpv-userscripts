@@ -1,5 +1,5 @@
 #  Description
-This script streams or downloads all webm files found in recent-bump-thread (https://github.com/SimonPhoenix96/recent-bump-thread).
+This script streams or downloads all webm files found in recent-bump-thread (https://github.com/SimonPhoenix96/recent-bump-thread) or bumpworthy.com depending on what you like.
 I modified https://github.com/wm4 autoload (https://github.com/mpv-player/mpv/blob/master/TOOLS/lua/autoload.lua) script to add downloaded/streamed webms inbetween episodes of  the generated episode playlist.
 
 Playlist will we generated in the background while the webms are downloaded/links for stream scraped. there is also an offline mode option, which will use locally availible webms.
@@ -10,6 +10,9 @@ copy the .lua & .ps1 file to your scripts folder (usually "~/.config/mpv/scripts
 # Usage (Default settings should work if wanting to stream off the ancient mongolian pottery forum)
 
 Change following variables in webm-autoloader.lua to your liking:
+
+**bumpworthy** 
+change this to true if u want adult swim bumps instead
 
 **onlineMode** 
 change this to false if u just want to use availible files in webmDir
