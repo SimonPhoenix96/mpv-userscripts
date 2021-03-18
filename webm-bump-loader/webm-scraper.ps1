@@ -14,8 +14,7 @@
 # get bump thread url
 if($webPage -eq "4chan") {
     # get bump thread from my github
-    $bumpThreadUrl = Invoke-WebRequest -Uri https://raw.githubusercontent.com/SimonPhoenix96/recent-bump-thread/main/recent-bump-thread.txt | select content -ExpandProperty content
-    # $bumpThreadUrl = "https://yuki.la/wsg/3594830#p3594830"
+    $bumpThreadUrl = Invoke-WebRequest -Uri "https://raw.githubusercontent.com/SimonPhoenix96/recent-bump-thread/main/recent-bump-threads.json" | convertfrom-json | select  -expandproperty threads | Get-Random | select -expandproperty url 
 }
 elseif ($webPage -eq "bumpworthy") {
     $bumpThreadUrl = "https://www.bumpworthy.com/bumps/"
@@ -43,9 +42,6 @@ if(-not (Test-Path("$bumpDir\downloadedLinks.txt"))) {
     Write-Host "downloadedLinks has been created." -ForegroundColor Green
     $count = 50
 }
-
-
-
 
 function get-webm-links {
     
@@ -161,13 +157,13 @@ function write-links-file {
 
 # MAIN
 # Step 1  - Invoking the web request, get link
+
 $links = (get-webm-links -webPage $webPage)
 
 
 # Step 2 - Download webms, skip if file already exists 
 #        - if $downloadedWebms return false then download previous thread files
 # OR     - stream webms if streaming option chosen
-
 
 if ($streamMode -eq $False){
     $successfulyDownloadedWebms = (get-webms -links $links) 
@@ -176,9 +172,7 @@ else {
 
     write-links-file -links $links -linksPath "$($bumpDir)/streamLinks.txt"
 }
-
-
-
+# /MAIN
 
 
 
