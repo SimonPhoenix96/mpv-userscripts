@@ -1,25 +1,25 @@
 #  Description
-This Script scrapes all webm files from a given web page, and uses https://github.com/wm4 
-autoload (https://github.com/mpv-player/mpv/blob/master/TOOLS/lua/autoload.lua) script to add downloaded webms inbetween episodes in playlist
+This script streams or downloads all webm files found in recent-bump-thread (https://github.com/SimonPhoenix96/recent-bump-thread).
+I modified https://github.com/wm4 autoload (https://github.com/mpv-player/mpv/blob/master/TOOLS/lua/autoload.lua) script to add downloaded/streamed webms inbetween episodes of  the generated episode playlist.
 
-Playlist will we generated once all webms are downloaded (there is also an offline mode option), or if you dont want to wait on windows once the download window is forcefully exited
-# Usage (Default settings should work if wanting to download off the ancient pottery forum)
-Change following variables in webm-autoloader.lua if you want
+Playlist will we generated in the background while the webms are downloaded/links for stream scraped. there is also an offline mode option, which will use locally availible webms.
 
-**WARNING** 
-If on Windows and you want to download from a different page you must also change the regex pattern in webm-scraper.ps1 on linux you'll have to replace i.4cdn.org in the wget command with something else 
+
+# Usage (Default settings should work if wanting to stream off the ancient pottery forum)
+
+Change following variables in webm-autoloader.lua to your liking:
 
 **onlineMode** 
 change this to false if u just want to use availible files in webmDir
 
-**webPage** 
-in downloadWebms function defines, where it'll download webms from || default is that chinese basket weaving forum, chinese dissidents use to communicate with eachother 
+**onlineMode** 
+streaming mode streams bumps instead of downloading them directly, if online mode false then itll use availible links automatically generated in webmDir\streamLinks.txt
 
-**webmCount** 
+**bumpCount** 
 defines ammount of webms to be played after episode finishes || default is 3
 
 **webmDir** 
-defines where to save webm files || default location is mpv script folder
+defines where to save webm files || default location is %HOMEDRIVE%\\%HOMEPATH%\\Videos\\bumps aka. C:\Users\simonphoenix96\Videos\bumps
 
-# External/Modified Scripts: 	    
-wm4 (https://github.com/mpv-player/mpv/blob/master/TOOLS/lua/autoload.lua)
+**WARNING** 
+If on Windows and you want to download from a different page you must also change the regex pattern in webm-scraper.ps1 on linux you'll have to replace i.4cdn.org in the wget command with something else 
