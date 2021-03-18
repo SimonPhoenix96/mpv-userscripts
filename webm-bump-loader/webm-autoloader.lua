@@ -11,33 +11,32 @@
 -- !!! change this to false if u just want to use availible files in webmDir\4chan or webmDir\bumpworthy
 onlineMode = true
 --
--- streaming mode streams bumps instead of downloading them directly
+-- !!! streaming mode streams bumps instead of downloading them directly, if online mode false then itll use availible links contained in webmDir\streamLinks.txt
 streamMode = true
--- !!! DEPRECATED AS URL GETS RETRIEVED AUTOMATICALLY IN WEBM-SCRAPER: change following link to page you want to download webms from
--- webPage = 'https://boards.4channel.org/wsg/thread/3768662' -- 'https://www.bumpworthy.com/bumps/'
 --
 -- !!! change following variable to amount of desired webms to be between episodes
-bumpCount = 2
+bumpCount = 3
 --
--- !!! DEPRECATED AS URL GETS RETRIEVED AUTOMATICALLY IN WEBM-SCRAPER: downloads webms off single webPage currently only 4chan thread support
--- singlePage = true
 --
--- bumpworthy.com support
+-- bumpworthy.com support aka. adult swim bumps
 bumpWorthy = false
 --
 -- !!! change this to desired webm save directory, on windows seperate path with double backslash, on linux with single forward slash
 --     Default: 0 || which means webmDir points the MPVs Script Folder
--- webmDir is the directory where bumpfiles will downloaded/managed at
 webmDir = "F:\\Videos\\bumps"
+--
+--
+--
+--
+--
+--
+-- !!! DONT change these!
+-- set download folders
 if(bumpWorthy) then
    webmDir = webmDir .. "\\bumpworthy"
 else
    webmDir = webmDir .. "\\4chan"
 end
---
---
---
--- !DONT change these!
 -- alreadyPlayedBumps.txt Path
 alreadyPlayedBumpsPath = webmDir .. "\\alreadyPlayedBumps.txt"
 --
@@ -46,16 +45,21 @@ streamLinksPath = webmDir .. "\\streamLinks.txt"
 ranDownloadedWebms = false
 --
 addedToPlayedBumps = 0
-
+--
+--
+--
+--
+--
+--
+--
+--
 function downloadWebms()
-   print("ran downloadedwebms: " .. tostring(ranDownloadedWebms))
    if(ranDownloadedWebms == false) then
       -- sets default webmDir value if webmDir left empty
       if(webmDir == 0)
       then
          webmDir =  script_path() .. 'webmDir'
       end
-
       -- check which OS this script is running on to decide which download function to use
       if package.config:sub(1,1) == "\\"
       then
@@ -71,7 +75,7 @@ function downloadWebms()
          end
       else
          --Linux Version
-         -- TODO implement stream mode for linux version
+         -- TODO: implement stream mode for linux version
          os.execute("wget -P " .. webmDir ..  " -nd -nc -r -l 1 -H -D i.4cdn.org -A webm " .. webPage)  -- change i.4cdn.org to wtv if you want to use different website, dont axe me
       end
       --
@@ -140,29 +144,11 @@ end
 
 -- wm4's modified function
 function add_files_at(index, files)
-   -- wait(1)
-   -- bumpFilesCopy = shallowCopy(bumpFiles)
-   -- print("xxx" .. type(bumpFilesCopy))
-   -- for j = 1, #files do
-   --    print("Reading files index " .. j .. " : " .. files[j])
-   -- end
-   -- for j = 1, #bumpFilesCopy do
-   --    print("Reading bumpFilesCopy index " .. j .. " : " .. bumpFilesCopy[j])
-   -- end
    
    index = index  - 1
    
    local oldcount = mp.get_property_number("playlist-count", 1)
    print("number of episodes" .. #files)
-   -- NOT NEEDED
-   -- if #files <= 1 then
-   --    playlistSize = 1
-   --    print("playlistsize " .. playlistSize)
-   -- else
-   --    playlistSize = #files + (bumpCount  * #files)
-   --    print("playlistsize " .. playlistSize)
-   -- end                       
-   
    
    -- no bumps at end
    -- for i = 1, #files do
@@ -180,7 +166,7 @@ function add_files_at(index, files)
          j = math.random(#bumpFiles)
          -- remove carriage return symbol
          bumpFileWithoutNR = string.gsub(bumpFiles[j], "m\r", "m")
-         print("no. bump alreafy played? " .. #alreadyPlayedBumpsLines)
+         print("no. bump already played? " .. #alreadyPlayedBumpsLines)
          print("bump alreafy played? " .. tostring(has_value(alreadyPlayedBumpsLines, bumpFileWithoutNR)))
          if(has_value(alreadyPlayedBumpsLines, bumpFileWithoutNR)) then
             print("bump already played removing: " .. bumpFileWithoutNR .. " from list.")
@@ -195,7 +181,6 @@ function add_files_at(index, files)
             -- add bump to playlist between episodes
             print("appending bump " .. bumpFileWithoutNR .. " to playlist")
             mp.commandv("loadfile",  bumpFileWithoutNR, "append")
-            
 
             bumpFileCounter = bumpFileCounter + 1
 
@@ -205,17 +190,6 @@ function add_files_at(index, files)
 
 
          end
-
-         -- APB skip bumpfile if in alreadyPlayedBumps
-         -- ::continue::
-         -- use copy of bumpFiles for further adding between episodes NEED TO SET FLAG TO RESET alreadyPlayedBumpLines ASWELL
-         -- WARNING: when reusing bumpFiles and alreadyPlayedBumpsPath contains solely same files as in bumpfiles we'll get in a infinit loop
-         -- if(#bumpFiles <= 1) then
-         --    hello = "hello"
-         --    print("reusing old bumpfiles")
-         --    bumpFiles = shallowCopy(bumpFilesCopy)
-         --    -- print(bumpFiles)
-         -- end
 
       end
 
@@ -409,9 +383,6 @@ function find_and_add_entries()
    return EXTENSIONS[string.lower(ext)]
    end)
 
-   -- randomize bumpFiles order of elements
-   -- shuffle(bumpFiles)
-   -- &
    -- append webmDir to bumpFiles for full path to file if using windows use double backslash
    if (streamMode ~= true) then
       if package.config:sub(1,1) == "\\" then
@@ -476,10 +447,7 @@ function find_and_add_entries()
       end
    end
 
-   -- APB remove alreadyPlayedBumps.txt when same amount as existing bump files as this would mean we've played them all
-
-   -- get all lines from a file, returns an empty
-   -- list/table if the file does not exist
+   -- get all lines from a file, returns an empty list/table if the file does not exist
    alreadyPlayedBumpsLines = lines_from(alreadyPlayedBumpsPath)
 
    -- APB
@@ -548,7 +516,7 @@ end
    
    mp.register_event("start-file", find_and_add_entries)
 
---DEBUG stuff APB
+--  Event Loop
 function loading_next_playlist_file()
    local current_playlist_pos = tonumber(mp.get_property('playlist-current-pos'))
    print ( "current playlist pos : " .. tostring(current_playlist_pos))
@@ -598,7 +566,6 @@ function loop_append_to_apb()
    -- mp.add_key_binding("ctrl+a", "loop_append_to_apb", loop_append_to_apb)
    print("loop_append_to_apb triggered")
    mp.register_event("file-loaded", loading_next_playlist_file)
-   -- mp.register_event("file-loaded", loading_next_playlist_file)
 end
 
 local mp_event_loop = loop_append_to_apb()
