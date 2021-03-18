@@ -11,16 +11,16 @@ copy the .lua & .ps1 file to your scripts folder (usually "~/.config/mpv/scripts
 
 Change following variables in webm-autoloader.lua to your liking:
 
-**onlineMode** 
+**<onlineMode>** 
 change this to false if u just want to use availible files in webmDir
 
-**onlineMode** 
+**<onlineMode>** 
 streaming mode streams bumps instead of downloading them directly, if online mode false then itll use availible links automatically generated in webmDir\streamLinks.txt
 
-**bumpCount** 
+**<bumpCount>** 
 defines ammount of webms to be played after episode finishes || default is 3
 
-**webmDir** 
+**<webmDir>** 
 defines where to save webm files || default location is %HOMEDRIVE%\\%HOMEPATH%\\Videos\\bumps aka. C:\Users\simonphoenix96\Videos\bumps
 
 **WARNING** 
