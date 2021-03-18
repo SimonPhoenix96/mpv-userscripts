@@ -4,6 +4,8 @@ I modified https://github.com/wm4 autoload (https://github.com/mpv-player/mpv/bl
 
 Playlist will we generated in the background while the webms are downloaded/links for stream scraped. there is also an offline mode option, which will use locally availible webms.
 
+# Installation
+copy the .lua & .ps1 file to your scripts folder (usually "~/.config/mpv/scripts/" or "%APPDATA%\mpv\scripts" in Windows).
 
 # Usage (Default settings should work if wanting to stream off the ancient mongolian pottery forum)
 
