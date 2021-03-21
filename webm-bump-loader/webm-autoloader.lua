@@ -24,7 +24,7 @@ bumpWorthy = true
 -- !!! change this to desired webm save directory, on windows seperate path with double backslash, on linux with single forward slash
 --     Default: 0 || which means webmDir points the MPVs Script Folder
 -- webmDir = "%HOMEDRIVE%\\%HOMEPATH%\\Videos\\bumps"
-webmDir = "F:\\Videos\\bumps"
+webmDir = "%HOMEDRIVE%\\%HOMEPATH%\\Videos\\bumps"
 --
 --
 --
