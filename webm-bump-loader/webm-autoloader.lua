@@ -9,7 +9,7 @@
 --
 --
 -- !!! change this to false if u just want to use availible files in webmDir\4chan or webmDir\bumpworthy
-onlineMode = true
+onlineMode = false
 --
 -- !!! streaming mode streams bumps instead of downloading them directly, if online mode false then itll use availible links contained in webmDir\streamLinks.txt
 streamMode = true
@@ -23,7 +23,8 @@ bumpWorthy = false
 --
 -- !!! change this to desired webm save directory, on windows seperate path with double backslash, on linux with single forward slash
 --     Default: 0 || which means webmDir points the MPVs Script Folder
-webmDir = "%HOMEDRIVE%\\%HOMEPATH%\\Videos\\bumps"
+-- webmDir = "%HOMEDRIVE%\\%HOMEPATH%\\Videos\\bumps"
+webmDir = "F:\\Videos\\bumps"
 --
 --
 --
@@ -165,9 +166,13 @@ function add_files_at(index, files)
          math.randomseed(os.time() * os.time())
          j = math.random(#bumpFiles)
          -- remove carriage return symbol
-         bumpFileWithoutNR = string.gsub(bumpFiles[j], "m\r", "m")
-         print("no. bump already played? " .. #alreadyPlayedBumpsLines)
-         print("bump alreafy played? " .. tostring(has_value(alreadyPlayedBumpsLines, bumpFileWithoutNR)))
+
+         bumpFileWithoutNR = string.gsub(bumpFiles[j], "\r", " ")
+         bumpFileWithoutNR = string.gsub(bumpFileWithoutNR, "%s+", "")
+
+
+         -- print("no. bump already played? " .. #alreadyPlayedBumpsLines)
+         -- print("bump already played? " .. tostring(has_value(alreadyPlayedBumpsLines, bumpFileWithoutNR)))
          if(has_value(alreadyPlayedBumpsLines, bumpFileWithoutNR)) then
             print("bump already played removing: " .. bumpFileWithoutNR .. " from list.")
             table.remove(bumpFiles, j)
