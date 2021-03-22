@@ -1,6 +1,8 @@
--- Author: 	      wm4 + simonphoenix96
+-- Authors: 	      
+--                wm4 + simonphoenix96
 --
--- Description:   This Script scrapes all webm files from a given web page, and uses https://github.com/wm4
+-- Description:   
+--                This Script scrapes all webm files from a given web page, and uses https://github.com/wm4
 --                autoload (https://github.com/mpv-player/mpv/blob/master/TOOLS/lua/autoload.lua) script to add downloaded webms inbetween episodes in playlist
 --
 -- Usage: 		   
@@ -11,13 +13,14 @@
 --                <webmDir> defines where to save webm files || default location is %HOMEDRIVE%\%HOMEPATH%\Videos\bumps aka. C:\Users\simonphoenix96\Videos\bumps
 --
 --
+--
 onlineMode = true
 --
 streamMode = true
 --
 bumpCount = 3
 --
-bumpWorthy = true
+bumpWorthy = false
 --
 webmDir = "%HOMEDRIVE%\\%HOMEPATH%\\Videos\\bumps"
 --
@@ -26,8 +29,10 @@ webmDir = "%HOMEDRIVE%\\%HOMEPATH%\\Videos\\bumps"
 --
 --
 --
+--
+--
 -- !!! DONT change these !!!
--- set download folders
+--
 if(bumpWorthy) then
    webmDir = webmDir .. "\\bumpworthy"
 else
@@ -44,9 +49,6 @@ ranDownloadedWebms = false
 addedToPlayedBumps = 0
 --
 updateStreamlinks = true
---
---
---
 --
 --
 --
