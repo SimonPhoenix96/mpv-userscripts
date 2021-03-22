@@ -165,8 +165,11 @@ function add_files_at(index, files)
          math.randomseed(os.time() * os.time())
          j = math.random(#bumpFiles)
          -- remove carriage return symbol
+
          bumpFileWithoutNR = string.gsub(bumpFiles[j], "\r", " ")
          bumpFileWithoutNR = string.gsub(bumpFileWithoutNR, "%s+", "")
+
+
          -- -- print("no. bump already played? " .. #alreadyPlayedBumpsLines)
          -- -- print("bump already played? " .. tostring(has_value(alreadyPlayedBumpsLines, bumpFileWithoutNR)))
          if(has_value(alreadyPlayedBumpsLines, bumpFileWithoutNR)) then
@@ -182,7 +185,9 @@ function add_files_at(index, files)
             -- add bump to playlist between episodes
             -- -- print("appending bump " .. bumpFileWithoutNR .. " to playlist")
             mp.commandv("loadfile",  bumpFileWithoutNR, "append")
+
             bumpFileCounter = bumpFileCounter + 1
+
             -- -- print("removing: " .. bumpFileWithoutNR .. " from list.")
             table.remove(bumpFiles, j)
 
@@ -194,7 +199,9 @@ function add_files_at(index, files)
 
       -- APB
       -- -- print("bumpFileCounter " .. bumpFileCounter)
+
       -- add episode to playlist between bumps
+      
       if (i <= #files) then
          -- -- print("episodes added: " .. i)
          -- -- print("adding episode " .. files[i] .. " to playlist index: " .. index)
@@ -457,10 +464,35 @@ function find_and_add_entries()
       io.open(alreadyPlayedBumpsPath,"w"):close()
    end
    
+
+ 
+
+   -- APB
+   -- -- calculate how many bump files needed
+   -- numNeededBumpFiles = (#append[1] * bumpCount) + bumpCount
+   
+   -- -- download bumps from previous thread if not enough bumps
+   
+   -- -- print("number of bump files: " .. #bumpFiles .." needed bump files: " .. numNeededBumpFiles) 
+   -- -- incase not enough bumpFiles to put between episodes use bumpFilesCopy to re-add same bumps between episodes
+   -- bumpFilesCopy = shallowcopy(bumpFiles)
+   
+   -- if (#bumpFiles < numNeededBumpFiles) then
+      
+   --    math.randomseed(os.time() * os.time())
+   --    j = math.random(#bumpFiles)
+   --    while #bumpFiles < numNeededBumpFiles do
+   --       table.insert(bumpFiles, bumpFilesCopy[j])
+   --    end
+   -- end
+   -- -- print("number of bump files: " .. #bumpFiles)
+   
    -- print("adding files onward from played file")
    add_files_at(pl_current + 1, append[1])
-   -- print("adding files backward from played file")
+   -- -- print("adding files backward from played file")
    -- add_files_at(pl_current, append[-1]) 
+
+   -- for some unholy reason find_and_add_entries goes into an endless loop if i dont unregister it
    mp.unregister_event(find_and_add_entries)         
 
 end
@@ -481,24 +513,24 @@ function file_check(file_name)
 
 -- MAIN
 
--- print("streamlinks exists: " .. tostring(file_exists(streamLinksPath)))
 if (file_exists(streamLinksPath) and streamMode) then
    local streamLinksUpdatedOn = io.popen( "dir /T:W " .. '"' .. streamLinksPath.. '"', "r" )
    streamLinksUpdatedOn = streamLinksUpdatedOn:read "*a"
-   -- print("streamLinksUpdatedOn: " .. tostring(streamLinksUpdatedOn))
+   print("streamLinksUpdatedOn: " .. tostring(streamLinksUpdatedOn))
    m, d, y = string.match(streamLinksUpdatedOn, "(%d+)/(%d+)/(%d+)")
    local date = os.time{day=d, year=y, month=m}  
-   -- print("da date: " .. date)
+   print("da date: " .. date)
    daysfrom = math.floor(os.difftime(os.time(), date) / (24 * 60 * 60))
-   -- print("has it been 5 days already since last streamlink.txt update: " .. daysfrom) 
-   if (daysfrom < 5) then 
-      updateStreamlinks = false
+   print("has it been 5 days already since last streamlink.txt update: " .. daysfrom) 
+   -- set to false as streamLinks exists but dont know if it has already been 5 days since last updated 
+   updateStreamlinks = false
+   if (daysfrom > 5) then 
+      updateStreamlinks = true
    end
 end
 
--- print("updateStreamlinks: " .. tostring(updateStreamlinks))
 
-
+print("updateStreamlinks: " .. tostring(updateStreamlinks))
 if (onlineMode) then
 
    if (streamMode and updateStreamlinks) then
