@@ -1,29 +1,23 @@
--- Author: 	    wm4 + simonphoenix96
+-- Author: 	      wm4 + simonphoenix96
 --
--- Description: This Script scrapes all webm files from a given web page, and uses https://github.com/wm4
---              autoload (https://github.com/mpv-player/mpv/blob/master/TOOLS/lua/autoload.lua) script to add downloaded webms inbetween episodes in playlist
+-- Description:   This Script scrapes all webm files from a given web page, and uses https://github.com/wm4
+--                autoload (https://github.com/mpv-player/mpv/blob/master/TOOLS/lua/autoload.lua) script to add downloaded webms inbetween episodes in playlist
 --
--- Usage: 		webPage in downloadWebms function defines, where it'll download webms from
---				bumpCount defines ammount of webms to be played after episode finishes
---				webmDir defines where to save webm files || default location is mpv script folder
+-- Usage: 		   <bumpworthy> change this to true if u want adult swim bumps instead
+--                <onlineMode> change this to false if u just want to use availible files in webmDir
+--                <streamMode> streaming mode streams bumps instead of downloading them directly, if online mode false then itll use availible links automatically generated in webmDir\streamLinks.txt
+--                <bumpCount> defines ammount of webms to be played after episode finishes || default is 3
+--                <webmDir> defines where to save webm files || default location is %HOMEDRIVE%\%HOMEPATH%\Videos\bumps aka. C:\Users\simonphoenix96\Videos\bumps
 --
 --
--- !!! change this to false if u just want to use availible files in webmDir\4chan or webmDir\bumpworthy
 onlineMode = true
 --
--- !!! streaming mode streams bumps instead of downloading them directly, if online mode false then itll use availible links contained in webmDir\streamLinks.txt
 streamMode = true
 --
--- !!! change following variable to amount of desired webms to be between episodes
 bumpCount = 3
 --
---
--- bumpworthy.com support aka. adult swim bumps
 bumpWorthy = true
 --
--- !!! change this to desired webm save directory, on windows seperate path with double backslash, on linux with single forward slash
---     Default: 0 || which means webmDir points the MPVs Script Folder
--- webmDir = "%HOMEDRIVE%\\%HOMEPATH%\\Videos\\bumps"
 webmDir = "%HOMEDRIVE%\\%HOMEPATH%\\Videos\\bumps"
 --
 --
@@ -31,14 +25,15 @@ webmDir = "%HOMEDRIVE%\\%HOMEPATH%\\Videos\\bumps"
 --
 --
 --
--- !!! DONT change these!
+-- !!! DONT change these !!!
 -- set download folders
 if(bumpWorthy) then
    webmDir = webmDir .. "\\bumpworthy"
 else
    webmDir = webmDir .. "\\4chan"
 end
--- alreadyPlayedBumps.txt Path
+--
+--
 alreadyPlayedBumpsPath = webmDir .. "\\alreadyPlayedBumps.txt"
 --
 streamLinksPath = webmDir .. "\\streamLinks.txt"
@@ -49,8 +44,6 @@ addedToPlayedBumps = 0
 --
 updateStreamlinks = true
 --
-
-
 --
 --
 --
@@ -169,11 +162,8 @@ function add_files_at(index, files)
          math.randomseed(os.time() * os.time())
          j = math.random(#bumpFiles)
          -- remove carriage return symbol
-
          bumpFileWithoutNR = string.gsub(bumpFiles[j], "\r", " ")
          bumpFileWithoutNR = string.gsub(bumpFileWithoutNR, "%s+", "")
-
-
          -- -- print("no. bump already played? " .. #alreadyPlayedBumpsLines)
          -- -- print("bump already played? " .. tostring(has_value(alreadyPlayedBumpsLines, bumpFileWithoutNR)))
          if(has_value(alreadyPlayedBumpsLines, bumpFileWithoutNR)) then
@@ -189,9 +179,7 @@ function add_files_at(index, files)
             -- add bump to playlist between episodes
             -- -- print("appending bump " .. bumpFileWithoutNR .. " to playlist")
             mp.commandv("loadfile",  bumpFileWithoutNR, "append")
-
             bumpFileCounter = bumpFileCounter + 1
-
             -- -- print("removing: " .. bumpFileWithoutNR .. " from list.")
             table.remove(bumpFiles, j)
 
@@ -203,9 +191,7 @@ function add_files_at(index, files)
 
       -- APB
       -- -- print("bumpFileCounter " .. bumpFileCounter)
-
       -- add episode to playlist between bumps
-      
       if (i <= #files) then
          -- -- print("episodes added: " .. i)
          -- -- print("adding episode " .. files[i] .. " to playlist index: " .. index)
@@ -468,35 +454,10 @@ function find_and_add_entries()
       io.open(alreadyPlayedBumpsPath,"w"):close()
    end
    
-
- 
-
-   -- APB
-   -- -- calculate how many bump files needed
-   -- numNeededBumpFiles = (#append[1] * bumpCount) + bumpCount
-   
-   -- -- download bumps from previous thread if not enough bumps
-   
-   -- -- print("number of bump files: " .. #bumpFiles .." needed bump files: " .. numNeededBumpFiles) 
-   -- -- incase not enough bumpFiles to put between episodes use bumpFilesCopy to re-add same bumps between episodes
-   -- bumpFilesCopy = shallowcopy(bumpFiles)
-   
-   -- if (#bumpFiles < numNeededBumpFiles) then
-      
-   --    math.randomseed(os.time() * os.time())
-   --    j = math.random(#bumpFiles)
-   --    while #bumpFiles < numNeededBumpFiles do
-   --       table.insert(bumpFiles, bumpFilesCopy[j])
-   --    end
-   -- end
-   -- -- print("number of bump files: " .. #bumpFiles)
-   
    -- print("adding files onward from played file")
    add_files_at(pl_current + 1, append[1])
-   -- -- print("adding files backward from played file")
+   -- print("adding files backward from played file")
    -- add_files_at(pl_current, append[-1]) 
-
-   -- for some unholy reason find_and_add_entries goes into an endless loop if i dont unregister it
    mp.unregister_event(find_and_add_entries)         
 
 end
@@ -521,18 +482,20 @@ function file_check(file_name)
 if (file_exists(streamLinksPath) and streamMode) then
    local streamLinksUpdatedOn = io.popen( "dir /T:W " .. '"' .. streamLinksPath.. '"', "r" )
    streamLinksUpdatedOn = streamLinksUpdatedOn:read "*a"
-   print("streamLinksUpdatedOn: " .. tostring(streamLinksUpdatedOn))
+   -- print("streamLinksUpdatedOn: " .. tostring(streamLinksUpdatedOn))
    m, d, y = string.match(streamLinksUpdatedOn, "(%d+)/(%d+)/(%d+)")
    local date = os.time{day=d, year=y, month=m}  
-   print("da date: " .. date)
+   -- print("da date: " .. date)
    daysfrom = math.floor(os.difftime(os.time(), date) / (24 * 60 * 60))
-   print("has it been 5 days already since last streamlink.txt update: " .. daysfrom) 
+   -- print("has it been 5 days already since last streamlink.txt update: " .. daysfrom) 
    if (daysfrom < 5) then 
       updateStreamlinks = false
    end
 end
 
-print("updateStreamlinks: " .. tostring(updateStreamlinks))
+-- print("updateStreamlinks: " .. tostring(updateStreamlinks))
+
+
 if (onlineMode) then
 
    if (streamMode and updateStreamlinks) then
