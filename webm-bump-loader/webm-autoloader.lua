@@ -3,7 +3,8 @@
 -- Description:   This Script scrapes all webm files from a given web page, and uses https://github.com/wm4
 --                autoload (https://github.com/mpv-player/mpv/blob/master/TOOLS/lua/autoload.lua) script to add downloaded webms inbetween episodes in playlist
 --
--- Usage: 		   <bumpworthy> change this to true if u want adult swim bumps instead
+-- Usage: 		   
+--                <bumpworthy> change this to true if u want adult swim bumps instead
 --                <onlineMode> change this to false if u just want to use availible files in webmDir
 --                <streamMode> streaming mode streams bumps instead of downloading them directly, if online mode false then itll use availible links automatically generated in webmDir\streamLinks.txt
 --                <bumpCount> defines ammount of webms to be played after episode finishes || default is 3
