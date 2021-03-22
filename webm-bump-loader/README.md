@@ -1,11 +1,14 @@
 #  Description [wsg] / bumpworthy.com loader
-This script streams or downloads all webm/mp4 files found in [wsg] bumps from  [recent-bump-thread](https://github.com/SimonPhoenix96/random/tree/main/bump-links) repo or [bumpworthy.com](bumpworthy.com) depending on what you like.
+This script streams or downloads all [wsg] or [bumpworthy.com](bumpworthy.com) webm/mp4 files found in  [bump-links](https://github.com/SimonPhoenix96/random/tree/main/bump-links) repo depending on which option you set.
+
 I modified wm4's [autoload](https://github.com/mpv-player/mpv/blob/master/TOOLS/lua/autoload.lua) script to add downloaded/streamed webms inbetween episodes of  the generated episode playlist.
 
 Playlist will we generated in the background while the webms are downloaded/links for stream scraped. there is also an offline mode option, which will use locally availible webms.
 
+If using streamMode, the script will get [bump-links](https://github.com/SimonPhoenix96/random/tree/main/bump-links) updates if the file hasnt been updated in 5 days.
+
 # Installation
-copy the .lua & .ps1 file to your scripts folder (usually "~/.config/mpv/scripts/" or "%APPDATA%\mpv\scripts" in Windows).
+copy the .lua & .ps1 file to your scripts folder (usually "~/.config/mpv/scripts/" or if using Windows "%APPDATA%\mpv\scripts")
 
 # Usage (Default settings should work if wanting to stream off the ancient mongolian pottery forum)
 
