@@ -1,6 +1,6 @@
 #  Description [wsg] / bumpworthy.com loader
-This script streams or downloads all webm files found in [wsg] bumps from recent-bump-thread (https://github.com/SimonPhoenix96/recent-bump-thread) or bumpworthy.com depending on what you like.
-I modified https://github.com/wm4 autoload (https://github.com/mpv-player/mpv/blob/master/TOOLS/lua/autoload.lua) script to add downloaded/streamed webms inbetween episodes of  the generated episode playlist.
+This script streams or downloads all webm files found in [wsg] bumps from  [https://github.com/SimonPhoenix96/random/tree/main/bump-links](recent-bump-thread) or [bumpworthy.com](bumpworthy.com) depending on what you like.
+I modified wm4's [https://github.com/mpv-player/mpv/blob/master/TOOLS/lua/autoload.lua](autoload) (https://github.com/mpv-player/mpv/blob/master/TOOLS/lua/autoload.lua) script to add downloaded/streamed webms inbetween episodes of  the generated episode playlist.
 
 Playlist will we generated in the background while the webms are downloaded/links for stream scraped. there is also an offline mode option, which will use locally availible webms.
 
