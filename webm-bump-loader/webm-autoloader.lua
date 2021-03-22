@@ -9,7 +9,7 @@
 --
 --
 -- !!! change this to false if u just want to use availible files in webmDir\4chan or webmDir\bumpworthy
-onlineMode = false
+onlineMode = true
 --
 -- !!! streaming mode streams bumps instead of downloading them directly, if online mode false then itll use availible links contained in webmDir\streamLinks.txt
 streamMode = true
@@ -47,7 +47,10 @@ ranDownloadedWebms = false
 --
 addedToPlayedBumps = 0
 --
+updateStreamlinks = true
 --
+
+
 --
 --
 --
@@ -513,13 +516,38 @@ function file_check(file_name)
  end
 
 -- MAIN
+
+-- print("streamlinks exists: " .. tostring(file_exists(streamLinksPath)))
+if (file_exists(streamLinksPath) and streamMode) then
+   local streamLinksUpdatedOn = io.popen( "dir /T:W " .. '"' .. streamLinksPath.. '"', "r" )
+   streamLinksUpdatedOn = streamLinksUpdatedOn:read "*a"
+   print("streamLinksUpdatedOn: " .. tostring(streamLinksUpdatedOn))
+   m, d, y = string.match(streamLinksUpdatedOn, "(%d+)/(%d+)/(%d+)")
+   local date = os.time{day=d, year=y, month=m}  
+   print("da date: " .. date)
+   daysfrom = math.floor(os.difftime(os.time(), date) / (24 * 60 * 60))
+   print("has it been 5 days already since last streamlink.txt update: " .. daysfrom) 
+   if (daysfrom < 5) then 
+      updateStreamlinks = false
+   end
+end
+
+print("updateStreamlinks: " .. tostring(updateStreamlinks))
 if (onlineMode) then
 
+   if (streamMode and updateStreamlinks) then
+     -- print("streamMode and updateStreamlinks true")
       mp.register_event("start-file", downloadWebms)
+   elseif (streamMode == false) then
+     -- print("streamMode and updateStreamlinks false")
+      mp.register_event("start-file", downloadWebms)
+   end
+
+
       
 end
    
-   mp.register_event("start-file", find_and_add_entries)
+mp.register_event("start-file", find_and_add_entries)
 
 --  Event Loop
 function loading_next_playlist_file()
@@ -533,10 +561,6 @@ function loading_next_playlist_file()
    
    if (current_playlist_pos >= 1  and addedToPlayedBumps ~= bumpCount and  resetAddedToPlayedBumps ~= true) then
       local current_playlist_filename =  mp.get_property('playlist/' .. current_playlist_pos.. '/filename')
-      -- print("Loading next playlist file " .. current_playlist_filename .. " at playlist index " ..  current_playlist_pos)
-      -- -- print("Current bumpFiles size == " .. #bumpFiles)
-      -- appends played filename to the last line of alreadyPlayedBumps.txt
-      -- print("adding " .. current_playlist_filename .. " to " .. alreadyPlayedBumpsPath)
 
       -- Opens a file in append mode
       if (streamMode) then 
