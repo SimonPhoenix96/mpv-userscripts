@@ -21,7 +21,7 @@ change this to true if u want adult swim bumps instead
 change this to false if u just want to use available files in webmDir
 
 **`streamMode`** 
-streaming mode streams bumps instead of downloading them directly, if online mode false then itll use availible links automatically generated in webmDir\streamLinks.txt
+streaming mode streams bumps instead of downloading them directly, if online mode false then itll use available links automatically generated in webmDir\streamLinks.txt
 
 **`bumpCount`** 
 defines ammount of webms to be played after episode finishes || default is 3
