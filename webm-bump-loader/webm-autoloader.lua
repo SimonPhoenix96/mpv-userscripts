@@ -10,7 +10,7 @@
 --                <onlineMode> change this to false if u just want to use availible files in webmDir
 --                <streamMode> streaming mode streams bumps instead of downloading them directly, if online mode false then itll use availible links automatically generated in webmDir\streamLinks.txt
 --                <bumpCount> defines ammount of webms to be played after episode finishes || default is 3
---                <webmDir> defines where to save webm files || default location is %HOMEDRIVE%\%HOMEPATH%\Videos\bumps aka. C:\Users\simonphoenix96\Videos\bumps
+--                <webmDir> defines where to save webm files on windows seperate folders with "\\" || default location is %HOMEDRIVE%\%HOMEPATH%\Videos\bumps aka. C:\Users\simonphoenix96\Videos\bumps
 --
 --
 --
@@ -22,8 +22,13 @@ bumpCount = 3
 --
 bumpWorthy = false
 --
-webmDir = "%HOMEDRIVE%\\%HOMEPATH%\\Videos\\bumps"
 --
+-- ignore homedrive & homepath if you want to set a custom webmDir
+homedrive = os.getenv("HOMEDRIVE")
+homepath = os.getenv("HOMEPATH")
+webmDir = homedrive .. homepath .. "\\Videos\\bumps"
+--
+print("webmDir: " .. webmDir)
 --
 --
 --
