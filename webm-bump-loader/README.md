@@ -18,7 +18,7 @@ Change following variables in webm-autoloader.lua to your liking:
 change this to true if u want adult swim bumps instead
 
 **`onlineMode`** 
-change this to false if u just want to use availible files in webmDir
+change this to false if u just want to use available files in webmDir
 
 **`streamMode`** 
 streaming mode streams bumps instead of downloading them directly, if online mode false then itll use availible links automatically generated in webmDir\streamLinks.txt
