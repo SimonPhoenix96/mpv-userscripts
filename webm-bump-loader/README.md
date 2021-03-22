@@ -27,7 +27,7 @@ streaming mode streams bumps instead of downloading them directly, if online mod
 defines ammount of webms to be played after episode finishes || default is 3
 
 **`webmDir`** 
-defines where to save webm files on windows seperate folders with `\\` || default location is `%HOMEDRIVE%\\%HOMEPATH%\\Videos\\` bumps aka. `C:\\Users\\simonphoenix96\\Videos\\bumps`
+defines where to save webm files on windows seperate folders with `\\` default location is `%HOMEDRIVE%\\%HOMEPATH%\\Videos\\` bumps aka. `C:\\Users\\simonphoenix96\\Videos\\bumps`
 
 **WARNING** 
 If on Windows and you want to download from a different page you must also change the regex pattern in webm-scraper.ps1 on linux you'll have to replace i.4cdn.org in the wget command with something else 
