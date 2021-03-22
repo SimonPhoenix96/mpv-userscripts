@@ -1,4 +1,3 @@
-# TODO: functionize everything
 # Page to get bumps from 4chan/bumpworthy
 [string]$webPage = $args[0]
 
@@ -185,12 +184,12 @@ function get-webms {
 
     # clean up links as they contain everyline doubly
     $downloadedLinks = $downloadedLinks | sort | get-unique 
+
     [boolean]$successfulyDownloadedWebms = $False
 
     # randomize links
-    $links = $links | Sort-Object {Get-Random} | get-unique
+    $links = $links  | Sort-Object {Get-Random}  | get-unique 
     
-    # TODO: if all files already downloaded, get files from previous thread
     @($links).foreach({
         
         if ($downloadedLinks -match $_){
@@ -225,22 +224,26 @@ function write-links-file {
     $downloadedLinks = [IO.File]::ReadAllText("$linksPath")
 
     # clean up links as they contain everyline doubly
-    $links = $links | Sort-Object {Get-Random} | get-unique 
+    $links = $links | sort  | get-unique 
 
+    # when links filtered add to $filteredLinks
+    [System.Collections.ArrayList]$filteredLinks =  @() 
 
-    # TODO: if all files already downloaded, get files from previous thread
     @($links).foreach({
         
         if ($downloadedLinks -match $_ -or $_ -match "System.Collections.ArrayList"){
             Write-Host 'Skipping file, already added to $linksPath' -ForegroundColor Yellow
         } 
         else {
-            Write-Host 'append streamLink to $linksPath' 
+            Write-Host "append streamLink to $linksPath $($_)" 
             # add https:// to front of everyline as mpv requires this to be able to stream
-            Write-Host "$($_)"
-            "$($_)" | Out-File -Encoding UTF8 -Append -FilePath  "$linksPath"
+            # "$($_)" | Out-File -Encoding UTF8 -Append -FilePath  "$linksPath"
+            [void]$filteredLinks.Add($_)
         }
     })
+    $filteredLinks = $filteredLinks | Sort-Object {Get-Random}
+    
+    $filteredLinks | Out-File -Encoding UTF8 -Append -FilePath  "$linksPath"
 
 
 
@@ -268,7 +271,7 @@ if ($streamMode -eq $False){
 }
 else {
 
-    write-links-file -links $links -linksPath "$($bumpDir)/streamLinks.txt"
+    write-links-file -links $links -linksPath "$($bumpDir)\streamLinks.txt"
 }
 
 
