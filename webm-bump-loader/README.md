@@ -10,7 +10,7 @@ If using streamMode, the script will get [bump-links](https://github.com/SimonPh
 # Installation
 copy the .lua & .ps1 file to your scripts folder (usually `"~/.config/mpv/scripts/"` or if using Windows `%APPDATA%\mpv\scripts`)
 
-# Usage (Default settings should work if wanting to stream [wsg] bumps)
+# Usage (yuki.la seems to be down atm so i made the default bump source bumpworthy.com)
 
 Change following variables in webm-autoloader.lua to your liking:
 
