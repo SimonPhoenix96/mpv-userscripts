@@ -8,26 +8,26 @@ Playlist will we generated in the background while the webms are downloaded/link
 If using streamMode, the script will get [bump-links](https://github.com/SimonPhoenix96/random/tree/main/bump-links) updates if the file hasnt been updated in 5 days.
 
 # Installation
-copy the .lua & .ps1 file to your scripts folder (usually "~/.config/mpv/scripts/" or if using Windows "%APPDATA%\mpv\scripts")
+copy the .lua & .ps1 file to your scripts folder (usually `"~/.config/mpv/scripts/"` or if using Windows `%APPDATA%\mpv\scripts`)
 
 # Usage (Default settings should work if wanting to stream [wsg] bumps)
 
 Change following variables in webm-autoloader.lua to your liking:
 
-**bumpworthy** 
+**`bumpworthy`** 
 change this to true if u want adult swim bumps instead
 
-**onlineMode** 
-change this to false if u just want to use availible files in webmDir
+**`onlineMode`** 
+change this to false if u just want to use available files in webmDir
 
-**streamMode** 
-streaming mode streams bumps instead of downloading them directly, if online mode false then itll use availible links automatically generated in webmDir\streamLinks.txt
+**`streamMode`** 
+streaming mode streams bumps instead of downloading them directly, if online mode false then itll use available links automatically generated in webmDir\streamLinks.txt
 
-**bumpCount** 
+**`bumpCount`** 
 defines ammount of webms to be played after episode finishes || default is 3
 
-**webmDir** 
-defines where to save webm files || default location is %HOMEDRIVE%\\%HOMEPATH%\\Videos\\bumps aka. C:\Users\simonphoenix96\Videos\bumps
+**`webmDir`** 
+defines where to save webm files on windows seperate folders with `\\` default location is `%HOMEDRIVE%\\%HOMEPATH%\\Videos\\bumps` aka. `C:\\Users\\simonphoenix96\\Videos\\bumps`
 
-**WARNING** 
+# **Dev Info** 
 If on Windows and you want to download from a different page you must also change the regex pattern in webm-scraper.ps1 on linux you'll have to replace i.4cdn.org in the wget command with something else 
