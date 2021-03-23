@@ -57,7 +57,7 @@ function get-github-links{
         Remove-Item $local_links
     }elseif($webPage -eq "bumpworthy"){
         $local_links = (join-path -path $bumpDir -childpath "bumpworthy-links.txt")
-        $links = Invoke-WebRequest -Uri "https://raw.githubusercontent.com/SimonPhoenix96/random/main/bump-links/bumpworthy/bumpworthy-links.txt" -OutFile $local_links
+        Invoke-WebRequest -Uri "https://raw.githubusercontent.com/SimonPhoenix96/random/main/bump-links/bumpworthy/bumpworthy-links.txt" -OutFile $local_links
         $links = Get-Content -Path $local_links
         Remove-Item $local_links
     }
