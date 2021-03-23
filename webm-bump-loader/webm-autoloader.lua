@@ -20,7 +20,7 @@ streamMode = true
 --
 bumpCount = 3
 --
-bumpWorthy = false
+bumpWorthy = true
 --
 --
 -- ignore homedrive & homepath if you want to set a custom webmDir
@@ -28,7 +28,6 @@ homedrive = os.getenv("HOMEDRIVE")
 homepath = os.getenv("HOMEPATH")
 webmDir = homedrive .. homepath .. "\\Videos\\bumps"
 --
-print("webmDir: " .. webmDir)
 --
 --
 --
