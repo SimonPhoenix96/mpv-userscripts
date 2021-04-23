@@ -528,9 +528,9 @@ if (file_exists(streamLinksPath) and streamMode) then
    print("has it been 5 days already since last streamlink.txt update: " .. daysfrom) 
    -- set to false as streamLinks exists but dont know if it has already been 5 days since last updated 
    updateStreamlinks = false
-   if (daysfrom > 5) then 
-      updateStreamlinks = true
-   end
+   -- if (daysfrom > 180) then 
+   --    updateStreamlinks = true
+   -- end
 end
 
 
