@@ -1,11 +1,14 @@
--- Authors: 	      
+-- Authors: 
+--	      
 --                wm4 + simonphoenix96
 --
 -- Description:   
+--
 --                This Script scrapes all webm files from a given web page, and uses https://github.com/wm4
 --                autoload (https://github.com/mpv-player/mpv/blob/master/TOOLS/lua/autoload.lua) script to add downloaded webms inbetween episodes in playlist
 --
--- Usage: 		   
+-- Usage: 
+--		   
 --                <bumpworthy> change this to true if u want adult swim bumps instead
 --                <onlineMode> change this to false if u just want to use availible files in webmDir
 --                <streamMode> streaming mode streams bumps instead of downloading them directly, if online mode false then itll use availible links automatically generated in webmDir\streamLinks.txt
@@ -23,19 +26,16 @@ bumpCount = 3
 bumpWorthy = true
 --
 --
--- ignore homedrive & homepath if you want to set a custom webmDir
+--
 homedrive = os.getenv("HOMEDRIVE")
 homepath = os.getenv("HOMEPATH")
+-- remove homedrive & homepath if you want to set a custom webmDir
 webmDir = homedrive .. homepath .. "\\Videos\\bumps"
 --
 --
 --
---
---
---
---
---
 -- !!! DONT change these !!!
+--
 --
 if(bumpWorthy) then
    webmDir = webmDir .. "\\bumpworthy"
@@ -43,6 +43,8 @@ else
    webmDir = webmDir .. "\\4chan"
 end
 --
+--debug
+print("webmDir:" .. webmDir)
 --
 alreadyPlayedBumpsPath = webmDir .. "\\alreadyPlayedBumps.txt"
 --
@@ -69,13 +71,13 @@ function downloadWebms()
       then
          -- Windows Version
          if(bumpWorthy) then
-            -- print('powershell.exe  -file "' .. script_path() .. 'webm-scraper.ps1" "' .. "bumpworthy" .. '" "' .. webmDir .. '" ' .. tostring(streamMode))
-            os.execute('powershell.exe -file "' .. script_path() .. 'webm-scraper.ps1" "bumpworthy" "' .. webmDir .. '" ' .. tostring(streamMode))
+           print('powershell.exe  -file "' .. script_path() .. 'webm-scraper.ps1" "' .. "bumpworthy" .. '" "' .. webmDir .. '" ' .. tostring(streamMode))
+            os.execute('powershell.exe  -ExecutionPolicy Bypass -file  "' .. script_path() .. 'webm-scraper.ps1" "bumpworthy" "' .. webmDir .. '" ' .. tostring(streamMode))
          else
             -- print('powershell.exe -file "' .. script_path() .. 'webm-scraper.ps1" "' .. "4chan" .. '" "' .. webmDir .. '" ' .. tostring(streamMode))
             -- -- print('if(((Get-Process mpv -ErrorAction SilentlyContinue) -eq $null)){powershell.exe -windowstyle hidden -file "' .. script_path() .. 'webm-scraper.ps1" "' .. "4chan" .. '" "' .. webmDir .. '" ' .. tostring(streamMode) .. "}" )
             -- os.execute('if(-not((Get-Process mpv -ErrorAction SilentlyContinue) -eq $null)){powershell.exe -windowstyle hidden -file "' .. script_path() .. 'webm-scraper.ps1" "' .. "4chan" .. '" "' .. webmDir .. '" ' .. tostring(streamMode) .. "}" ) -- change regex pattern in webm-scraper.ps1 to website other than the chan
-            os.execute('powershell.exe -file "' .. script_path() .. 'webm-scraper.ps1" "' .. "4chan" .. '" "' .. webmDir .. '" ' .. tostring(streamMode))
+            os.execute('powershell.exe  -ExecutionPolicy Bypass -file "' .. script_path() .. 'webm-scraper.ps1" "' .. "4chan" .. '" "' .. webmDir .. '" ' .. tostring(streamMode))
          end
       else
          --Linux Version
@@ -538,7 +540,7 @@ print("updateStreamlinks: " .. tostring(updateStreamlinks))
 if (onlineMode) then
 
    if (streamMode and updateStreamlinks) then
-     -- print("streamMode and updateStreamlinks true")
+      -- print("streamMode and updateStreamlinks true")
       mp.register_event("start-file", downloadWebms)
    elseif (streamMode == false) then
      -- print("streamMode and updateStreamlinks false")
