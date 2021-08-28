@@ -1,4 +1,4 @@
-#  Description [wsg] / bumpworthy.com loader ***LINUX BROKEN***
+#  Description [wsg] / bumpworthy.com loader 
 This script streams or downloads all [wsg] or [bumpworthy.com](https://www.bumpworthy.com/) webm/mp4 files found in  [bump-links](https://github.com/SimonPhoenix96/random/tree/main/bump-links) repo depending on which option you set.
 
 I modified wm4's [autoload](https://github.com/mpv-player/mpv/blob/master/TOOLS/lua/autoload.lua) script to add downloaded/streamed webms inbetween episodes of  the generated episode playlist.
@@ -7,7 +7,7 @@ Playlist will we generated in the background while the webms are downloaded/link
 
 If using streamMode, the script will get [bump-links](https://github.com/SimonPhoenix96/random/tree/main/bump-links) updates if the file hasnt been updated in 5 days.
 
-# Installation
+# Installation ***WARNING: LINUX COMPATIBILTY BROKEN***
 copy the .lua & .ps1 file to your scripts folder (usually `"~/.config/mpv/scripts/"` or if using Windows `%APPDATA%\mpv\scripts`)
 
 # Usage (yuki.la seems to be down atm so i made the default bump source bumpworthy.com)
