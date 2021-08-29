@@ -1,0 +1,1848 @@
+[   0.004][v][cplayer] mpv 0.33.1-dirty Copyright © 2000-2020 mpv/MPlayer/mplayer2 projects
+[   0.004][v][cplayer]  built on UNKNOWN
+[   0.004][v][cplayer] FFmpeg library versions:
+[   0.004][v][cplayer]    libavutil       56.70.100
+[   0.004][v][cplayer]    libavcodec      58.134.100
+[   0.004][v][cplayer]    libavformat     58.76.100
+[   0.004][v][cplayer]    libswscale      5.9.100
+[   0.004][v][cplayer]    libavfilter     7.110.100
+[   0.004][v][cplayer]    libswresample   3.9.100
+[   0.004][v][cplayer] FFmpeg version: n4.4
+[   0.004][v][cplayer] 
+[   0.004][v][cplayer] Configuration: /usr/bin/waf configure --prefix=/usr --confdir=/etc/mpv --enable-cdda --enable-dvb --enable-dvdnav --enable-libarchive --enable-libmpv-shared --disable-build-date
+[   0.004][v][cplayer] List of enabled features: 52arch alsa asm caca cdda cplayer cplugins cuda-hwaccel cuda-interop debug-build drm dvbin dvdnav egl egl-drm egl-helpers egl-x11 ffmpeg ffnvcodec gbm gbm.h gl gl-wayland glibc-thread-name glob glob-posix gpl iconv jack javascript jpeg lcms2 libarchive libass libavdevice libbluray libdl libm libmpv-shared libplacebo librt linux-fstatfs linux-input-event-codes lua memfd_create optimize plain-gl posix posix-or-mingw pthreads pulse rubberband shaderc shaderc-shared stdatomic uchardet vaapi vaapi-drm vaapi-egl vaapi-vulkan vaapi-wayland vaapi-x-egl vaapi-x11 vdpau vt.h vulkan wayland wayland-protocols x11 xv zimg zlib
+[   0.004][v][cplayer] Command line options: '/mnt/sshfs_3rdimpact/Videos/Anime/Sonny Boy/[tan] Sonny Boy - 01v2 [WEBRip 1080p Hi10p AAC] [E54A4BC6].mkv' '--log-file=/home/jd/devEnvironment/git/mpv-userscripts/webm-bump-loader/mpv.log' '--volume=0'
+[   0.004][v][cplayer] mpv 0.33.1-dirty Copyright © 2000-2020 mpv/MPlayer/mplayer2 projects
+[   0.004][v][cplayer]  built on UNKNOWN
+[   0.004][v][cplayer] FFmpeg library versions:
+[   0.004][v][cplayer]    libavutil       56.70.100
+[   0.004][v][cplayer]    libavcodec      58.134.100
+[   0.004][v][cplayer]    libavformat     58.76.100
+[   0.004][v][cplayer]    libswscale      5.9.100
+[   0.004][v][cplayer]    libavfilter     7.110.100
+[   0.004][v][cplayer]    libswresample   3.9.100
+[   0.004][v][cplayer] FFmpeg version: n4.4
+[   0.004][v][cplayer] 
+[   0.004][v][cplayer] Configuration: /usr/bin/waf configure --prefix=/usr --confdir=/etc/mpv --enable-cdda --enable-dvb --enable-dvdnav --enable-libarchive --enable-libmpv-shared --disable-build-date
+[   0.004][v][cplayer] List of enabled features: 52arch alsa asm caca cdda cplayer cplugins cuda-hwaccel cuda-interop debug-build drm dvbin dvdnav egl egl-drm egl-helpers egl-x11 ffmpeg ffnvcodec gbm gbm.h gl gl-wayland glibc-thread-name glob glob-posix gpl iconv jack javascript jpeg lcms2 libarchive libass libavdevice libbluray libdl libm libmpv-shared libplacebo librt linux-fstatfs linux-input-event-codes lua memfd_create optimize plain-gl posix posix-or-mingw pthreads pulse rubberband shaderc shaderc-shared stdatomic uchardet vaapi vaapi-drm vaapi-egl vaapi-vulkan vaapi-wayland vaapi-x-egl vaapi-x11 vdpau vt.h vulkan wayland wayland-protocols x11 xv zimg zlib
+[   0.004][d][global] config path: '' -> '/home/jd/.config/mpv'
+[   0.004][d][global] user path: '~~home/' -> '/home/jd/.config/mpv'
+[   0.004][d][global] user path: '~~old_home/' -> '/home/jd/.mpv'
+[   0.004][d][global] config path: 'encoding-profiles.conf' -/-> '/home/jd/.config/mpv/encoding-profiles.conf'
+[   0.004][d][global] config path: 'encoding-profiles.conf' -/-> '/home/jd/.mpv/encoding-profiles.conf'
+[   0.004][d][global] config path: 'encoding-profiles.conf' -> '/etc/mpv/encoding-profiles.conf'
+[   0.004][v][cplayer] Reading config file /etc/mpv/encoding-profiles.conf
+[   0.005][v][cplayer] Applying profile 'default'...
+[   0.005][d][global] config path: 'mpv.conf' -/-> '/home/jd/.config/mpv/mpv.conf'
+[   0.005][d][global] config path: 'config' -/-> '/home/jd/.config/mpv/config'
+[   0.005][d][global] config path: 'mpv.conf' -/-> '/home/jd/.mpv/mpv.conf'
+[   0.005][d][global] config path: 'config' -/-> '/home/jd/.mpv/config'
+[   0.005][d][global] config path: 'mpv.conf' -/-> '/etc/mpv/mpv.conf'
+[   0.005][d][global] config path: 'config' -/-> '/etc/mpv/config'
+[   0.005][v][cplayer] Setting option 'log-file' = '/home/jd/devEnvironment/git/mpv-userscripts/webm-bump-loader/mpv.log' (flags = 8)
+[   0.005][v][cplayer] Setting option 'volume' = '0' (flags = 8)
+[   0.006][d][global] config path: 'input.conf' -> '/home/jd/.config/mpv/input.conf'
+[   0.006][d][global] config path: 'input.conf' -/-> '/home/jd/.mpv/input.conf'
+[   0.006][d][global] config path: 'input.conf' -/-> '/etc/mpv/input.conf'
+[   0.006][d][global] user path: '/home/jd/.config/mpv/input.conf' -> '/home/jd/.config/mpv/input.conf'
+[   0.006][v][ifo_dvdnav] Opening /home/jd/.config/mpv/input.conf
+[   0.006][v][bdmv/bluray] Opening /home/jd/.config/mpv/input.conf
+[   0.006][v][file] Opening /home/jd/.config/mpv/input.conf
+[   0.006][d][file] resize stream to 131072 bytes, drop 0 bytes
+[   0.006][d][file] Stream opened successfully.
+[   0.006][v][input] Parsing input config file /home/jd/.config/mpv/input.conf
+[   0.006][v][input] Input config file /home/jd/.config/mpv/input.conf parsed: 7 binds
+[   0.006][d][global] user path: '/home/jd/devEnvironment/git/mpv-userscripts/webm-bump-loader/mpv.log' -> '/home/jd/devEnvironment/git/mpv-userscripts/webm-bump-loader/mpv.log'
+[   0.006][d][osc] Loading lua script @osc.lua...
+[   0.006][d][ytdl_hook] Loading lua script @ytdl_hook.lua...
+[   0.006][d][stats] Loading lua script @stats.lua...
+[   0.006][d][console] Loading lua script @console.lua...
+[   0.007][d][auto_profiles] Loading lua script @auto_profiles.lua...
+[   0.007][d][osc] loading mp.defaults
+[   0.007][d][ytdl_hook] loading mp.defaults
+[   0.007][d][global] config path: 'scripts' -> '/home/jd/.config/mpv/scripts'
+[   0.007][d][global] config path: 'scripts' -/-> '/home/jd/.mpv/scripts'
+[   0.007][d][global] config path: 'scripts' -/-> '/etc/mpv/scripts'
+[   0.007][e][cplayer] Can't load unknown script: /home/jd/.config/mpv/scripts/mpv.log
+[   0.007][d][auto_profiles] loading mp.defaults
+[   0.007][d][console] loading mp.defaults
+[   0.007][d][webm_autoloader] Loading lua script /home/jd/.config/mpv/scripts/webm-autoloader.lua...
+[   0.007][d][stats] loading mp.defaults
+[   0.007][e][cplayer] Can't load unknown script: /home/jd/.config/mpv/scripts/mpv.txt
+[   0.007][e][cplayer] Can't load unknown script: /home/jd/.config/mpv/scripts/mpv.tx
+[   0.007][v][cplayer] Waiting for scripts...
+[   0.007][d][webm_autoloader] loading mp.defaults
+[   0.008][d][osc] loading @osc.lua
+[   0.008][d][auto_profiles] loading @auto_profiles.lua
+[   0.008][d][ytdl_hook] loading @ytdl_hook.lua
+[   0.008][d][console] loading @console.lua
+[   0.008][d][stats] loading @stats.lua
+[   0.008][d][webm_autoloader] loading file /home/jd/.config/mpv/scripts/webm-autoloader.lua
+[   0.009][d][auto_profiles] Exiting...
+[   0.009][i][webm_autoloader] using linux: true 
+[   0.009][i][webm_autoloader] webmDir:/home/jd/Videos/bumps/bumpworthy 
+[   0.009][d][ytdl_hook] reading options for ytdl_hook 
+[   0.009][d][global] config path: 'script-opts/ytdl_hook.conf' -/-> '/home/jd/.config/mpv/script-opts/ytdl_hook.conf'
+[   0.009][d][global] config path: 'script-opts/ytdl_hook.conf' -/-> '/home/jd/.mpv/script-opts/ytdl_hook.conf'
+[   0.009][d][global] config path: 'script-opts/ytdl_hook.conf' -/-> '/etc/mpv/script-opts/ytdl_hook.conf'
+[   0.009][d][ytdl_hook] script-opts/ytdl_hook.conf not found. 
+[   0.009][d][global] config path: 'lua-settings/ytdl_hook.conf' -/-> '/home/jd/.config/mpv/lua-settings/ytdl_hook.conf'
+[   0.009][d][global] config path: 'lua-settings/ytdl_hook.conf' -/-> '/home/jd/.mpv/lua-settings/ytdl_hook.conf'
+[   0.009][d][global] config path: 'lua-settings/ytdl_hook.conf' -/-> '/etc/mpv/lua-settings/ytdl_hook.conf'
+[   0.009][d][ytdl_hook] lua-settings/ytdl_hook.conf not found. 
+[   0.009][d][webm_autoloader] reading options for webm_autoloader 
+[   0.009][d][global] config path: 'script-opts/webm_autoloader.conf' -/-> '/home/jd/.config/mpv/script-opts/webm_autoloader.conf'
+[   0.009][d][global] config path: 'script-opts/webm_autoloader.conf' -/-> '/home/jd/.mpv/script-opts/webm_autoloader.conf'
+[   0.009][d][global] config path: 'script-opts/webm_autoloader.conf' -/-> '/etc/mpv/script-opts/webm_autoloader.conf'
+[   0.009][d][webm_autoloader] script-opts/webm_autoloader.conf not found. 
+[   0.009][d][global] config path: 'lua-settings/webm_autoloader.conf' -/-> '/home/jd/.config/mpv/lua-settings/webm_autoloader.conf'
+[   0.009][d][global] config path: 'lua-settings/webm_autoloader.conf' -/-> '/home/jd/.mpv/lua-settings/webm_autoloader.conf'
+[   0.009][d][global] config path: 'lua-settings/webm_autoloader.conf' -/-> '/etc/mpv/lua-settings/webm_autoloader.conf'
+[   0.009][d][webm_autoloader] lua-settings/webm_autoloader.conf not found. 
+[   0.010][d][stats] reading options for stats 
+[   0.010][d][global] config path: 'script-opts/stats.conf' -/-> '/home/jd/.config/mpv/script-opts/stats.conf'
+[   0.010][d][global] config path: 'script-opts/stats.conf' -/-> '/home/jd/.mpv/script-opts/stats.conf'
+[   0.010][d][global] config path: 'script-opts/stats.conf' -/-> '/etc/mpv/script-opts/stats.conf'
+[   0.010][d][stats] script-opts/stats.conf not found. 
+[   0.010][d][global] config path: 'lua-settings/stats.conf' -/-> '/home/jd/.config/mpv/lua-settings/stats.conf'
+[   0.010][d][global] config path: 'lua-settings/stats.conf' -/-> '/home/jd/.mpv/lua-settings/stats.conf'
+[   0.010][d][global] config path: 'lua-settings/stats.conf' -/-> '/etc/mpv/lua-settings/stats.conf'
+[   0.010][d][stats] lua-settings/stats.conf not found. 
+[   0.010][d][console] reading options for console 
+[   0.010][d][global] config path: 'script-opts/console.conf' -/-> '/home/jd/.config/mpv/script-opts/console.conf'
+[   0.010][d][global] config path: 'script-opts/console.conf' -/-> '/home/jd/.mpv/script-opts/console.conf'
+[   0.010][d][global] config path: 'script-opts/console.conf' -/-> '/etc/mpv/script-opts/console.conf'
+[   0.010][d][console] script-opts/console.conf not found. 
+[   0.010][d][global] config path: 'lua-settings/console.conf' -/-> '/home/jd/.config/mpv/lua-settings/console.conf'
+[   0.010][d][global] config path: 'lua-settings/console.conf' -/-> '/home/jd/.mpv/lua-settings/console.conf'
+[   0.010][d][global] config path: 'lua-settings/console.conf' -/-> '/etc/mpv/lua-settings/console.conf'
+[   0.010][d][console] lua-settings/console.conf not found. 
+[   0.010][i][webm_autoloader] updateStreamlinks: true 
+[   0.011][d][cplayer] Run command: define-section, flags=64, args=[name="input_console", contents="", flags="default"]
+[   0.011][d][cplayer] Run command: enable-section, flags=64, args=[name="input_console", flags="allow-hide-cursor+allow-vo-dragging"]
+[   0.011][d][cplayer] Run command: define-section, flags=64, args=[name="input_forced_console", contents="", flags="force"]
+[   0.011][d][cplayer] Run command: enable-section, flags=64, args=[name="input_forced_console", flags="allow-hide-cursor+allow-vo-dragging"]
+[   0.011][d][global] config path: 'fonts' -/-> '/home/jd/.config/mpv/fonts'
+[   0.011][d][global] config path: 'fonts' -/-> '/home/jd/.mpv/fonts'
+[   0.011][d][global] config path: 'fonts' -/-> '/etc/mpv/fonts'
+[   0.011][d][osd/libass] ASS library version: 0x1500000 (runtime 0x1501000)
+[   0.011][v][osd/libass] libass API version: 0x1501000
+[   0.011][v][osd/libass] libass source: commit: 0.15.1-0-g5447214643eacef71776350e779adf4b6c07bb3b-dirty
+[   0.011][v][osd/libass] Shaper: FriBidi 1.0.10 (SIMPLE) HarfBuzz-ng 2.9.0 (COMPLEX)
+[   0.011][d][global] config path: 'subfont.ttf' -/-> '/home/jd/.config/mpv/subfont.ttf'
+[   0.011][d][global] config path: 'subfont.ttf' -/-> '/home/jd/.mpv/subfont.ttf'
+[   0.011][d][global] config path: 'subfont.ttf' -/-> '/etc/mpv/subfont.ttf'
+[   0.011][d][global] config path: 'fonts.conf' -/-> '/home/jd/.config/mpv/fonts.conf'
+[   0.011][d][global] config path: 'fonts.conf' -/-> '/home/jd/.mpv/fonts.conf'
+[   0.011][d][global] config path: 'fonts.conf' -/-> '/etc/mpv/fonts.conf'
+[   0.011][v][osd/libass] Setting up fonts...
+[   0.011][d][osc] reading options for osc 
+[   0.011][d][global] config path: 'script-opts/osc.conf' -/-> '/home/jd/.config/mpv/script-opts/osc.conf'
+[   0.011][d][global] config path: 'script-opts/osc.conf' -/-> '/home/jd/.mpv/script-opts/osc.conf'
+[   0.012][d][global] config path: 'script-opts/osc.conf' -/-> '/etc/mpv/script-opts/osc.conf'
+[   0.012][d][osc] script-opts/osc.conf not found. 
+[   0.012][d][global] config path: 'lua-settings/osc.conf' -/-> '/home/jd/.config/mpv/lua-settings/osc.conf'
+[   0.012][d][global] config path: 'lua-settings/osc.conf' -/-> '/home/jd/.mpv/lua-settings/osc.conf'
+[   0.012][d][global] config path: 'lua-settings/osc.conf' -/-> '/etc/mpv/lua-settings/osc.conf'
+[   0.012][d][osc] lua-settings/osc.conf not found. 
+[   0.016][v][osd/libass] Using font provider fontconfig
+[   0.016][v][osd/libass] Done.
+[   0.016][d][cplayer] Run command: define-section, flags=64, args=[name="input_stats", contents="i script-binding stats/display-stats\nI script-binding stats/display-stats-toggle\n", flags="default"]
+[   0.016][d][cplayer] Run command: enable-section, flags=64, args=[name="input_stats", flags="allow-hide-cursor+allow-vo-dragging"]
+[   0.016][d][cplayer] Run command: define-section, flags=64, args=[name="input_forced_stats", contents="", flags="force"]
+[   0.016][d][cplayer] Run command: enable-section, flags=64, args=[name="input_forced_stats", flags="allow-hide-cursor+allow-vo-dragging"]
+[   0.017][d][cplayer] Run command: define-section, flags=64, args=[name="showhide", contents="mouse_move script-binding osc/__keybinding1\nmouse_leave script-binding osc/__keybinding2\n", flags="force"]
+[   0.017][d][cplayer] Run command: define-section, flags=64, args=[name="showhide_wc", contents="mouse_move script-binding osc/__keybinding3\nmouse_leave script-binding osc/__keybinding4\n", flags="force"]
+[   0.017][d][cplayer] Run command: enable-section, flags=64, args=[name="showhide", flags="allow-hide-cursor+allow-vo-dragging"]
+[   0.017][d][cplayer] Run command: enable-section, flags=64, args=[name="showhide_wc", flags="allow-hide-cursor+allow-vo-dragging"]
+[   0.017][d][cplayer] Run command: define-section, flags=64, args=[name="input", contents="mbtn_left script-binding osc/__keybinding5\nshift+mbtn_left script-binding osc/__keybinding6\nmbtn_right script-binding osc/__keybinding7\nmbtn_mid script-binding osc/__keybinding8\nwheel_up script-binding osc/__keybinding9\nwheel_down script-binding osc/__keybinding10\nmbtn_left_dbl ignore\nshift+mbtn_left_dbl ignore\nmbtn_right_dbl ignore\n", flags="force"]
+[   0.017][d][cplayer] Run command: enable-section, flags=64, args=[name="input", flags=""]
+[   0.017][d][cplayer] Run command: define-section, flags=64, args=[name="window-controls", contents="mbtn_left script-binding osc/__keybinding11\n", flags="force"]
+[   0.017][d][cplayer] Run command: enable-section, flags=64, args=[name="window-controls", flags=""]
+[   0.017][d][cplayer] Run command: disable-section, flags=64, args=[name="input"]
+[   0.017][d][cplayer] Run command: disable-section, flags=64, args=[name="window-controls"]
+[   0.017][d][cplayer] Run command: change-list, flags=64, args=[name="shared-script-properties", operation="append", value="osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[   0.017][v][cplayer] Set property: shared-script-properties -> 1
+[   0.017][v][cplayer] Done loading scripts.
+[   0.017][d][global] config path: 'watch_later' -> '/home/jd/.config/mpv/watch_later'
+[   0.017][v][cplayer] Running hook: ytdl_hook/on_load
+[   0.018][i][webm_autoloader] wget https://raw.githubusercontent.com/SimonPhoenix96/random/main/bump-links/bumpworthy/bumpworthy-links.txt -O /home/jd/Videos/bumps/bumpworthy/streamLinks.txt 
+[   0.018][v][ytdl_hook] ytdl:// hook 
+[   0.018][v][ytdl_hook] not a ytdl:// url 
+[   0.018][d][osc] osc_init 
+[   0.018][v][ifo_dvdnav] Opening /mnt/sshfs_3rdimpact/Videos/Anime/Sonny Boy/[tan] Sonny Boy - 01v2 [WEBRip 1080p Hi10p AAC] [E54A4BC6].mkv
+[   0.018][v][bdmv/bluray] Opening /mnt/sshfs_3rdimpact/Videos/Anime/Sonny Boy/[tan] Sonny Boy - 01v2 [WEBRip 1080p Hi10p AAC] [E54A4BC6].mkv
+[   0.018][v][file] Opening /mnt/sshfs_3rdimpact/Videos/Anime/Sonny Boy/[tan] Sonny Boy - 01v2 [WEBRip 1080p Hi10p AAC] [E54A4BC6].mkv
+[   0.018][d][cplayer] Run command: change-list, flags=64, args=[name="shared-script-properties", operation="append", value="osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[   0.018][v][cplayer] Set property: shared-script-properties -> 1
+[   0.018][d][global] config path: 'fonts' -/-> '/home/jd/.config/mpv/fonts'
+[   0.018][d][global] config path: 'fonts' -/-> '/home/jd/.mpv/fonts'
+[   0.018][d][global] config path: 'fonts' -/-> '/etc/mpv/fonts'
+[   0.018][d][osd/libass] ASS library version: 0x1500000 (runtime 0x1501000)
+[   0.018][v][osd/libass] libass API version: 0x1501000
+[   0.018][v][osd/libass] libass source: commit: 0.15.1-0-g5447214643eacef71776350e779adf4b6c07bb3b-dirty
+[   0.018][v][osd/libass] Shaper: FriBidi 1.0.10 (SIMPLE) HarfBuzz-ng 2.9.0 (COMPLEX)
+[   0.018][d][global] config path: 'subfont.ttf' -/-> '/home/jd/.config/mpv/subfont.ttf'
+[   0.018][d][global] config path: 'subfont.ttf' -/-> '/home/jd/.mpv/subfont.ttf'
+[   0.018][d][global] config path: 'subfont.ttf' -/-> '/etc/mpv/subfont.ttf'
+[   0.018][d][global] config path: 'fonts.conf' -/-> '/home/jd/.config/mpv/fonts.conf'
+[   0.018][d][global] config path: 'fonts.conf' -/-> '/home/jd/.mpv/fonts.conf'
+[   0.018][d][global] config path: 'fonts.conf' -/-> '/etc/mpv/fonts.conf'
+[   0.018][v][osd/libass] Setting up fonts...
+[   0.023][v][osd/libass] Using font provider fontconfig
+[   0.023][v][osd/libass] Done.
+[   0.023][d][cplayer] Run command: define-section, flags=64, args=[name="input_osc", contents="", flags="default"]
+[   0.023][d][cplayer] Run command: enable-section, flags=64, args=[name="input_osc", flags="allow-hide-cursor+allow-vo-dragging"]
+[   0.023][d][cplayer] Run command: define-section, flags=64, args=[name="input_forced_osc", contents="", flags="force"]
+[   0.023][d][cplayer] Run command: enable-section, flags=64, args=[name="input_forced_osc", flags="allow-hide-cursor+allow-vo-dragging"]
+[   0.053][d][osc] osc_init 
+[   0.054][d][cplayer] Run command: change-list, flags=64, args=[name="shared-script-properties", operation="append", value="osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[   0.054][v][cplayer] Set property: shared-script-properties -> 1
+[   0.083][d][file] resize stream to 131072 bytes, drop 0 bytes
+[   0.084][d][file] Stream opened successfully.
+[   0.084][v][demux] Trying demuxers for level=normal.
+[   0.084][d][demux] Trying demuxer: disc (force-level: normal)
+[   0.084][d][demux] Trying demuxer: edl (force-level: normal)
+[   0.215][d][demux] Trying demuxer: cue (force-level: normal)
+[   0.215][d][demux] Trying demuxer: rawaudio (force-level: normal)
+[   0.215][d][demux] Trying demuxer: rawvideo (force-level: normal)
+[   0.215][d][demux] Trying demuxer: mkv (force-level: normal)
+[   0.215][d][mkv] Found the head...
+[   0.215][d][mkv] + a segment...
+[   0.215][d][mkv] Parsing seek head...
+[   0.215][d][mkv] |+ segment information...
+[   0.215][d][mkv] float 1468676.000000
+[   0.215][d][mkv] | + muxing app: libebml v1.4.2 + libmatroska v1.6.4
+[   0.215][d][mkv] | + writing app: mkvmerge v57.0.0 ('Till The End') 64-bit
+[   0.215][d][mkv] | + timecode scale: 1000000
+[   0.215][d][mkv] | + duration: 1468.676s
+[   0.215][d][mkv] | + segment uid 1e 4d 61 1d 89 ae 05 74 2f 25 c7 60 d7 56 34 52
+[   0.215][d][mkv] |+ segment tracks...
+[   0.215][d][mkv] Ignoring unrecognized subelement. ID: 22b59d size: 2
+[   0.215][d][mkv] Ignoring unrecognized subelement. ID: 22b59d size: 2
+[   0.215][d][mkv] float 48000.000000
+[   0.215][d][mkv] Ignoring unrecognized subelement. ID: 22b59d size: 2
+[   0.215][d][mkv] | + a track...
+[   0.215][d][mkv] |  + Track number: 1
+[   0.215][d][mkv] |  + Track type: Video
+[   0.215][d][mkv] |  + Video track
+[   0.215][d][mkv] |   + Display width: 1920
+[   0.215][d][mkv] |   + Display height: 1080
+[   0.215][d][mkv] |   + Pixel width: 1920
+[   0.215][d][mkv] |   + Pixel height: 1080
+[   0.215][d][mkv] |  + Codec ID: V_MPEG4/ISO/AVC
+[   0.215][d][mkv] |  + CodecPrivate, length 48
+[   0.215][d][mkv] |  + Language: jpn
+[   0.215][d][mkv] |  + Default duration: 41.708ms ( = 23.976 fps)
+[   0.215][d][mkv] | + a track...
+[   0.215][d][mkv] |  + Track number: 2
+[   0.215][d][mkv] |  + Track type: Audio
+[   0.215][d][mkv] |  + Audio track
+[   0.215][d][mkv] |   + Sampling frequency: 48000.000000
+[   0.215][d][mkv] |   + Channels: 2
+[   0.215][d][mkv] |  + Codec ID: A_AAC
+[   0.215][d][mkv] |  + CodecPrivate, length 2
+[   0.215][d][mkv] |  + Language: jpn
+[   0.215][d][mkv] |  + Default duration: 21.333ms ( = 46.875 fps)
+[   0.215][d][mkv] | + a track...
+[   0.215][d][mkv] |  + Track number: 3
+[   0.215][d][mkv] |  + Track type: Subtitle
+[   0.215][d][mkv] |  + Codec ID: S_TEXT/ASS
+[   0.215][d][mkv] |  + CodecPrivate, length 1916
+[   0.215][d][mkv] Parsing attachments...
+[   0.591][i][webm_autoloader] Prepending [Erai-raws] Sonny Boy - 03 [1080p][Multiple Subtitle].mkv 
+[   0.591][i][webm_autoloader] Adding [tan] Sonny Boy - 02 [WEBRip 1080p Hi10p AAC] [46A6A2C3].mkv 
+[   0.591][i][webm_autoloader] Adding [tan] Sonny Boy - 04 [WEBRip 1080p Hi10p AAC] [D85C679B].mkv 
+[   0.591][i][webm_autoloader] Adding [tan] Sonny Boy - 05 [WEBRip 1080p Hi10p AAC] [20B9123D].mkv 
+[   0.591][i][webm_autoloader] Adding [tan] Sonny Boy - 06 [WEBRip 1080p Hi10p AAC] [CC808F8C].mkv 
+[   0.591][d][cplayer] Run command: loadfile, flags=64, args=[url="https://static.bumpworthy.com/bumps/7107.d.mp4", flags="append", options=""]
+[   0.592][d][cplayer] Run command: loadfile, flags=64, args=[url="https://static.bumpworthy.com/bumps/6733.d.mp4", flags="append", options=""]
+[   0.592][d][cplayer] Run command: loadfile, flags=64, args=[url="https://static.bumpworthy.com/bumps/5544.d.mp4", flags="append", options=""]
+[   0.592][d][cplayer] Run command: loadfile, flags=64, args=[url="/mnt/sshfs_3rdimpact/Videos/Anime/Sonny Boy/[tan] Sonny Boy - 02 [WEBRip 1080p Hi10p AAC] [46A6A2C3].mkv", flags="append", options=""]
+[   0.592][d][cplayer] Run command: playlist-move, flags=64, args=[index1="-1", index2="-1"]
+[   0.592][d][cplayer] Run command: loadfile, flags=64, args=[url="https://static.bumpworthy.com/bumps/5276.d.mp4", flags="append", options=""]
+[   0.592][d][cplayer] Run command: loadfile, flags=64, args=[url="https://static.bumpworthy.com/bumps/6770.d.mp4", flags="append", options=""]
+[   0.592][d][cplayer] Run command: loadfile, flags=64, args=[url="https://static.bumpworthy.com/bumps/7155.d.mp4", flags="append", options=""]
+[   0.592][d][cplayer] Run command: loadfile, flags=64, args=[url="/mnt/sshfs_3rdimpact/Videos/Anime/Sonny Boy/[tan] Sonny Boy - 04 [WEBRip 1080p Hi10p AAC] [D85C679B].mkv", flags="append", options=""]
+[   0.592][d][cplayer] Run command: playlist-move, flags=64, args=[index1="0", index2="0"]
+[   0.592][d][cplayer] Run command: loadfile, flags=64, args=[url="https://static.bumpworthy.com/bumps/5458.d.mp4", flags="append", options=""]
+[   0.592][d][cplayer] Run command: loadfile, flags=64, args=[url="https://static.bumpworthy.com/bumps/6124.d.mp4", flags="append", options=""]
+[   0.592][d][cplayer] Run command: loadfile, flags=64, args=[url="https://static.bumpworthy.com/bumps/8734.d.mp4", flags="append", options=""]
+[   0.592][d][cplayer] Run command: loadfile, flags=64, args=[url="/mnt/sshfs_3rdimpact/Videos/Anime/Sonny Boy/[tan] Sonny Boy - 05 [WEBRip 1080p Hi10p AAC] [20B9123D].mkv", flags="append", options=""]
+[   0.592][d][cplayer] Run command: playlist-move, flags=64, args=[index1="1", index2="1"]
+[   0.592][d][cplayer] Run command: loadfile, flags=64, args=[url="https://static.bumpworthy.com/bumps/8593.d.mp4", flags="append", options=""]
+[   0.592][d][cplayer] Run command: loadfile, flags=64, args=[url="https://static.bumpworthy.com/bumps/8215.d.mp4", flags="append", options=""]
+[   0.592][d][cplayer] Run command: loadfile, flags=64, args=[url="https://static.bumpworthy.com/bumps/6647.d.mp4", flags="append", options=""]
+[   0.592][d][cplayer] Run command: loadfile, flags=64, args=[url="/mnt/sshfs_3rdimpact/Videos/Anime/Sonny Boy/[tan] Sonny Boy - 06 [WEBRip 1080p Hi10p AAC] [CC808F8C].mkv", flags="append", options=""]
+[   0.592][d][cplayer] Run command: playlist-move, flags=64, args=[index1="2", index2="2"]
+[   0.592][d][cplayer] Run command: loadfile, flags=64, args=[url="https://static.bumpworthy.com/bumps/5458.d.mp4", flags="append", options=""]
+[   0.592][d][cplayer] Run command: loadfile, flags=64, args=[url="https://static.bumpworthy.com/bumps/7326.d.mp4", flags="append", options=""]
+[   0.593][d][cplayer] Run command: loadfile, flags=64, args=[url="https://static.bumpworthy.com/bumps/6498.d.mp4", flags="append", options=""]
+[   0.593][d][cplayer] Run command: playlist-move, flags=64, args=[index1="3", index2="3"]
+[   0.593][d][osc] osc_init 
+[   0.593][d][cplayer] Run command: change-list, flags=64, args=[name="shared-script-properties", operation="append", value="osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[   0.593][v][cplayer] Set property: shared-script-properties -> 1
+[   0.699][d][mkv] Attachment: grain.ttf, application/x-truetype-font, 173460 bytes
+[   0.699][d][mkv] Attachment: Inkfree.ttf, application/x-truetype-font, 57316 bytes
+[   0.699][d][mkv] Attachment: LatoWeb-Light.ttf, application/x-truetype-font, 617492 bytes
+[   0.699][d][mkv] Attachment: Marker Felt.ttf, application/x-truetype-font, 83056 bytes
+[   0.699][d][mkv] Attachment: Polo Brush.ttf, application/x-truetype-font, 50348 bytes
+[   0.699][d][mkv] Attachment: Pwchalk-LyxG.ttf, application/x-truetype-font, 48564 bytes
+[   0.699][d][mkv] Attachment: Square 721 Blk-Normal.ttf, application/x-truetype-font, 47736 bytes
+[   0.699][d][mkv] Attachment: AppleGaramond-Bold.ttf, application/x-truetype-font, 47264 bytes
+[   0.699][d][mkv] Attachment: chawp.ttf, application/x-truetype-font, 287200 bytes
+[   0.699][d][mkv] Attachment: CommieSans-Medium.ttf, application/x-truetype-font, 55700 bytes
+[   0.699][d][mkv] Attachment: DAYROM.ttf, application/x-truetype-font, 83160 bytes
+[   0.737][d][mkv] Parsing chapters...
+[   0.737][d][mkv] Ignoring unrecognized subelement. ID: 437d size: 3
+[   0.737][d][mkv] Ignoring unrecognized subelement. ID: 437d size: 3
+[   0.737][d][mkv] Ignoring unrecognized subelement. ID: 437d size: 3
+[   0.737][v][mkv] New edition 0
+[   0.737][d][mkv] Chapter 0 from 00:00:00.000 to 00:00:00.000, Part A
+[   0.737][d][mkv] Chapter 1 from 00:11:56.674000000 to 00:00:00.000, Part B
+[   0.737][d][mkv] Chapter 2 from 00:22:58.627000000 to 00:00:00.000, Ending
+[   0.737][d][mkv] |+ found cluster
+[   0.737][v][mkv] Seeking to 1424463027 to read header element 0x1c53bb6b.
+[   0.737][v][file] stream level seek from 1690726 to 1424463027
+[   0.788][v][mkv] Parsing cues...
+[   0.788][v][mkv] Seeking to 1424487835 to read header element 0x1254c367.
+[   0.788][v][file] stream level seek from 1424488840 to 1559901
+[   0.788][v][mkv] All headers are parsed!
+[   0.864][v][demux] Detected file format: Matroska
+[   0.864][v][cplayer] Opening done: /mnt/sshfs_3rdimpact/Videos/Anime/Sonny Boy/[tan] Sonny Boy - 01v2 [WEBRip 1080p Hi10p AAC] [E54A4BC6].mkv
+[   0.865][d][osc] osc_init 
+[   0.865][d][cplayer] Run command: change-list, flags=64, args=[name="shared-script-properties", operation="append", value="osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[   0.865][v][cplayer] Set property: shared-script-properties -> 1
+[   0.868][v][find_files] Loading external files in /mnt/sshfs_3rdimpact/Videos/Anime/Sonny Boy/
+[   0.872][d][global] config path: 'sub' -/-> '/home/jd/.config/mpv/sub'
+[   0.872][d][global] config path: 'sub' -/-> '/home/jd/.mpv/sub'
+[   0.872][d][global] config path: 'sub' -/-> '/etc/mpv/sub'
+[   0.872][v][cplayer] Running hook: ytdl_hook/on_preloaded
+[   0.872][v][mkv] select track 0
+[   0.872][v][mkv] select track 1
+[   0.872][v][mkv] select track 2
+[   0.872][i][cplayer]  (+) Video --vid=1 (*) (h264 1920x1080 23.976fps)
+[   0.872][i][cplayer]  (+) Audio --aid=1 --alang=jpn (*) (aac 2ch 48000Hz)
+[   0.872][i][cplayer]  (+) Subs  --sid=1 --slang=eng (*) (ass)
+[   0.874][v][vo/gpu] Probing for best GPU context.
+[   0.874][v][vo/gpu/opengl] Initializing GPU context 'wayland'
+[   0.874][v][vo/gpu/opengl] Initializing GPU context 'x11egl'
+[   0.874][v][vo/gpu/x11] X11 opening display: :0
+[   0.876][d][vo/gpu/x11] X11 running at 7126x1080 (":0" => local display)
+[   0.877][d][vo/gpu/x11] Detected wm supports NetWM.
+[   0.877][d][vo/gpu/x11] Detected wm supports FULLSCREEN state.
+[   0.877][v][vo/gpu/x11] Display 0 (DVI-D-0): [3286, 0, 5206, 1080] @ 60.000000 FPS
+[   0.877][v][vo/gpu/x11] Display 1 (HDMI-0): [5206, 0, 7126, 1080] @ 50.044484 FPS
+[   0.877][v][vo/gpu/x11] Display 2 (DP-3): [0, 0, 1366, 768] @ 59.789541 FPS
+[   0.877][v][vo/gpu/x11] Display 3 (DP-4): [1366, 0, 3286, 1080] @ 144.000765 FPS
+[   0.878][v][vo/gpu/x11] Current display FPS: 60.000000
+[   0.894][v][vo/gpu/opengl] EGL_VERSION=1.5
+[   0.894][v][vo/gpu/opengl] EGL_VENDOR=NVIDIA
+[   0.894][v][vo/gpu/opengl] EGL_CLIENT_APIS=OpenGL_ES OpenGL
+[   0.894][v][vo/gpu/opengl] Trying to create Desktop OpenGL context.
+[   0.895][d][vo/gpu/opengl] Chosen EGLConfig:
+[   0.895][d][vo/gpu/opengl]   EGL_CONFIG_ID=0x28
+[   0.895][d][vo/gpu/opengl]   EGL_RED_SIZE=0x8
+[   0.895][d][vo/gpu/opengl]   EGL_GREEN_SIZE=0x8
+[   0.895][d][vo/gpu/opengl]   EGL_BLUE_SIZE=0x8
+[   0.895][d][vo/gpu/opengl]   EGL_ALPHA_SIZE=0x0
+[   0.895][d][vo/gpu/opengl]   EGL_COLOR_BUFFER_TYPE=0x308e
+[   0.895][d][vo/gpu/opengl]   EGL_CONFIG_CAVEAT=0x3038
+[   0.895][d][vo/gpu/opengl]   EGL_CONFORMANT=0x4d
+[   0.895][d][vo/gpu/opengl]   EGL_NATIVE_VISUAL_ID=0x2b
+[   0.899][v][vo/gpu/opengl] Choosing visual EGL config 0x28, visual ID 0x2b
+[   0.920][v][vo/gpu/opengl] GL_VERSION='4.4.0 NVIDIA 470.63.01'
+[   0.920][v][vo/gpu/opengl] Detected desktop OpenGL 4.4.
+[   0.920][v][vo/gpu/opengl] GL_VENDOR='NVIDIA Corporation'
+[   0.920][v][vo/gpu/opengl] GL_RENDERER='NVIDIA GeForce GTX 1060 6GB/PCIe/SSE2'
+[   0.920][v][vo/gpu/opengl] GL_SHADING_LANGUAGE_VERSION='4.40 NVIDIA via Cg compiler'
+[   0.920][d][vo/gpu/opengl] Combined OpenGL extensions string:
+[   0.920][d][vo/gpu/opengl] EGL_EXT_buffer_age EGL_EXT_client_sync EGL_EXT_create_context_robustness EGL_EXT_image_dma_buf_import EGL_EXT_image_dma_buf_import_modifiers EGL_MESA_image_dma_buf_export EGL_EXT_output_base EGL_EXT_stream_acquire_mode EGL_EXT_sync_reuse EGL_IMG_context_priority EGL_KHR_config_attribs EGL_KHR_create_context_no_error EGL_KHR_context_flush_control EGL_KHR_create_context EGL_KHR_fence_sync EGL_KHR_get_all_proc_addresses EGL_KHR_partial_update EGL_KHR_swap_buffers_with_damage EGL_KHR_no_config_context EGL_KHR_gl_colorspace EGL_KHR_gl_renderbuffer_image EGL_KHR_gl_texture_2D_image EGL_KHR_gl_texture_3D_image EGL_KHR_gl_texture_cubemap_image EGL_KHR_image EGL_KHR_image_base EGL_KHR_image_pixmap EGL_KHR_reusable_sync EGL_KHR_stream EGL_KHR_stream_attrib EGL_KHR_stream_consumer_gltexture EGL_KHR_stream_cross_process_fd EGL_KHR_stream_fifo EGL_KHR_stream_producer_eglsurface EGL_KHR_surfaceless_context EGL_KHR_wait_sync EGL_NV_nvrm_fence_sync EGL_NV_post_sub_buffer EGL_NV_quadruple_buffer EGL_NV_stream_consumer_eglimage EGL_NV_stream_cross_display EGL_NV_stream_cross_object EGL_NV_stream_cross_process EGL_NV_stream_cross_system EGL_NV_stream_dma EGL_NV_stream_flush EGL_NV_stream_metadata EGL_NV_stream_remote EGL_NV_stream_reset EGL_NV_stream_socket EGL_NV_stream_socket_inet EGL_NV_stream_socket_unix EGL_NV_stream_sync EGL_NV_stream_fifo_next EGL_NV_stream_fifo_synchronous EGL_NV_stream_consumer_gltexture_yuv EGL_NV_stream_attrib EGL_NV_stream_origin EGL_NV_system_time EGL_NV_output_drm_flip_event EGL_NV_triple_buffer EGL_WL_bind_wayland_display EGL_WL_wayland_eglstream GL_AMD_multi_draw_indirect GL_AMD_seamless_cubemap_per_texture GL_AMD_vertex_shader_viewport_index GL_AMD_vertex_shader_layer GL_ARB_arrays_of_arrays GL_ARB_base_instance GL_ARB_bindless_texture GL_ARB_blend_func_extended GL_ARB_buffer_storage GL_ARB_clear_buffer_object GL_ARB_clear_texture GL_ARB_clip_control GL_ARB_color_buffer_float GL_ARB_compressed_texture_pixel_storage GL_ARB_conservative_depth GL_ARB_compute_shader GL_ARB_compute_variable_group_size GL_ARB_conditional_render_inverted GL_ARB_copy_buffer GL_ARB_copy_image GL_ARB_cull_distance GL_ARB_debug_output GL_ARB_depth_buffer_float GL_ARB_depth_clamp GL_ARB_depth_texture GL_ARB_derivative_control GL_ARB_direct_state_access GL_ARB_draw_buffers GL_ARB_draw_buffers_blend GL_ARB_draw_indirect GL_ARB_draw_elements_base_vertex GL_ARB_draw_instanced GL_ARB_enhanced_layouts GL_ARB_ES2_compatibility GL_ARB_ES3_compatibility GL_ARB_ES3_1_compatibility GL_ARB_ES3_2_compatibility GL_ARB_explicit_attrib_location GL_ARB_explicit_uniform_location GL_ARB_fragment_coord_conventions GL_ARB_fragment_layer_viewport GL_ARB_fragment_program GL_ARB_fragment_program_shadow GL_ARB_fragment_shader GL_ARB_fragment_shader_interlock GL_ARB_framebuffer_no_attachments GL_ARB_framebuffer_object GL_ARB_framebuffer_sRGB GL_ARB_geometry_shader4 GL_ARB_get_program_binary GL_ARB_get_texture_sub_image GL_ARB_gl_spirv GL_ARB_gpu_shader5 GL_ARB_gpu_shader_fp64 GL_ARB_gpu_shader_int64 GL_ARB_half_float_pixel GL_ARB_half_float_vertex GL_ARB_imaging GL_ARB_indirect_parameters GL_ARB_instanced_arrays GL_ARB_internalformat_query GL_ARB_internalformat_query2 GL_ARB_invalidate_subdata GL_ARB_map_buffer_alignment GL_ARB_map_buffer_range GL_ARB_multi_bind GL_ARB_multi_draw_indirect GL_ARB_multisample GL_ARB_multitexture GL_ARB_occlusion_query GL_ARB_occlusion_query2 GL_ARB_parallel_shader_compile GL_ARB_pipeline_statistics_query GL_ARB_pixel_buffer_object GL_ARB_point_parameters GL_ARB_point_sprite GL_ARB_polygon_offset_clamp GL_ARB_post_depth_coverage GL_ARB_program_interface_query GL_ARB_provoking_vertex GL_ARB_query_buffer_object GL_ARB_robust_buffer_access_behavior GL_ARB_robustness GL_ARB_sample_locations GL_ARB_sample_shading GL_ARB_sampler_objects GL_ARB_seamless_cube_map GL_ARB_seamless_cubemap_per_texture GL_ARB_separate_shader_objects GL_ARB_shader_atomic_counter_ops GL_ARB_shader_atomic_counters GL_ARB_shader_ballot GL_ARB_shader_bit_encoding GL_ARB_shader_clock GL_ARB_shader_draw_parameters GL_ARB_shader_group_vote GL_ARB_shader_image_load_store GL_ARB_shader_image_size GL_ARB_shader_objects GL_ARB_shader_precision GL_ARB_shader_storage_buffer_object GL_ARB_shader_subroutine GL_ARB_shader_texture_image_samples GL_ARB_shader_texture_lod GL_ARB_shading_language_100 GL_ARB_shader_viewport_layer_array GL_ARB_shading_language_420pack GL_ARB_shading_language_include GL_ARB_shading_language_packing GL_ARB_shadow GL_ARB_sparse_buffer GL_ARB_sparse_texture GL_ARB_sparse_texture2 GL_ARB_sparse_texture_clamp GL_ARB_spirv_extensions GL_ARB_stencil_texturing GL_ARB_sync GL_ARB_tessellation_shader GL_ARB_texture_barrier GL_ARB_texture_border_clamp GL_ARB_texture_buffer_object GL_ARB_texture_buffer_object_rgb32 GL_ARB_texture_buffer_range GL_ARB_texture_compression GL_ARB_texture_compression_bptc GL_ARB_texture_compression_rgtc GL_ARB_texture_cube_map GL_ARB_texture_cube_map_array GL_ARB_texture_env_add GL_ARB_texture_env_combine GL_ARB_texture_env_crossbar GL_ARB_texture_env_dot3 GL_ARB_texture_filter_anisotropic GL_ARB_texture_filter_minmax GL_ARB_texture_float GL_ARB_texture_gather GL_ARB_texture_mirror_clamp_to_edge GL_ARB_texture_mirrored_repeat GL_ARB_texture_multisample GL_ARB_texture_non_power_of_two GL_ARB_texture_query_levels GL_ARB_texture_query_lod GL_ARB_texture_rectangle GL_ARB_texture_rg GL_ARB_texture_rgb10_a2ui GL_ARB_texture_stencil8 GL_ARB_texture_storage GL_ARB_texture_storage_multisample GL_ARB_texture_swizzle GL_ARB_texture_view GL_ARB_timer_query GL_ARB_transform_feedback2 GL_ARB_transform_feedback3 GL_ARB_transform_feedback_instanced GL_ARB_transform_feedback_overflow_query GL_ARB_transpose_matrix GL_ARB_uniform_buffer_object GL_ARB_vertex_array_bgra GL_ARB_vertex_array_object GL_ARB_vertex_attrib_64bit GL_ARB_vertex_attrib_binding GL_ARB_vertex_buffer_object GL_ARB_vertex_program GL_ARB_vertex_shader GL_ARB_vertex_type_10f_11f_11f_rev GL_ARB_vertex_type_2_10_10_10_rev GL_ARB_viewport_array GL_ARB_window_pos GL_ATI_draw_buffers GL_ATI_texture_float GL_ATI_texture_mirror_once GL_S3_s3tc GL_EXT_texture_env_add GL_EXT_abgr GL_EXT_bgra GL_EXT_bindable_uniform GL_EXT_blend_color GL_EXT_blend_equation_separate GL_EXT_blend_func_separate GL_EXT_blend_minmax GL_EXT_blend_subtract GL_EXT_compiled_vertex_array GL_EXT_Cg_shader GL_EXT_depth_bounds_test GL_EXT_direct_state_access GL_EXT_draw_buffers2 GL_EXT_draw_instanced GL_EXT_draw_range_elements GL_EXT_EGL_image_storage GL_EXT_fog_coord GL_EXT_framebuffer_blit GL_EXT_framebuffer_multisample GL_EXTX_framebuffer_mixed_formats GL_EXT_framebuffer_multisample_blit_scaled GL_EXT_framebuffer_object GL_EXT_framebuffer_sRGB GL_EXT_geometry_shader4 GL_EXT_gpu_program_parameters GL_EXT_gpu_shader4 GL_EXT_multi_draw_arrays GL_EXT_multiview_texture_multisample GL_EXT_multiview_timer_query GL_EXT_packed_depth_stencil GL_EXT_packed_float GL_EXT_packed_pixels GL_EXT_pixel_buffer_object GL_EXT_point_parameters GL_EXT_polygon_offset_clamp GL_EXT_post_depth_coverage GL_EXT_provoking_vertex GL_EXT_raster_multisample GL_EXT_rescale_normal GL_EXT_secondary_color GL_EXT_separate_shader_objects GL_EXT_separate_specular_color GL_EXT_shader_image_load_formatted GL_EXT_shader_image_load_store GL_EXT_shader_integer_mix GL_EXT_shadow_funcs GL_EXT_sparse_texture2 GL_EXT_stencil_two_side GL_EXT_stencil_wrap GL_EXT_texture3D GL_EXT_texture_array GL_EXT_texture_buffer_object GL_EXT_texture_compression_dxt1 GL_EXT_texture_compression_latc GL_EXT_texture_compression_rgtc GL_EXT_texture_compression_s3tc GL_EXT_texture_cube_map GL_EXT_texture_edge_clamp GL_EXT_texture_env_combine GL_EXT_texture_env_dot3 GL_EXT_texture_filter_anisotropic GL_EXT_texture_filter_minmax GL_EXT_texture_integer GL_EXT_texture_lod GL_EXT_texture_lod_bias GL_EXT_texture_mirror_clamp GL_EXT_texture_object GL_EXT_texture_shadow_lod GL_EXT_texture_shared_exponent GL_EXT_texture_sRGB GL_EXT_texture_sRGB_R8 GL_EXT_texture_sRGB_decode GL_EXT_texture_storage GL_EXT_texture_swizzle GL_EXT_timer_query GL_EXT_transform_feedback2 GL_EXT_vertex_array GL_EXT_vertex_array_bgra GL_EXT_vertex_attrib_64bit GL_EXT_window_rectangles GL_EXT_import_sync_object GL_NV_robustness_video_memory_purge GL_IBM_rasterpos_clip GL_IBM_texture_mirrored_repeat GL_KHR_context_flush_control GL_KHR_debug GL_EXT_memory_object GL_EXT_memory_object_fd GL_NV_memory_object_sparse GL_KHR_parallel_shader_compile GL_KHR_no_error GL_KHR_robust_buffer_access_behavior GL_KHR_robustness GL_EXT_semaphore GL_EXT_semaphore_fd GL_NV_timeline_semaphore GL_KHR_shader_subgroup GL_KTX_buffer_region GL_NV_alpha_to_coverage_dither_control GL_NV_bindless_multi_draw_indirect GL_NV_bindless_multi_draw_indirect_count GL_NV_bindless_texture GL_NV_blend_equation_advanced GL_NV_blend_equation_advanced_coherent GL_NVX_blend_equation_advanced_multi_draw_buffers GL_NV_blend_minmax_factor GL_NV_blend_square GL_NV_clip_space_w_scaling GL_NV_command_list GL_NV_compute_program5 GL_NV_conditional_render GL_NV_conservative_raster GL_NV_conservative_raster_dilate GL_NV_conservative_raster_pre_snap_triangles GL_NV_copy_depth_to_color GL_NV_copy_image GL_NV_depth_buffer_float GL_NV_depth_clamp GL_NV_draw_texture GL_NV_draw_vulkan_image GL_NV_ES1_1_compatibility GL_NV_ES3_1_compatibility GL_NV_explicit_multisample GL_NV_feature_query GL_NV_fence GL_NV_fill_rectangle GL_NV_float_buffer GL_NV_fog_distance GL_NV_fragment_coverage_to_color GL_NV_fragment_program GL_NV_fragment_program_option GL_NV_fragment_program2 GL_NV_fragment_shader_interlock GL_NV_framebuffer_mixed_samples GL_NV_framebuffer_multisample_coverage GL_NV_geometry_shader4 GL_NV_geometry_shader_passthrough GL_NV_gpu_program4 GL_NV_internalformat_sample_query GL_NV_gpu_program4_1 GL_NV_gpu_program5 GL_NV_gpu_program5_mem_extended GL_NV_gpu_program_fp64 GL_NV_gpu_shader5 GL_NV_half_float GL_NV_light_max_exponent GL_NV_memory_attachment GL_NV_multisample_coverage GL_NV_multisample_filter_hint GL_NV_occlusion_query GL_NV_packed_depth_stencil GL_NV_parameter_buffer_object GL_NV_parameter_buffer_object2 GL_NV_path_rendering GL_NV_path_rendering_shared_edge GL_NV_point_sprite GL_NV_primitive_restart GL_NV_query_resource GL_NV_query_resource_tag GL_NV_register_combiners GL_NV_register_combiners2 GL_NV_sample_locations GL_NV_sample_mask_override_coverage GL_NV_shader_atomic_counters GL_NV_shader_atomic_float GL_NV_shader_atomic_float64 GL_NV_shader_atomic_fp16_vector GL_NV_shader_atomic_int64 GL_NV_shader_buffer_load GL_NV_shader_storage_buffer_object GL_NV_shader_subgroup_partitioned GL_NV_stereo_view_rendering GL_NV_texgen_reflection GL_NV_texture_barrier GL_NV_texture_compression_vtc GL_NV_texture_env_combine4 GL_NV_texture_multisample GL_NV_texture_rectangle GL_NV_texture_rectangle_compressed GL_NV_texture_shader GL_NV_texture_shader2 GL_NV_texture_shader3 GL_NV_transform_feedback GL_NV_transform_feedback2 GL_NV_uniform_buffer_unified_memory GL_NV_vertex_attrib_integer_64bit GL_NV_vertex_buffer_unified_memory GL_NV_vertex_program GL_NV_vertex_program1_1 GL_NV_vertex_program2 GL_NV_vertex_program2_option GL_NV_vertex_program3 GL_NV_viewport_array2 GL_NV_viewport_swizzle GL_NVX_conditional_render GL_NV_gpu_multicast GL_NVX_progress_fence GL_NVX_gpu_memory_info GL_NV_shader_thread_group GL_NV_shader_thread_shuffle GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent GL_OES_EGL_image GL_OVR_multiview GL_OVR_multiview2 GL_SGIS_generate_mipmap GL_SGIS_texture_lod GL_SGIX_depth_texture GL_SGIX_shadow GL_SUN_slice_accum
+[   0.921][d][vo/gpu/opengl] Texture formats:
+[   0.921][d][vo/gpu/opengl]   NAME       COMP*TYPE SIZE           DEPTH PER COMP.
+[   0.921][d][vo/gpu/opengl]   r8         1*unorm   1B    LF CR ST {8}
+[   0.921][d][vo/gpu/opengl]   rg8        2*unorm   2B    LF CR ST {8 8}
+[   0.921][d][vo/gpu/opengl]   rgb8       3*unorm   3B    LF CR ST {8 8 8}
+[   0.921][d][vo/gpu/opengl]   rgba8      4*unorm   4B    LF CR ST {8 8 8 8}
+[   0.921][d][vo/gpu/opengl]   r16        1*unorm   2B    LF CR ST {16}
+[   0.921][d][vo/gpu/opengl]   rg16       2*unorm   4B    LF CR ST {16 16}
+[   0.921][d][vo/gpu/opengl]   rgb16      3*unorm   6B    LF CR ST {16 16 16}
+[   0.921][d][vo/gpu/opengl]   rgba16     4*unorm   8B    LF CR ST {16 16 16 16}
+[   0.921][d][vo/gpu/opengl]   r8ui       1*uint    1B       CR ST {8}
+[   0.921][d][vo/gpu/opengl]   rg8ui      2*uint    2B       CR ST {8 8}
+[   0.921][d][vo/gpu/opengl]   rgb8ui     3*uint    3B          ST {8 8 8}
+[   0.921][d][vo/gpu/opengl]   rgba8ui    4*uint    4B       CR ST {8 8 8 8}
+[   0.921][d][vo/gpu/opengl]   r16ui      1*uint    2B       CR ST {16}
+[   0.921][d][vo/gpu/opengl]   rg16ui     2*uint    4B       CR ST {16 16}
+[   0.921][d][vo/gpu/opengl]   rgb16ui    3*uint    6B          ST {16 16 16}
+[   0.921][d][vo/gpu/opengl]   rgba16ui   4*uint    8B       CR ST {16 16 16 16}
+[   0.921][d][vo/gpu/opengl]   r16f       1*float   4B    LF CR ST {32/16}
+[   0.921][d][vo/gpu/opengl]   rg16f      2*float   8B    LF CR ST {32/16 32/16}
+[   0.921][d][vo/gpu/opengl]   rgb16f     3*float  12B    LF CR ST {32/16 32/16 32/16}
+[   0.921][d][vo/gpu/opengl]   rgba16f    4*float  16B    LF CR ST {32/16 32/16 32/16 32/16}
+[   0.921][d][vo/gpu/opengl]   r32f       1*float   4B    LF CR ST {32}
+[   0.921][d][vo/gpu/opengl]   rg32f      2*float   8B    LF CR ST {32 32}
+[   0.921][d][vo/gpu/opengl]   rgb32f     3*float  12B    LF CR ST {32 32 32}
+[   0.921][d][vo/gpu/opengl]   rgba32f    4*float  16B    LF CR ST {32 32 32 32}
+[   0.921][d][vo/gpu/opengl]   rgb10_a2   4*unorm   4B    LF CR ST {0/10 0/10 0/10 0/2}
+[   0.921][d][vo/gpu/opengl]   rgba12     4*unorm   8B    LF CR ST {16 16 16 16}
+[   0.921][d][vo/gpu/opengl]   rgb10      3*unorm   6B    LF CR ST {16/10 16/10 16/10}
+[   0.921][d][vo/gpu/opengl]   rgb565     3*unorm   2B    LF    ST {0/8 0/8 0/8}
+[   0.921][d][vo/gpu/opengl]  LA = LUMINANCE_ALPHA hack format
+[   0.921][d][vo/gpu/opengl]  LF = linear filterable
+[   0.921][d][vo/gpu/opengl]  CR = can be used for render targets
+[   0.921][d][vo/gpu/opengl]  ST = can be used for storable images
+[   0.921][d][vo/gpu/opengl] Image formats:
+[   0.921][d][vo/gpu/opengl]   yuv444p => 3 planes 1x1 8/0 [r8/r8/r8] (r/g/b) [unorm]
+[   0.921][d][vo/gpu/opengl]   yuv420p => 3 planes 2x2 8/0 [r8/r8/r8] (r/g/b) [unorm]
+[   0.921][d][vo/gpu/opengl]   gray => 1 planes 1x1 8/0 [r8] (r) [unorm]
+[   0.921][d][vo/gpu/opengl]   gray16 => 1 planes 1x1 16/0 [r16] (r) [unorm]
+[   0.921][d][vo/gpu/opengl]   uyvy422
+[   0.921][d][vo/gpu/opengl]   nv12 => 2 planes 2x2 8/0 [r8/rg8] (r/gb) [unorm]
+[   0.921][d][vo/gpu/opengl]   p010 => 2 planes 2x2 16/6 [r16/rg16] (r/gb) [unorm]
+[   0.921][d][vo/gpu/opengl]   argb => 1 planes 1x1 8/0 [rgba8] (argb) [unorm]
+[   0.921][d][vo/gpu/opengl]   bgra => 1 planes 1x1 8/0 [rgba8] (bgra) [unorm]
+[   0.921][d][vo/gpu/opengl]   abgr => 1 planes 1x1 8/0 [rgba8] (abgr) [unorm]
+[   0.921][d][vo/gpu/opengl]   rgba => 1 planes 1x1 8/0 [rgba8] (rgba) [unorm]
+[   0.921][d][vo/gpu/opengl]   bgr24 => 1 planes 1x1 8/0 [rgb8] (bgr) [unorm]
+[   0.921][d][vo/gpu/opengl]   rgb24 => 1 planes 1x1 8/0 [rgb8] (rgb) [unorm]
+[   0.921][d][vo/gpu/opengl]   0rgb => 1 planes 1x1 8/0 [rgba8] (_rgb) [unorm]
+[   0.921][d][vo/gpu/opengl]   bgr0 => 1 planes 1x1 8/0 [rgba8] (bgr) [unorm]
+[   0.921][d][vo/gpu/opengl]   0bgr => 1 planes 1x1 8/0 [rgba8] (_bgr) [unorm]
+[   0.921][d][vo/gpu/opengl]   rgb0 => 1 planes 1x1 8/0 [rgba8] (rgb) [unorm]
+[   0.921][d][vo/gpu/opengl]   rgba64 => 1 planes 1x1 16/0 [rgba16] (rgba) [unorm]
+[   0.921][d][vo/gpu/opengl]   rgb565 => 1 planes 1x1 0/0 [rgb565] (rgb) [unknown]
+[   0.921][d][vo/gpu/opengl]   pal8
+[   0.921][d][vo/gpu/opengl]   vdpau
+[   0.921][d][vo/gpu/opengl]   d3d11
+[   0.921][d][vo/gpu/opengl]   dxva2_vld
+[   0.921][d][vo/gpu/opengl]   mmal
+[   0.921][d][vo/gpu/opengl]   mediacodec
+[   0.921][d][vo/gpu/opengl]   drm_prime
+[   0.921][d][vo/gpu/opengl]   cuda
+[   0.921][d][vo/gpu/opengl]   yap8 => 2 planes 1x1 8/0 [r8/r8] (r/a) [unorm]
+[   0.921][d][vo/gpu/opengl]   yap16 => 2 planes 1x1 16/0 [r16/r16] (r/a) [unorm]
+[   0.921][d][vo/gpu/opengl]   grayaf32 => 2 planes 1x1 32/0 [r16f/r16f] (r/a) [float]
+[   0.921][d][vo/gpu/opengl]   yuv444pf => 3 planes 1x1 32/0 [r16f/r16f/r16f] (r/g/b) [float]
+[   0.921][d][vo/gpu/opengl]   yuva444pf => 4 planes 1x1 32/0 [r16f/r16f/r16f/r16f] (r/g/b/a) [float]
+[   0.921][d][vo/gpu/opengl]   yuv420pf => 3 planes 2x2 32/0 [r16f/r16f/r16f] (r/g/b) [float]
+[   0.921][d][vo/gpu/opengl]   yuva420pf => 4 planes 2x2 32/0 [r16f/r16f/r16f/r16f] (r/g/b/a) [float]
+[   0.921][d][vo/gpu/opengl]   yuv422pf => 3 planes 2x1 32/0 [r16f/r16f/r16f] (r/g/b) [float]
+[   0.921][d][vo/gpu/opengl]   yuva422pf => 4 planes 2x1 32/0 [r16f/r16f/r16f/r16f] (r/g/b/a) [float]
+[   0.921][d][vo/gpu/opengl]   yuv440pf => 3 planes 1x2 32/0 [r16f/r16f/r16f] (r/g/b) [float]
+[   0.921][d][vo/gpu/opengl]   yuva440pf => 4 planes 1x2 32/0 [r16f/r16f/r16f/r16f] (r/g/b/a) [float]
+[   0.921][d][vo/gpu/opengl]   yuv410pf => 3 planes 4x4 32/0 [r16f/r16f/r16f] (r/g/b) [float]
+[   0.921][d][vo/gpu/opengl]   yuva410pf => 4 planes 4x4 32/0 [r16f/r16f/r16f/r16f] (r/g/b/a) [float]
+[   0.921][d][vo/gpu/opengl]   yuv411pf => 3 planes 4x1 32/0 [r16f/r16f/r16f] (r/g/b) [float]
+[   0.921][d][vo/gpu/opengl]   yuva411pf => 4 planes 4x1 32/0 [r16f/r16f/r16f/r16f] (r/g/b/a) [float]
+[   0.921][d][vo/gpu/opengl]   rgb30 => 1 planes 1x1 10/0 [rgb10_a2] (bgr) [unknown]
+[   0.921][d][vo/gpu/opengl]   y1 => 1 planes 1x1 8/-7 [r8] (r) [unorm]
+[   0.921][d][vo/gpu/opengl]   gbrp1 => 3 planes 1x1 8/-7 [r8/r8/r8] (g/b/r) [unorm]
+[   0.921][d][vo/gpu/opengl]   gbrp2 => 3 planes 1x1 8/-6 [r8/r8/r8] (g/b/r) [unorm]
+[   0.921][d][vo/gpu/opengl]   gbrp3 => 3 planes 1x1 8/-5 [r8/r8/r8] (g/b/r) [unorm]
+[   0.921][d][vo/gpu/opengl]   gbrp4 => 3 planes 1x1 8/-4 [r8/r8/r8] (g/b/r) [unorm]
+[   0.921][d][vo/gpu/opengl]   gbrp5 => 3 planes 1x1 8/-3 [r8/r8/r8] (g/b/r) [unorm]
+[   0.921][d][vo/gpu/opengl]   gbrp6 => 3 planes 1x1 8/-2 [r8/r8/r8] (g/b/r) [unorm]
+[   0.921][d][vo/gpu/opengl]   vdpau_output
+[   0.921][d][vo/gpu/opengl]   vaapi
+[   0.921][d][vo/gpu/opengl]   videotoolbox
+[   0.921][d][vo/gpu/opengl]   yuyv422
+[   0.921][d][vo/gpu/opengl]   yuv422p => 3 planes 2x1 8/0 [r8/r8/r8] (r/g/b) [unorm]
+[   0.921][d][vo/gpu/opengl]   yuv410p => 3 planes 4x4 8/0 [r8/r8/r8] (r/g/b) [unorm]
+[   0.921][d][vo/gpu/opengl]   yuv411p => 3 planes 4x1 8/0 [r8/r8/r8] (r/g/b) [unorm]
+[   0.921][d][vo/gpu/opengl]   monow
+[   0.921][d][vo/gpu/opengl]   monob
+[   0.921][d][vo/gpu/opengl]   yuvj422p => 3 planes 2x1 8/0 [r8/r8/r8] (r/g/b) [unorm]
+[   0.922][d][vo/gpu/opengl]   uyyvyy411
+[   0.922][d][vo/gpu/opengl]   bgr8
+[   0.922][d][vo/gpu/opengl]   bgr4
+[   0.922][d][vo/gpu/opengl]   bgr4_byte
+[   0.922][d][vo/gpu/opengl]   rgb8
+[   0.922][d][vo/gpu/opengl]   rgb4
+[   0.922][d][vo/gpu/opengl]   rgb4_byte
+[   0.922][d][vo/gpu/opengl]   nv21 => 2 planes 2x2 8/0 [r8/rg8] (r/bg) [unorm]
+[   0.922][d][vo/gpu/opengl]   gray16be
+[   0.922][d][vo/gpu/opengl]   yuv440p => 3 planes 1x2 8/0 [r8/r8/r8] (r/g/b) [unorm]
+[   0.922][d][vo/gpu/opengl]   yuvj440p => 3 planes 1x2 8/0 [r8/r8/r8] (r/g/b) [unorm]
+[   0.922][d][vo/gpu/opengl]   yuva420p => 4 planes 2x2 8/0 [r8/r8/r8/r8] (r/g/b/a) [unorm]
+[   0.922][d][vo/gpu/opengl]   rgb48be
+[   0.922][d][vo/gpu/opengl]   rgb48 => 1 planes 1x1 16/0 [rgb16] (rgb) [unorm]
+[   0.922][d][vo/gpu/opengl]   rgb565be
+[   0.922][d][vo/gpu/opengl]   rgb555be
+[   0.922][d][vo/gpu/opengl]   rgb555
+[   0.922][d][vo/gpu/opengl]   bgr565be
+[   0.922][d][vo/gpu/opengl]   bgr565
+[   0.922][d][vo/gpu/opengl]   bgr555be
+[   0.922][d][vo/gpu/opengl]   bgr555
+[   0.922][d][vo/gpu/opengl]   vaapi_moco
+[   0.922][d][vo/gpu/opengl]   vaapi_idct
+[   0.922][d][vo/gpu/opengl]   yuv420p16 => 3 planes 2x2 16/0 [r16/r16/r16] (r/g/b) [unorm]
+[   0.922][d][vo/gpu/opengl]   yuv420p16be
+[   0.922][d][vo/gpu/opengl]   yuv422p16 => 3 planes 2x1 16/0 [r16/r16/r16] (r/g/b) [unorm]
+[   0.922][d][vo/gpu/opengl]   yuv422p16be
+[   0.922][d][vo/gpu/opengl]   yuv444p16 => 3 planes 1x1 16/0 [r16/r16/r16] (r/g/b) [unorm]
+[   0.922][d][vo/gpu/opengl]   yuv444p16be
+[   0.922][d][vo/gpu/opengl]   rgb444
+[   0.922][d][vo/gpu/opengl]   rgb444be
+[   0.922][d][vo/gpu/opengl]   bgr444
+[   0.922][d][vo/gpu/opengl]   bgr444be
+[   0.922][d][vo/gpu/opengl]   ya8 => 1 planes 1x1 8/0 [rg8] (ra) [unorm]
+[   0.922][d][vo/gpu/opengl]   bgr48be
+[   0.922][d][vo/gpu/opengl]   bgr48 => 1 planes 1x1 16/0 [rgb16] (bgr) [unorm]
+[   0.922][d][vo/gpu/opengl]   yuv420p9be
+[   0.922][d][vo/gpu/opengl]   yuv420p9 => 3 planes 2x2 16/-7 [r16/r16/r16] (r/g/b) [unorm]
+[   0.922][d][vo/gpu/opengl]   yuv420p10be
+[   0.922][d][vo/gpu/opengl]   yuv420p10 => 3 planes 2x2 16/-6 [r16/r16/r16] (r/g/b) [unorm]
+[   0.922][d][vo/gpu/opengl]   yuv422p10be
+[   0.922][d][vo/gpu/opengl]   yuv422p10 => 3 planes 2x1 16/-6 [r16/r16/r16] (r/g/b) [unorm]
+[   0.922][d][vo/gpu/opengl]   yuv444p9be
+[   0.922][d][vo/gpu/opengl]   yuv444p9 => 3 planes 1x1 16/-7 [r16/r16/r16] (r/g/b) [unorm]
+[   0.922][d][vo/gpu/opengl]   yuv444p10be
+[   0.922][d][vo/gpu/opengl]   yuv444p10 => 3 planes 1x1 16/-6 [r16/r16/r16] (r/g/b) [unorm]
+[   0.922][d][vo/gpu/opengl]   yuv422p9be
+[   0.922][d][vo/gpu/opengl]   yuv422p9 => 3 planes 2x1 16/-7 [r16/r16/r16] (r/g/b) [unorm]
+[   0.922][d][vo/gpu/opengl]   gbrp => 3 planes 1x1 8/0 [r8/r8/r8] (g/b/r) [unorm]
+[   0.922][d][vo/gpu/opengl]   gbrp9be
+[   0.922][d][vo/gpu/opengl]   gbrp9 => 3 planes 1x1 16/-7 [r16/r16/r16] (g/b/r) [unorm]
+[   0.922][d][vo/gpu/opengl]   gbrp10be
+[   0.922][d][vo/gpu/opengl]   gbrp10 => 3 planes 1x1 16/-6 [r16/r16/r16] (g/b/r) [unorm]
+[   0.922][d][vo/gpu/opengl]   gbrp16be
+[   0.922][d][vo/gpu/opengl]   gbrp16 => 3 planes 1x1 16/0 [r16/r16/r16] (g/b/r) [unorm]
+[   0.922][d][vo/gpu/opengl]   yuva422p => 4 planes 2x1 8/0 [r8/r8/r8/r8] (r/g/b/a) [unorm]
+[   0.922][d][vo/gpu/opengl]   yuva444p => 4 planes 1x1 8/0 [r8/r8/r8/r8] (r/g/b/a) [unorm]
+[   0.922][d][vo/gpu/opengl]   yuva420p9be
+[   0.922][d][vo/gpu/opengl]   yuva420p9 => 4 planes 2x2 16/-7 [r16/r16/r16/r16] (r/g/b/a) [unorm]
+[   0.922][d][vo/gpu/opengl]   yuva422p9be
+[   0.922][d][vo/gpu/opengl]   yuva422p9 => 4 planes 2x1 16/-7 [r16/r16/r16/r16] (r/g/b/a) [unorm]
+[   0.922][d][vo/gpu/opengl]   yuva444p9be
+[   0.922][d][vo/gpu/opengl]   yuva444p9 => 4 planes 1x1 16/-7 [r16/r16/r16/r16] (r/g/b/a) [unorm]
+[   0.922][d][vo/gpu/opengl]   yuva420p10be
+[   0.922][d][vo/gpu/opengl]   yuva420p10 => 4 planes 2x2 16/-6 [r16/r16/r16/r16] (r/g/b/a) [unorm]
+[   0.922][d][vo/gpu/opengl]   yuva422p10be
+[   0.922][d][vo/gpu/opengl]   yuva422p10 => 4 planes 2x1 16/-6 [r16/r16/r16/r16] (r/g/b/a) [unorm]
+[   0.922][d][vo/gpu/opengl]   yuva444p10be
+[   0.922][d][vo/gpu/opengl]   yuva444p10 => 4 planes 1x1 16/-6 [r16/r16/r16/r16] (r/g/b/a) [unorm]
+[   0.922][d][vo/gpu/opengl]   yuva420p16be
+[   0.922][d][vo/gpu/opengl]   yuva420p16 => 4 planes 2x2 16/0 [r16/r16/r16/r16] (r/g/b/a) [unorm]
+[   0.922][d][vo/gpu/opengl]   yuva422p16be
+[   0.922][d][vo/gpu/opengl]   yuva422p16 => 4 planes 2x1 16/0 [r16/r16/r16/r16] (r/g/b/a) [unorm]
+[   0.922][d][vo/gpu/opengl]   yuva444p16be
+[   0.922][d][vo/gpu/opengl]   yuva444p16 => 4 planes 1x1 16/0 [r16/r16/r16/r16] (r/g/b/a) [unorm]
+[   0.922][d][vo/gpu/opengl]   xyz12 => 1 planes 1x1 16/4 [rgb16] (rgb) [unorm]
+[   0.922][d][vo/gpu/opengl]   xyz12be
+[   0.922][d][vo/gpu/opengl]   nv16 => 2 planes 2x1 8/0 [r8/rg8] (r/gb) [unorm]
+[   0.922][d][vo/gpu/opengl]   nv20 => 2 planes 2x1 16/-6 [r16/rg16] (r/gb) [unorm]
+[   0.922][d][vo/gpu/opengl]   nv20be
+[   0.922][d][vo/gpu/opengl]   rgba64be
+[   0.922][d][vo/gpu/opengl]   bgra64be
+[   0.922][d][vo/gpu/opengl]   bgra64 => 1 planes 1x1 16/0 [rgba16] (bgra) [unorm]
+[   0.922][d][vo/gpu/opengl]   yvyu422
+[   0.922][d][vo/gpu/opengl]   ya16be
+[   0.922][d][vo/gpu/opengl]   ya16 => 1 planes 1x1 16/0 [rg16] (ra) [unorm]
+[   0.922][d][vo/gpu/opengl]   gbrap => 4 planes 1x1 8/0 [r8/r8/r8/r8] (g/b/r/a) [unorm]
+[   0.922][d][vo/gpu/opengl]   gbrap16be
+[   0.922][d][vo/gpu/opengl]   gbrap16 => 4 planes 1x1 16/0 [r16/r16/r16/r16] (g/b/r/a) [unorm]
+[   0.922][d][vo/gpu/opengl]   qsv
+[   0.922][d][vo/gpu/opengl]   d3d11va_vld
+[   0.922][d][vo/gpu/opengl]   yuv420p12be
+[   0.922][d][vo/gpu/opengl]   yuv420p12 => 3 planes 2x2 16/-4 [r16/r16/r16] (r/g/b) [unorm]
+[   0.922][d][vo/gpu/opengl]   yuv420p14be
+[   0.922][d][vo/gpu/opengl]   yuv420p14 => 3 planes 2x2 16/-2 [r16/r16/r16] (r/g/b) [unorm]
+[   0.922][d][vo/gpu/opengl]   yuv422p12be
+[   0.922][d][vo/gpu/opengl]   yuv422p12 => 3 planes 2x1 16/-4 [r16/r16/r16] (r/g/b) [unorm]
+[   0.922][d][vo/gpu/opengl]   yuv422p14be
+[   0.922][d][vo/gpu/opengl]   yuv422p14 => 3 planes 2x1 16/-2 [r16/r16/r16] (r/g/b) [unorm]
+[   0.922][d][vo/gpu/opengl]   yuv444p12be
+[   0.922][d][vo/gpu/opengl]   yuv444p12 => 3 planes 1x1 16/-4 [r16/r16/r16] (r/g/b) [unorm]
+[   0.922][d][vo/gpu/opengl]   yuv444p14be
+[   0.922][d][vo/gpu/opengl]   yuv444p14 => 3 planes 1x1 16/-2 [r16/r16/r16] (r/g/b) [unorm]
+[   0.922][d][vo/gpu/opengl]   gbrp12be
+[   0.922][d][vo/gpu/opengl]   gbrp12 => 3 planes 1x1 16/-4 [r16/r16/r16] (g/b/r) [unorm]
+[   0.922][d][vo/gpu/opengl]   gbrp14be
+[   0.922][d][vo/gpu/opengl]   gbrp14 => 3 planes 1x1 16/-2 [r16/r16/r16] (g/b/r) [unorm]
+[   0.922][d][vo/gpu/opengl]   yuvj411p => 3 planes 4x1 8/0 [r8/r8/r8] (r/g/b) [unorm]
+[   0.922][d][vo/gpu/opengl]   bayer_bggr8
+[   0.922][d][vo/gpu/opengl]   bayer_rggb8
+[   0.922][d][vo/gpu/opengl]   bayer_gbrg8
+[   0.922][d][vo/gpu/opengl]   bayer_grbg8
+[   0.922][d][vo/gpu/opengl]   bayer_bggr16
+[   0.922][d][vo/gpu/opengl]   bayer_bggr16be
+[   0.922][d][vo/gpu/opengl]   bayer_rggb16
+[   0.922][d][vo/gpu/opengl]   bayer_rggb16be
+[   0.922][d][vo/gpu/opengl]   bayer_gbrg16
+[   0.922][d][vo/gpu/opengl]   bayer_gbrg16be
+[   0.922][d][vo/gpu/opengl]   bayer_grbg16
+[   0.922][d][vo/gpu/opengl]   bayer_grbg16be
+[   0.922][d][vo/gpu/opengl]   xvmc
+[   0.922][d][vo/gpu/opengl]   yuv440p10 => 3 planes 1x2 16/-6 [r16/r16/r16] (r/g/b) [unorm]
+[   0.922][d][vo/gpu/opengl]   yuv440p10be
+[   0.922][d][vo/gpu/opengl]   yuv440p12 => 3 planes 1x2 16/-4 [r16/r16/r16] (r/g/b) [unorm]
+[   0.922][d][vo/gpu/opengl]   yuv440p12be
+[   0.922][d][vo/gpu/opengl]   ayuv64 => 1 planes 1x1 16/0 [rgba16] (argb) [unorm]
+[   0.922][d][vo/gpu/opengl]   ayuv64be
+[   0.922][d][vo/gpu/opengl]   p010be
+[   0.922][d][vo/gpu/opengl]   gbrap12be
+[   0.922][d][vo/gpu/opengl]   gbrap12 => 4 planes 1x1 16/-4 [r16/r16/r16/r16] (g/b/r/a) [unorm]
+[   0.922][d][vo/gpu/opengl]   gbrap10be
+[   0.922][d][vo/gpu/opengl]   gbrap10 => 4 planes 1x1 16/-6 [r16/r16/r16/r16] (g/b/r/a) [unorm]
+[   0.922][d][vo/gpu/opengl]   gray12be
+[   0.922][d][vo/gpu/opengl]   gray12 => 1 planes 1x1 16/-4 [r16] (r) [unorm]
+[   0.922][d][vo/gpu/opengl]   gray10be
+[   0.922][d][vo/gpu/opengl]   gray10 => 1 planes 1x1 16/-6 [r16] (r) [unorm]
+[   0.922][d][vo/gpu/opengl]   p016 => 2 planes 2x2 16/0 [r16/rg16] (r/gb) [unorm]
+[   0.922][d][vo/gpu/opengl]   p016be
+[   0.922][d][vo/gpu/opengl]   gray9be
+[   0.922][d][vo/gpu/opengl]   gray9 => 1 planes 1x1 16/-7 [r16] (r) [unorm]
+[   0.922][d][vo/gpu/opengl]   gbrpf32be
+[   0.922][d][vo/gpu/opengl]   gbrpf32 => 3 planes 1x1 32/0 [r16f/r16f/r16f] (g/b/r) [float]
+[   0.922][d][vo/gpu/opengl]   gbrapf32be
+[   0.922][d][vo/gpu/opengl]   gbrapf32 => 4 planes 1x1 32/0 [r16f/r16f/r16f/r16f] (g/b/r/a) [float]
+[   0.922][d][vo/gpu/opengl]   opencl
+[   0.922][d][vo/gpu/opengl]   gray14be
+[   0.922][d][vo/gpu/opengl]   gray14 => 1 planes 1x1 16/-2 [r16] (r) [unorm]
+[   0.922][d][vo/gpu/opengl]   grayf32be
+[   0.922][d][vo/gpu/opengl]   grayf32 => 1 planes 1x1 32/0 [r16f] (r) [float]
+[   0.922][d][vo/gpu/opengl]   yuva422p12be
+[   0.922][d][vo/gpu/opengl]   yuva422p12 => 4 planes 2x1 16/-4 [r16/r16/r16/r16] (r/g/b/a) [unorm]
+[   0.922][d][vo/gpu/opengl]   yuva444p12be
+[   0.922][d][vo/gpu/opengl]   yuva444p12 => 4 planes 1x1 16/-4 [r16/r16/r16/r16] (r/g/b/a) [unorm]
+[   0.922][d][vo/gpu/opengl]   nv24 => 2 planes 1x1 8/0 [r8/rg8] (r/gb) [unorm]
+[   0.922][d][vo/gpu/opengl]   nv42 => 2 planes 1x1 8/0 [r8/rg8] (r/bg) [unorm]
+[   0.922][d][vo/gpu/opengl]   vulkan
+[   0.922][d][vo/gpu/opengl]   y210be
+[   0.922][d][vo/gpu/opengl]   y210
+[   0.922][d][vo/gpu/opengl]   x2rgb10be
+[   0.922][v][vo/gpu] Testing FBO format rgba16f
+[   0.922][d][vo/gpu] Resizing texture: 16x16
+[   0.922][v][vo/gpu] Using FBO format rgba16f.
+[   0.922][v][vo/gpu] No advanced processing required. Enabling dumb mode.
+[   0.922][v][vo/gpu] Assuming 60.000000 FPS for display sync.
+[   0.923][v][vd] Container reported FPS: 23.976024
+[   0.923][v][vd] Codec list:
+[   0.923][v][vd]     h264 - H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10
+[   0.923][v][vd]     h264_v4l2m2m (h264) - V4L2 mem2mem H.264 decoder wrapper
+[   0.923][v][vd]     h264_qsv (h264) - H264 video (Intel Quick Sync Video acceleration)
+[   0.923][v][vd]     h264_cuvid (h264) - Nvidia CUVID H264 decoder
+[   0.923][v][vd] Opening decoder h264
+[   0.923][v][vd] No hardware decoding requested.
+[   0.923][v][vd] Using software decoding.
+[   0.923][v][vd] Detected 8 logical cores.
+[   0.923][v][vd] Requesting 9 threads for decoding.
+[   0.924][d][ffmpeg/video] h264: Reinit context to 1920x1088, pix_fmt: yuv420p10le
+[   0.925][d][vd] DR parameter change to 1920x1090 yuv420p10 align=64
+[   0.925][d][vd] Allocating new DR image...
+[   0.959][v][vd] Selected codec: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10)
+[   0.979][v][vf] User filter list:
+[   0.980][v][vf]   (empty)
+[   0.980][v][ad] Codec list:
+[   0.980][v][ad]     aac - AAC (Advanced Audio Coding)
+[   0.980][v][ad]     aac_fixed (aac) - AAC (Advanced Audio Coding)
+[   0.980][v][ad] Opening decoder aac
+[   0.980][v][ad] Requesting 1 threads for decoding.
+[   0.980][v][ad] Selected codec: aac (AAC (Advanced Audio Coding))
+[   0.980][v][af] User filter list:
+[   0.980][v][af]   (empty)
+[   0.980][d][global] config path: 'fonts' -/-> '/home/jd/.config/mpv/fonts'
+[   0.980][d][global] config path: 'fonts' -/-> '/home/jd/.mpv/fonts'
+[   0.980][d][global] config path: 'fonts' -/-> '/etc/mpv/fonts'
+[   0.980][d][sub/ass] ASS library version: 0x1500000 (runtime 0x1501000)
+[   0.980][v][sub/ass] libass API version: 0x1501000
+[   0.980][v][sub/ass] libass source: commit: 0.15.1-0-g5447214643eacef71776350e779adf4b6c07bb3b-dirty
+[   0.980][v][sub/ass] Shaper: FriBidi 1.0.10 (SIMPLE) HarfBuzz-ng 2.9.0 (COMPLEX)
+[   0.980][d][global] config path: 'subfont.ttf' -/-> '/home/jd/.config/mpv/subfont.ttf'
+[   0.980][d][global] config path: 'subfont.ttf' -/-> '/home/jd/.mpv/subfont.ttf'
+[   0.980][d][global] config path: 'subfont.ttf' -/-> '/etc/mpv/subfont.ttf'
+[   0.980][d][global] config path: 'fonts.conf' -/-> '/home/jd/.config/mpv/fonts.conf'
+[   0.980][d][global] config path: 'fonts.conf' -/-> '/home/jd/.mpv/fonts.conf'
+[   0.980][d][global] config path: 'fonts.conf' -/-> '/etc/mpv/fonts.conf'
+[   0.980][v][sub/ass] Setting up fonts...
+[   0.980][v][sub/ass] Using font provider fontconfig
+[   0.980][v][sub/ass] Done.
+[   0.980][v][cplayer] Starting playback...
+[   0.980][d][mkv] stream 1: resize index to 128
+[   0.980][d][ffmpeg/video] h264: Reinit context to 1920x1088, pix_fmt: yuv420p10le
+[   0.980][d][vd] Allocating new DR image...
+[   0.980][v][af] [in] 48000Hz stereo 2ch floatp
+[   0.980][v][af] [userspeed] 48000Hz stereo 2ch floatp
+[   0.980][v][af] [userspeed] (disabled)
+[   0.980][v][af] [convert] 48000Hz stereo 2ch floatp
+[   0.980][d][vd] Allocating new DR image...
+[   0.980][v][ao] Trying audio driver 'pulse'
+[   0.980][d][osc] osc_init 
+[   0.980][v][ao/pulse] requested format: 48000 Hz, stereo channels, floatp
+[   0.980][v][ao/pulse] Library version: 15.0.0
+[   0.980][v][ao/pulse] Proto: 35
+[   0.980][v][ao/pulse] Server proto: 4294967295
+[   0.980][v][ao/pulse] Channel layouts:
+[   0.980][v][ao/pulse]  - #fl
+[   0.980][v][ao/pulse]  - #fr
+[   0.980][v][ao/pulse]  - #fc
+[   0.980][v][ao/pulse]  - #lfe
+[   0.980][v][ao/pulse]  - #bl
+[   0.980][v][ao/pulse]  - #br
+[   0.980][v][ao/pulse]  - #flc
+[   0.980][v][ao/pulse]  - #frc
+[   0.980][v][ao/pulse]  - #bc
+[   0.980][v][ao/pulse]  - #sl
+[   0.980][v][ao/pulse]  - #sr
+[   0.980][v][ao/pulse]  - #tc
+[   0.980][v][ao/pulse]  - #tfl
+[   0.980][v][ao/pulse]  - #tfc
+[   0.980][v][ao/pulse]  - #tfr
+[   0.980][v][ao/pulse]  - #tbl
+[   0.980][v][ao/pulse]  - #tbc
+[   0.980][v][ao/pulse]  - #tbr
+[   0.980][v][ao/pulse] result: stereo
+[   0.983][v][ao/pulse] device buffer: 4800 samples.
+[   0.983][v][ao/pulse] using soft-buffer of 9600 samples.
+[   0.983][i][cplayer] AO: [pulse] 48000Hz stereo 2ch float
+[   0.983][v][cplayer] AO: Description: PulseAudio audio output
+[   0.984][v][autoconvert] inserting resampler
+[   0.985][v][swresample] format change, reinitializing resampler
+[   0.985][v][swresample] 48000Hz stereo floatp -> 48000Hz stereo float
+[   0.985][v][af] [out] 48000Hz stereo 2ch float
+[   0.988][d][cplayer] Run command: change-list, flags=64, args=[name="shared-script-properties", operation="append", value="osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[   0.988][v][cplayer] Set property: shared-script-properties -> 1
+[   1.031][d][vd] Allocating new DR image...
+[   1.035][d][vd] Allocating new DR image...
+[   1.071][d][vd] Allocating new DR image...
+[   1.075][d][vd] Allocating new DR image...
+[   1.100][d][vd] Allocating new DR image...
+[   1.103][d][vd] Allocating new DR image...
+[   1.107][d][vd] Allocating new DR image...
+[   1.111][d][vd] Allocating new DR image...
+[   1.111][v][vd] Using software decoding.
+[   1.111][v][vd] Decoder format: 1920x1080 [0:1] yuv420p10 bt.709/bt.709/bt.1886/limited/auto CL=mpeg2/4/h264
+[   1.111][v][vd] Using container aspect ratio.
+[   1.111][v][vf] [in] 1920x1080 yuv420p10 bt.709/bt.709/bt.1886/limited/display SP=1.000000 CL=mpeg2/4/h264
+[   1.118][v][vf] [userdeint] 1920x1080 yuv420p10 bt.709/bt.709/bt.1886/limited/display SP=1.000000 CL=mpeg2/4/h264
+[   1.118][v][vf] [userdeint] (disabled)
+[   1.118][v][vf] [autorotate] 1920x1080 yuv420p10 bt.709/bt.709/bt.1886/limited/display SP=1.000000 CL=mpeg2/4/h264
+[   1.118][v][vf] [autorotate] (disabled)
+[   1.118][v][vf] [convert] 1920x1080 yuv420p10 bt.709/bt.709/bt.1886/limited/display SP=1.000000 CL=mpeg2/4/h264
+[   1.118][v][vf] [convert] (disabled)
+[   1.118][v][vf] [out] 1920x1080 yuv420p10 bt.709/bt.709/bt.1886/limited/display SP=1.000000 CL=mpeg2/4/h264
+[   1.118][i][cplayer] VO: [gpu] 1920x1080 yuv420p10
+[   1.118][v][cplayer] VO: Description: Shader-based GPU Renderer
+[   1.118][v][vo/gpu] reconfig to 1920x1080 yuv420p10 bt.709/bt.709/bt.1886/limited/display SP=1.000000 CL=mpeg2/4/h264
+[   1.118][d][vd] Allocating new DR image...
+[   1.118][d][vo/gpu] screen size: 1366x768
+[   1.125][v][vo/gpu/x11] Current display FPS: 59.789541
+[   1.125][v][vo/gpu] Resize: 706x723
+[   1.125][v][vo/gpu] Window size: 706x723 (Borders: l=0 t=0 r=0 b=0)
+[   1.125][v][vo/gpu] Video source: 1920x1080 (1:1)
+[   1.125][v][vo/gpu] Video display: (0, 0) 1920x1080 -> (0, 163) 706x397
+[   1.125][v][vo/gpu] Video scale: 0.367708/0.367593
+[   1.125][v][vo/gpu] OSD borders: l=0 t=163 r=0 b=163
+[   1.125][v][vo/gpu] Video borders: l=0 t=163 r=0 b=163
+[   1.125][v][vo/gpu] Reported display depth: 8
+[   1.125][v][vo/gpu] Texture for plane 0: 1920x1080
+[   1.125][v][vo/gpu] Texture for plane 1: 960x540
+[   1.125][v][vo/gpu] Texture for plane 2: 960x540
+[   1.125][v][vo/gpu] Testing FBO format rgba16f
+[   1.125][d][vo/gpu] Resizing texture: 16x16
+[   1.128][v][vo/gpu] Using FBO format rgba16f.
+[   1.128][v][vo/gpu] No advanced processing required. Enabling dumb mode.
+[   1.133][v][vo/gpu] Assuming 59.789541 FPS for display sync.
+[   1.134][v][vo/gpu] DR enabled: yes
+[   1.135][d][vo/gpu/opengl] vertex shader source:
+[   1.135][d][vo/gpu/opengl] [  1] #version 440
+[   1.135][d][vo/gpu/opengl] [  2] #define tex1D texture
+[   1.135][d][vo/gpu/opengl] [  3] #define tex3D texture
+[   1.135][d][vo/gpu/opengl] [  4] #define LUT_POS(x, lut_size) mix(0.5 / (lut_size), 1.0 - 0.5 / (lut_size), (x))
+[   1.135][d][vo/gpu/opengl] [  5] in vec2 vertex_position;
+[   1.135][d][vo/gpu/opengl] [  6] in vec2 vertex_texcoord0;
+[   1.135][d][vo/gpu/opengl] [  7] out vec2 texcoord0;
+[   1.135][d][vo/gpu/opengl] [  8] in vec2 vertex_texcoord1;
+[   1.135][d][vo/gpu/opengl] [  9] out vec2 texcoord1;
+[   1.135][d][vo/gpu/opengl] [ 10] in vec2 vertex_texcoord2;
+[   1.135][d][vo/gpu/opengl] [ 11] out vec2 texcoord2;
+[   1.135][d][vo/gpu/opengl] [ 12] void main() {
+[   1.135][d][vo/gpu/opengl] [ 13] gl_Position = vec4(vertex_position, 1.0, 1.0);
+[   1.135][d][vo/gpu/opengl] [ 14] texcoord0 = vertex_texcoord0;
+[   1.135][d][vo/gpu/opengl] [ 15] texcoord1 = vertex_texcoord1;
+[   1.135][d][vo/gpu/opengl] [ 16] texcoord2 = vertex_texcoord2;
+[   1.135][d][vo/gpu/opengl] [ 17] }
+[   1.135][d][vo/gpu/opengl] fragment shader source:
+[   1.135][d][vo/gpu/opengl] [  1] #version 440
+[   1.135][d][vo/gpu/opengl] [  2] #define tex1D texture
+[   1.135][d][vo/gpu/opengl] [  3] #define tex3D texture
+[   1.135][d][vo/gpu/opengl] [  4] #define LUT_POS(x, lut_size) mix(0.5 / (lut_size), 1.0 - 0.5 / (lut_size), (x))
+[   1.135][d][vo/gpu/opengl] [  5] out vec4 out_color;
+[   1.135][d][vo/gpu/opengl] [  6] in vec2 texcoord0;
+[   1.135][d][vo/gpu/opengl] [  7] in vec2 texcoord1;
+[   1.135][d][vo/gpu/opengl] [  8] in vec2 texcoord2;
+[   1.135][d][vo/gpu/opengl] [  9] layout(std140, binding=0) uniform UBO {
+[   1.135][d][vo/gpu/opengl] [ 10] layout(offset=0) mat3 colormatrix;
+[   1.135][d][vo/gpu/opengl] [ 11] layout(offset=48) vec3 colormatrix_c;
+[   1.135][d][vo/gpu/opengl] [ 12] layout(offset=64) vec3 src_luma;
+[   1.135][d][vo/gpu/opengl] [ 13] layout(offset=80) vec3 dst_luma;
+[   1.135][d][vo/gpu/opengl] [ 14] layout(offset=96) vec2 texture_size0;
+[   1.135][d][vo/gpu/opengl] [ 15] layout(offset=112) mat2 texture_rot0;
+[   1.135][d][vo/gpu/opengl] [ 16] layout(offset=144) vec2 texture_off0;
+[   1.135][d][vo/gpu/opengl] [ 17] layout(offset=152) vec2 pixel_size0;
+[   1.135][d][vo/gpu/opengl] [ 18] layout(offset=160) vec2 texture_size1;
+[   1.135][d][vo/gpu/opengl] [ 19] layout(offset=176) mat2 texture_rot1;
+[   1.135][d][vo/gpu/opengl] [ 20] layout(offset=208) vec2 texture_off1;
+[   1.135][d][vo/gpu/opengl] [ 21] layout(offset=216) vec2 pixel_size1;
+[   1.135][d][vo/gpu/opengl] [ 22] layout(offset=224) vec2 texture_size2;
+[   1.135][d][vo/gpu/opengl] [ 23] layout(offset=240) mat2 texture_rot2;
+[   1.135][d][vo/gpu/opengl] [ 24] layout(offset=272) vec2 texture_off2;
+[   1.135][d][vo/gpu/opengl] [ 25] layout(offset=280) vec2 pixel_size2;
+[   1.135][d][vo/gpu/opengl] [ 26] };
+[   1.135][d][vo/gpu/opengl] [ 27] uniform sampler2D texture0;
+[   1.135][d][vo/gpu/opengl] [ 28] uniform sampler2D texture1;
+[   1.135][d][vo/gpu/opengl] [ 29] uniform sampler2D texture2;
+[   1.135][d][vo/gpu/opengl] [ 30] void main() {
+[   1.135][d][vo/gpu/opengl] [ 31] vec4 color = vec4(0.0, 0.0, 0.0, 1.0);
+[   1.135][d][vo/gpu/opengl] [ 32] color.r = 64.250000 * vec4(texture(texture0, texcoord0)).r;
+[   1.135][d][vo/gpu/opengl] [ 33] color.g = 64.250000 * vec4(texture(texture1, texcoord1)).r;
+[   1.135][d][vo/gpu/opengl] [ 34] color.b = 64.250000 * vec4(texture(texture2, texcoord2)).r;
+[   1.135][d][vo/gpu/opengl] [ 35] color = color.rgbr;
+[   1.135][d][vo/gpu/opengl] [ 36] color.rgb = mat3(colormatrix) * color.rgb + colormatrix_c;
+[   1.135][d][vo/gpu/opengl] [ 37] color.a = 1.0;
+[   1.135][d][vo/gpu/opengl] [ 38] // color mapping
+[   1.135][d][vo/gpu/opengl] [ 39] color.rgb *= vec3(1.000000);
+[   1.135][d][vo/gpu/opengl] [ 40] color.rgb *= vec3(1.000000);
+[   1.135][d][vo/gpu/opengl] [ 41] out_color = color;
+[   1.135][d][vo/gpu/opengl] [ 42] }
+[   1.135][d][vo/gpu/opengl] shader link log (status=1): 
+[   1.139][v][cplayer] first video frame after restart shown
+[   1.140][v][cplayer] audio ready
+[   1.140][d][cplayer] starting video playback
+[   1.140][v][cplayer] delaying audio start 0.000000 vs. 0.000000, diff=0.000000
+[   1.140][v][cplayer] playback restart complete @ 0.000000, audio=ready, video=playing
+[   1.141][v][vo/gpu/x11] Disabling screensaver.
+[   1.141][d][vd] Allocating new DR image...
+[   1.141][v][cplayer] starting audio playback
+[   1.141][d][osc] osc_init 
+[   1.141][v][ao/pulse] starting AO
+[   1.147][d][vd] Allocating new DR image...
+[   1.147][d][cplayer] Run command: change-list, flags=64, args=[name="shared-script-properties", operation="append", value="osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[   1.147][v][cplayer] Set property: shared-script-properties -> 1
+[   1.187][d][vd] Allocating new DR image...
+[   1.276][d][vd] Allocating new DR image...
+[   1.345][d][vd] Allocating new DR image...
+[   1.573][d][vd] Allocating new DR image...
+[   1.644][d][vd] Allocating new DR image...
+[   1.687][d][vd] Allocating new DR image...
+[   1.747][d][mkv] stream 0: resize index to 128
+[   1.914][d][vd] Allocating new DR image...
+[   2.048][d][vd] Allocating new DR image...
+[   2.179][d][vd] Allocating new DR image...
+[   2.308][d][vd] Allocating new DR image...
+[   2.436][d][vd] Allocating new DR image...
+[   2.563][d][vd] Allocating new DR image...
+[   2.690][d][vd] Allocating new DR image...
+[   2.690][d][cplayer] Run command: change-list, flags=64, args=[name="shared-script-properties", operation="append", value="osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[   2.690][v][cplayer] Set property: shared-script-properties -> 1
+[   2.720][d][cplayer] Run command: enable-section, flags=64, args=[name="input", flags=""]
+[   2.735][v][osd/libass] fontselect: (sans-serif, 400, 0) -> /usr/share/fonts/ttf-linux-libertine/LinBiolinum_Rah.ttf, 0, LinBiolinum
+[   2.735][v][osd/libass] fontselect: (mpv-osd-symbols, 400, 0) -> mpv-osd-symbols-Regular, 0, mpv-osd-symbols-Regular
+[   2.737][v][vo/gpu] Reallocating OSD texture to 1024x128.
+[   2.737][d][vo/gpu/opengl] vertex shader source:
+[   2.737][d][vo/gpu/opengl] [  1] #version 440
+[   2.737][d][vo/gpu/opengl] [  2] #define tex1D texture
+[   2.737][d][vo/gpu/opengl] [  3] #define tex3D texture
+[   2.737][d][vo/gpu/opengl] [  4] #define LUT_POS(x, lut_size) mix(0.5 / (lut_size), 1.0 - 0.5 / (lut_size), (x))
+[   2.737][d][vo/gpu/opengl] [  5] in vec2 vertex_position;
+[   2.737][d][vo/gpu/opengl] [  6] in vec2 vertex_texcoord;
+[   2.737][d][vo/gpu/opengl] [  7] out vec2 texcoord;
+[   2.737][d][vo/gpu/opengl] [  8] in vec4 vertex_ass_color;
+[   2.737][d][vo/gpu/opengl] [  9] out vec4 ass_color;
+[   2.737][d][vo/gpu/opengl] [ 10] void main() {
+[   2.737][d][vo/gpu/opengl] [ 11] gl_Position = vec4(vertex_position, 1.0, 1.0);
+[   2.737][d][vo/gpu/opengl] [ 12] texcoord = vertex_texcoord;
+[   2.737][d][vo/gpu/opengl] [ 13] ass_color = vertex_ass_color;
+[   2.737][d][vo/gpu/opengl] [ 14] }
+[   2.737][d][vo/gpu/opengl] fragment shader source:
+[   2.737][d][vo/gpu/opengl] [  1] #version 440
+[   2.737][d][vo/gpu/opengl] [  2] #define tex1D texture
+[   2.737][d][vo/gpu/opengl] [  3] #define tex3D texture
+[   2.737][d][vo/gpu/opengl] [  4] #define LUT_POS(x, lut_size) mix(0.5 / (lut_size), 1.0 - 0.5 / (lut_size), (x))
+[   2.737][d][vo/gpu/opengl] [  5] out vec4 out_color;
+[   2.737][d][vo/gpu/opengl] [  6] in vec2 texcoord;
+[   2.737][d][vo/gpu/opengl] [  7] in vec4 ass_color;
+[   2.737][d][vo/gpu/opengl] [  8] layout(std140, binding=0) uniform UBO {
+[   2.737][d][vo/gpu/opengl] [  9] layout(offset=0) vec3 src_luma;
+[   2.737][d][vo/gpu/opengl] [ 10] layout(offset=16) vec3 dst_luma;
+[   2.737][d][vo/gpu/opengl] [ 11] };
+[   2.737][d][vo/gpu/opengl] [ 12] uniform sampler2D osdtex;
+[   2.737][d][vo/gpu/opengl] [ 13] void main() {
+[   2.737][d][vo/gpu/opengl] [ 14] vec4 color = vec4(0.0, 0.0, 0.0, 1.0);
+[   2.737][d][vo/gpu/opengl] [ 15] color = vec4(ass_color.rgb, ass_color.a * texture(osdtex, texcoord).r);
+[   2.737][d][vo/gpu/opengl] [ 16] // color mapping
+[   2.737][d][vo/gpu/opengl] [ 17] color.rgb *= vec3(1.000000);
+[   2.737][d][vo/gpu/opengl] [ 18] color.rgb *= vec3(1.000000);
+[   2.737][d][vo/gpu/opengl] [ 19] out_color = color;
+[   2.737][d][vo/gpu/opengl] [ 20] }
+[   2.737][d][vo/gpu/opengl] shader link log (status=1): 
+[   3.343][d][mkv] stream 2: resize index to 128
+[   3.713][d][cplayer] Run command: change-list, flags=64, args=[name="shared-script-properties", operation="append", value="osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[   3.713][v][cplayer] Set property: shared-script-properties -> 1
+[   3.713][d][cplayer] Run command: disable-section, flags=64, args=[name="input"]
+[   4.107][d][cplayer] Run command: seek, flags=73, args=[target="5.000000", flags="relative", legacy="unused"]
+[   4.107][v][mkv] queuing seek to 8.003000
+[   4.107][v][mkv] cached range 0: 0.000000 <-> 11.678000 (bof=1, eof=0)
+[   4.107][v][mkv] ...using this range for in-cache seek.
+[   4.107][v][mkv] adjust seek target 8.003000 -> 9.968000
+[   4.107][v][mkv] seeking stream 0 (video) to packet 9.968000/-9223372036854775808.000000
+[   4.107][v][mkv] seeking stream 1 (audio) to packet 9.962667/-9223372036854775808.000000
+[   4.107][v][mkv] seeking stream 2 (sub) to packet 9.940000/-9223372036854775808.000000
+[   4.107][d][global] config path: 'fonts' -/-> '/home/jd/.config/mpv/fonts'
+[   4.107][d][global] config path: 'fonts' -/-> '/home/jd/.mpv/fonts'
+[   4.107][d][global] config path: 'fonts' -/-> '/etc/mpv/fonts'
+[   4.107][d][osd/libass] ASS library version: 0x1500000 (runtime 0x1501000)
+[   4.107][v][osd/libass] libass API version: 0x1501000
+[   4.107][v][osd/libass] libass source: commit: 0.15.1-0-g5447214643eacef71776350e779adf4b6c07bb3b-dirty
+[   4.107][v][osd/libass] Shaper: FriBidi 1.0.10 (SIMPLE) HarfBuzz-ng 2.9.0 (COMPLEX)
+[   4.107][d][global] config path: 'subfont.ttf' -/-> '/home/jd/.config/mpv/subfont.ttf'
+[   4.107][d][global] config path: 'subfont.ttf' -/-> '/home/jd/.mpv/subfont.ttf'
+[   4.107][d][global] config path: 'subfont.ttf' -/-> '/etc/mpv/subfont.ttf'
+[   4.107][d][global] config path: 'fonts.conf' -/-> '/home/jd/.config/mpv/fonts.conf'
+[   4.107][d][global] config path: 'fonts.conf' -/-> '/home/jd/.mpv/fonts.conf'
+[   4.107][d][global] config path: 'fonts.conf' -/-> '/etc/mpv/fonts.conf'
+[   4.107][v][osd/libass] Setting up fonts...
+[   4.113][v][osd/libass] Using font provider fontconfig
+[   4.113][v][osd/libass] Done.
+[   4.115][v][osd/libass] fontselect: (sans-serif, 400, 0) -> /usr/share/fonts/ttf-linux-libertine/LinBiolinum_Rah.ttf, 0, LinBiolinum
+[   4.115][v][vo/gpu] Reallocating OSD texture to 1024x128.
+[   4.119][d][ffmpeg/video] h264: Reinit context to 1920x1088, pix_fmt: yuv420p10le
+[   4.149][v][vo/gpu/x11] Enabling screensaver.
+[   4.150][v][vd] Decoder format: 1920x1080 [0:1] yuv420p10 bt.709/bt.709/bt.1886/limited/auto CL=mpeg2/4/h264
+[   4.150][v][vd] Using container aspect ratio.
+[   4.152][v][sub/ass] fontselect: (Lato Light, 700, 0) -> Lato-Light, 0, Lato-Light
+[   4.153][v][sub/ass] fontselect: (CHAWP, 700, 0) -> CHAWP, 0, CHAWP
+[   4.153][v][sub/ass] fontselect: (CHAWP, 400, 0) -> CHAWP, 0, CHAWP
+[   4.155][v][vo/gpu] Reallocating OSD texture to 512x256.
+[   4.157][v][cplayer] first video frame after restart shown
+[   4.158][v][cplayer] audio ready
+[   4.159][d][cplayer] starting video playback
+[   4.159][v][cplayer] starting audio playback
+[   4.159][v][cplayer] playback restart complete @ 9.968000, audio=playing, video=playing
+[   4.159][v][ao/pulse] starting AO
+[   4.159][v][vo/gpu/x11] Disabling screensaver.
+[   5.328][d][cplayer] Run command: change-list, flags=64, args=[name="shared-script-properties", operation="append", value="osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[   5.328][v][cplayer] Set property: shared-script-properties -> 1
+[   5.329][d][cplayer] Run command: enable-section, flags=64, args=[name="input", flags=""]
+[   5.368][d][cplayer] Run command: script-binding, flags=73, args=[name="osc/__keybinding2"]
+[   5.368][d][cplayer] Run command: script-binding, flags=73, args=[name="osc/__keybinding4"]
+[   5.693][d][cplayer] Run command: script-binding, flags=73, args=[name="osc/__keybinding2"]
+[   5.734][d][cplayer] Run command: script-binding, flags=73, args=[name="osc/__keybinding4"]
+[   6.109][d][cplayer] Run command: script-binding, flags=73, args=[name="osc/__keybinding5"]
+[   6.235][d][cplayer] Run command: script-binding, flags=73, args=[name="osc/__keybinding5"]
+[   6.566][d][cplayer] Run command: script-binding, flags=73, args=[name="osc/__keybinding5"]
+[   6.690][d][cplayer] Run command: script-binding, flags=73, args=[name="osc/__keybinding5"]
+[   6.690][d][cplayer] Run command: playlist-next, flags=64, args=[flags="weak"]
+[   6.690][v][cplayer] EOF code: 3  
+[   6.690][d][ad] Uninit decoder.
+[   6.691][d][vd] Uninit decoder.
+[   6.711][d][cplayer] Terminating demuxers...
+[   6.711][d][osc] osc_init 
+[   6.712][d][cplayer] Run command: change-list, flags=64, args=[name="shared-script-properties", operation="append", value="osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[   6.712][v][cplayer] Set property: shared-script-properties -> 1
+[   6.731][v][vo/gpu/x11] Enabling screensaver.
+[   6.750][d][cplayer] Done terminating demuxers.
+[   6.750][v][cplayer] finished playback, success (reason 2)
+[   6.750][i][cplayer] 
+[   6.750][i][cplayer] Playing: https://static.bumpworthy.com/bumps/7107.d.mp4
+[   6.750][v][cplayer] Running hook: ytdl_hook/on_load
+[   6.750][v][ytdl_hook] ytdl:// hook 
+[   6.750][v][ytdl_hook] not a ytdl:// url 
+[   6.750][d][osc] osc_init 
+[   6.750][v][ffmpeg] Opening https://static.bumpworthy.com/bumps/7107.d.mp4
+[   6.751][d][cplayer] Run command: change-list, flags=64, args=[name="shared-script-properties", operation="append", value="osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[   6.751][v][cplayer] Set property: shared-script-properties -> 1
+[   6.754][v][vo/gpu] Reallocating OSD texture to 1024x512.
+[   6.781][d][osc] osc_init 
+[   6.782][d][cplayer] Run command: change-list, flags=64, args=[name="shared-script-properties", operation="append", value="osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[   6.782][v][cplayer] Set property: shared-script-properties -> 1
+[   9.318][d][cplayer] Run command: script-binding, flags=73, args=[name="osc/__keybinding2"]
+[  11.021][d][ffmpeg] tcp: Starting connection attempt to 64.90.40.121 port 443
+[  11.042][d][ffmpeg] tcp: Successfully connected to 64.90.40.121 port 443
+[  11.638][d][ffmpeg] resize stream to 131072 bytes, drop 0 bytes
+[  11.638][v][ffmpeg] Mime-type: 'video/mp4'
+[  11.638][d][ffmpeg] Stream opened successfully.
+[  11.638][v][demux] Trying demuxers for level=normal.
+[  11.638][d][demux] Trying demuxer: disc (force-level: normal)
+[  11.638][d][demux] Trying demuxer: edl (force-level: normal)
+[  11.771][d][demux] Trying demuxer: cue (force-level: normal)
+[  11.771][d][demux] Trying demuxer: rawaudio (force-level: normal)
+[  11.771][d][demux] Trying demuxer: rawvideo (force-level: normal)
+[  11.771][d][demux] Trying demuxer: mkv (force-level: normal)
+[  11.771][d][demux] Trying demuxer: libarchive (force-level: normal)
+[  11.771][d][demux] Trying demuxer: lavf (force-level: normal)
+[  11.774][v][lavf] Found 'mov,mp4,m4a,3gp,3g2,mj2' at score=100 size=2048.
+[  11.775][v][ffmpeg] stream level seek from 16384 to 2335839
+[  11.890][d][cplayer] Run command: change-list, flags=64, args=[name="shared-script-properties", operation="append", value="osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[  11.890][v][cplayer] Set property: shared-script-properties -> 1
+[  11.890][d][cplayer] Run command: disable-section, flags=64, args=[name="input"]
+[  12.386][d][ffmpeg] tcp: Starting connection attempt to 64.90.40.121 port 443
+[  12.406][d][ffmpeg] tcp: Successfully connected to 64.90.40.121 port 443
+[  12.978][v][demux] Detected file format: mov,mp4,m4a,3gp,3g2,mj2 (libavformat)
+[  12.978][v][cplayer] Opening done: https://static.bumpworthy.com/bumps/7107.d.mp4
+[  12.978][d][global] config path: 'sub' -/-> '/home/jd/.config/mpv/sub'
+[  12.978][d][global] config path: 'sub' -/-> '/home/jd/.mpv/sub'
+[  12.978][d][global] config path: 'sub' -/-> '/etc/mpv/sub'
+[  12.978][v][cplayer] Running hook: ytdl_hook/on_preloaded
+[  12.978][v][lavf] select track 0
+[  12.978][v][lavf] select track 1
+[  12.978][i][cplayer]  (+) Video --vid=1 (*) (h264 640x360 29.970fps)
+[  12.978][i][cplayer]  (+) Audio --aid=1 --alang=eng (*) (aac 2ch 48000Hz)
+[  12.979][v][vd] Container reported FPS: 29.970030
+[  12.979][v][vd] Codec list:
+[  12.979][v][vd]     h264 - H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10
+[  12.979][v][vd]     h264_v4l2m2m (h264) - V4L2 mem2mem H.264 decoder wrapper
+[  12.979][v][vd]     h264_qsv (h264) - H264 video (Intel Quick Sync Video acceleration)
+[  12.979][v][vd]     h264_cuvid (h264) - Nvidia CUVID H264 decoder
+[  12.979][v][vd] Opening decoder h264
+[  12.979][v][vd] No hardware decoding requested.
+[  12.979][v][vd] Using software decoding.
+[  12.979][v][vd] Detected 8 logical cores.
+[  12.979][v][vd] Requesting 9 threads for decoding.
+[  12.979][v][vd] Selected codec: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10)
+[  12.979][v][vf] User filter list:
+[  12.979][v][vf]   (empty)
+[  12.980][v][ad] Codec list:
+[  12.980][v][ad]     aac - AAC (Advanced Audio Coding)
+[  12.980][v][ad]     aac_fixed (aac) - AAC (Advanced Audio Coding)
+[  12.980][v][ad] Opening decoder aac
+[  12.980][v][ad] Requesting 1 threads for decoding.
+[  12.980][v][ad] Selected codec: aac (AAC (Advanced Audio Coding))
+[  12.980][v][af] User filter list:
+[  12.980][v][af]   (empty)
+[  12.980][v][cplayer] Starting playback...
+[  12.980][v][ffmpeg] stream level seek from 2345668 to 48
+[  12.981][d][osc] osc_init 
+[  12.981][d][cplayer] Run command: change-list, flags=64, args=[name="shared-script-properties", operation="append", value="osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[  12.981][v][cplayer] Set property: shared-script-properties -> 1
+[  12.982][d][ffmpeg] tcp: Starting connection attempt to 64.90.40.121 port 443
+[  13.006][d][ffmpeg] tcp: Successfully connected to 64.90.40.121 port 443
+[  13.011][d][osc] osc_init 
+[  13.012][d][cplayer] Run command: change-list, flags=64, args=[name="shared-script-properties", operation="append", value="osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[  13.012][v][cplayer] Set property: shared-script-properties -> 1
+[  13.574][d][lavf] stream 1: resize index to 128
+[  13.574][v][af] [in] 48000Hz stereo 2ch floatp
+[  13.574][v][af] [userspeed] 48000Hz stereo 2ch floatp
+[  13.574][v][af] [userspeed] (disabled)
+[  13.574][v][af] [convert] 48000Hz stereo 2ch floatp
+[  13.574][d][ffmpeg/video] h264: Reinit context to 640x368, pix_fmt: yuv420p
+[  13.574][d][vd] DR parameter change to 640x386 yuv420p align=64
+[  13.574][d][vd] Allocating new DR image...
+[  13.589][d][vd] Allocating new DR image...
+[  13.589][d][vd] Allocating new DR image...
+[  13.590][d][vd] Allocating new DR image...
+[  13.590][v][autoconvert] inserting resampler
+[  13.590][v][swresample] format change, reinitializing resampler
+[  13.590][v][swresample] 48000Hz stereo floatp -> 48000Hz stereo float
+[  13.590][v][af] [out] 48000Hz stereo 2ch float
+[  13.732][d][vd] Allocating new DR image...
+[  13.736][d][vd] Allocating new DR image...
+[  13.739][d][vd] Allocating new DR image...
+[  13.895][d][vd] Allocating new DR image...
+[  13.900][d][vd] Allocating new DR image...
+[  13.902][d][vd] Allocating new DR image...
+[  13.904][v][vd] Using software decoding.
+[  13.904][d][vd] Allocating new DR image...
+[  13.904][v][vd] Decoder format: 640x360 yuv420p auto/auto/auto/auto/auto CL=mpeg2/4/h264
+[  13.904][v][vf] [in] 640x360 yuv420p bt.601/bt.709/bt.1886/limited/display SP=1.000000 CL=mpeg2/4/h264
+[  13.905][v][vf] [userdeint] 640x360 yuv420p bt.601/bt.709/bt.1886/limited/display SP=1.000000 CL=mpeg2/4/h264
+[  13.905][v][vf] [userdeint] (disabled)
+[  13.905][v][vf] [autorotate] 640x360 yuv420p bt.601/bt.709/bt.1886/limited/display SP=1.000000 CL=mpeg2/4/h264
+[  13.905][v][vf] [autorotate] (disabled)
+[  13.905][v][vf] [convert] 640x360 yuv420p bt.601/bt.709/bt.1886/limited/display SP=1.000000 CL=mpeg2/4/h264
+[  13.905][v][vf] [convert] (disabled)
+[  13.905][v][vf] [out] 640x360 yuv420p bt.601/bt.709/bt.1886/limited/display SP=1.000000 CL=mpeg2/4/h264
+[  14.059][d][vd] Allocating new DR image...
+[  14.059][i][cplayer] VO: [gpu] 640x360 yuv420p
+[  14.059][v][cplayer] VO: Description: Shader-based GPU Renderer
+[  14.059][v][vo/gpu] reconfig to 640x360 yuv420p bt.601/bt.709/bt.1886/limited/display SP=1.000000 CL=mpeg2/4/h264
+[  14.059][d][vo/gpu] screen size: 1366x768
+[  14.059][v][vo/gpu] Resize: 706x723
+[  14.059][v][vo/gpu] Window size: 706x723 (Borders: l=0 t=0 r=0 b=0)
+[  14.059][v][vo/gpu] Video source: 640x360 (1:1)
+[  14.059][v][vo/gpu] Video display: (0, 0) 640x360 -> (0, 163) 706x397
+[  14.059][v][vo/gpu] Video scale: 1.103125/1.102778
+[  14.059][v][vo/gpu] OSD borders: l=0 t=163 r=0 b=163
+[  14.059][v][vo/gpu] Video borders: l=0 t=163 r=0 b=163
+[  14.059][v][vo/gpu] Reported display depth: 8
+[  14.059][v][vo/gpu] Texture for plane 0: 640x360
+[  14.059][v][vo/gpu] Texture for plane 1: 320x180
+[  14.059][v][vo/gpu] Texture for plane 2: 320x180
+[  14.059][v][vo/gpu] Testing FBO format rgba16f
+[  14.059][d][vo/gpu] Resizing texture: 16x16
+[  14.060][v][vo/gpu] Using FBO format rgba16f.
+[  14.060][v][vo/gpu] No advanced processing required. Enabling dumb mode.
+[  14.060][d][vo/gpu/opengl] vertex shader source:
+[  14.061][d][vo/gpu/opengl] [  1] #version 440
+[  14.061][d][vo/gpu/opengl] [  2] #define tex1D texture
+[  14.061][d][vo/gpu/opengl] [  3] #define tex3D texture
+[  14.061][d][vo/gpu/opengl] [  4] #define LUT_POS(x, lut_size) mix(0.5 / (lut_size), 1.0 - 0.5 / (lut_size), (x))
+[  14.061][d][vo/gpu/opengl] [  5] in vec2 vertex_position;
+[  14.061][d][vo/gpu/opengl] [  6] in vec2 vertex_texcoord0;
+[  14.061][d][vo/gpu/opengl] [  7] out vec2 texcoord0;
+[  14.061][d][vo/gpu/opengl] [  8] in vec2 vertex_texcoord1;
+[  14.061][d][vo/gpu/opengl] [  9] out vec2 texcoord1;
+[  14.061][d][vo/gpu/opengl] [ 10] in vec2 vertex_texcoord2;
+[  14.061][d][vo/gpu/opengl] [ 11] out vec2 texcoord2;
+[  14.061][d][vo/gpu/opengl] [ 12] void main() {
+[  14.061][d][vo/gpu/opengl] [ 13] gl_Position = vec4(vertex_position, 1.0, 1.0);
+[  14.061][d][vo/gpu/opengl] [ 14] texcoord0 = vertex_texcoord0;
+[  14.061][d][vo/gpu/opengl] [ 15] texcoord1 = vertex_texcoord1;
+[  14.061][d][vo/gpu/opengl] [ 16] texcoord2 = vertex_texcoord2;
+[  14.061][d][vo/gpu/opengl] [ 17] }
+[  14.061][d][vo/gpu/opengl] fragment shader source:
+[  14.061][d][vo/gpu/opengl] [  1] #version 440
+[  14.061][d][vo/gpu/opengl] [  2] #define tex1D texture
+[  14.061][d][vo/gpu/opengl] [  3] #define tex3D texture
+[  14.061][d][vo/gpu/opengl] [  4] #define LUT_POS(x, lut_size) mix(0.5 / (lut_size), 1.0 - 0.5 / (lut_size), (x))
+[  14.061][d][vo/gpu/opengl] [  5] out vec4 out_color;
+[  14.061][d][vo/gpu/opengl] [  6] in vec2 texcoord0;
+[  14.061][d][vo/gpu/opengl] [  7] in vec2 texcoord1;
+[  14.061][d][vo/gpu/opengl] [  8] in vec2 texcoord2;
+[  14.061][d][vo/gpu/opengl] [  9] layout(std140, binding=0) uniform UBO {
+[  14.061][d][vo/gpu/opengl] [ 10] layout(offset=0) mat3 colormatrix;
+[  14.061][d][vo/gpu/opengl] [ 11] layout(offset=48) vec3 colormatrix_c;
+[  14.061][d][vo/gpu/opengl] [ 12] layout(offset=64) vec3 src_luma;
+[  14.061][d][vo/gpu/opengl] [ 13] layout(offset=80) vec3 dst_luma;
+[  14.061][d][vo/gpu/opengl] [ 14] layout(offset=96) vec2 texture_size0;
+[  14.061][d][vo/gpu/opengl] [ 15] layout(offset=112) mat2 texture_rot0;
+[  14.061][d][vo/gpu/opengl] [ 16] layout(offset=144) vec2 texture_off0;
+[  14.061][d][vo/gpu/opengl] [ 17] layout(offset=152) vec2 pixel_size0;
+[  14.061][d][vo/gpu/opengl] [ 18] layout(offset=160) vec2 texture_size1;
+[  14.061][d][vo/gpu/opengl] [ 19] layout(offset=176) mat2 texture_rot1;
+[  14.061][d][vo/gpu/opengl] [ 20] layout(offset=208) vec2 texture_off1;
+[  14.061][d][vo/gpu/opengl] [ 21] layout(offset=216) vec2 pixel_size1;
+[  14.061][d][vo/gpu/opengl] [ 22] layout(offset=224) vec2 texture_size2;
+[  14.061][d][vo/gpu/opengl] [ 23] layout(offset=240) mat2 texture_rot2;
+[  14.061][d][vo/gpu/opengl] [ 24] layout(offset=272) vec2 texture_off2;
+[  14.061][d][vo/gpu/opengl] [ 25] layout(offset=280) vec2 pixel_size2;
+[  14.061][d][vo/gpu/opengl] [ 26] };
+[  14.061][d][vo/gpu/opengl] [ 27] uniform sampler2D texture0;
+[  14.061][d][vo/gpu/opengl] [ 28] uniform sampler2D texture1;
+[  14.061][d][vo/gpu/opengl] [ 29] uniform sampler2D texture2;
+[  14.061][d][vo/gpu/opengl] [ 30] void main() {
+[  14.061][d][vo/gpu/opengl] [ 31] vec4 color = vec4(0.0, 0.0, 0.0, 1.0);
+[  14.061][d][vo/gpu/opengl] [ 32] color.r = 1.000000 * vec4(texture(texture0, texcoord0)).r;
+[  14.061][d][vo/gpu/opengl] [ 33] color.g = 1.000000 * vec4(texture(texture1, texcoord1)).r;
+[  14.061][d][vo/gpu/opengl] [ 34] color.b = 1.000000 * vec4(texture(texture2, texcoord2)).r;
+[  14.061][d][vo/gpu/opengl] [ 35] color = color.rgbr;
+[  14.061][d][vo/gpu/opengl] [ 36] color.rgb = mat3(colormatrix) * color.rgb + colormatrix_c;
+[  14.061][d][vo/gpu/opengl] [ 37] color.a = 1.0;
+[  14.061][d][vo/gpu/opengl] [ 38] // color mapping
+[  14.061][d][vo/gpu/opengl] [ 39] color.rgb *= vec3(1.000000);
+[  14.061][d][vo/gpu/opengl] [ 40] color.rgb *= vec3(1.000000);
+[  14.061][d][vo/gpu/opengl] [ 41] out_color = color;
+[  14.061][d][vo/gpu/opengl] [ 42] }
+[  14.061][d][vo/gpu/opengl] shader link log (status=1): 
+[  14.061][v][cplayer] first video frame after restart shown
+[  14.062][v][cplayer] audio ready
+[  14.062][d][cplayer] starting video playback
+[  14.062][v][cplayer] starting audio playback
+[  14.062][v][cplayer] playback restart complete @ 0.000000, audio=playing, video=playing
+[  14.062][v][ao/pulse] starting AO
+[  14.063][d][vd] Allocating new DR image...
+[  14.074][v][vo/gpu/x11] Disabling screensaver.
+[  14.074][d][vd] Allocating new DR image...
+[  14.215][d][vd] Allocating new DR image...
+[  14.264][d][vd] Allocating new DR image...
+[  14.300][d][vd] Allocating new DR image...
+[  14.329][d][vd] Allocating new DR image...
+[  14.362][d][vd] Allocating new DR image...
+[  14.395][d][vd] Allocating new DR image...
+[  14.427][d][vd] Allocating new DR image...
+[  14.461][d][vd] Allocating new DR image...
+[  14.526][d][vd] Allocating new DR image...
+[  14.547][d][lavf] stream 0: resize index to 128
+[  14.582][d][vd] Allocating new DR image...
+[  14.622][d][vd] Allocating new DR image...
+[  14.751][d][vd] Allocating new DR image...
+[  15.042][v][lavf] EOF reached.
+[  15.516][d][cplayer] Run command: change-list, flags=64, args=[name="shared-script-properties", operation="append", value="osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[  15.516][v][cplayer] Set property: shared-script-properties -> 1
+[  15.517][d][cplayer] Run command: enable-section, flags=64, args=[name="input", flags=""]
+[  15.550][d][cplayer] Run command: script-binding, flags=73, args=[name="osc/__keybinding2"]
+[  15.584][d][cplayer] Run command: script-binding, flags=73, args=[name="osc/__keybinding4"]
+[  15.795][d][cplayer] Run command: change-list, flags=64, args=[name="shared-script-properties", operation="append", value="osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[  15.795][v][cplayer] Set property: shared-script-properties -> 1
+[  15.795][d][cplayer] Run command: disable-section, flags=64, args=[name="input"]
+[  15.819][d][vd] Allocating new DR image...
+[  15.854][d][cplayer] Run command: change-list, flags=64, args=[name="shared-script-properties", operation="append", value="osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[  15.855][v][cplayer] Set property: shared-script-properties -> 1
+[  15.855][d][cplayer] Run command: enable-section, flags=64, args=[name="input", flags=""]
+[  17.864][d][cplayer] Run command: script-binding, flags=73, args=[name="osc/__keybinding5"]
+[  17.964][d][cplayer] Run command: script-binding, flags=73, args=[name="osc/__keybinding5"]
+[  17.964][d][cplayer] Run command: cycle, flags=64, args=[name="mute", value="1.000000"]
+[  17.964][v][cplayer] Set property: mute -> 1
+[  18.298][d][cplayer] Run command: script-binding, flags=73, args=[name="osc/__keybinding9"]
+[  18.298][d][cplayer] Run command: script-binding, flags=73, args=[name="osc/__keybinding9"]
+[  18.299][d][cplayer] Run command: add, flags=65, args=[name="volume", value="5.000000"]
+[  18.299][v][cplayer] Set property: volume -> 1
+[  18.331][d][cplayer] Run command: script-binding, flags=73, args=[name="osc/__keybinding9"]
+[  18.331][d][cplayer] Run command: script-binding, flags=73, args=[name="osc/__keybinding9"]
+[  18.331][d][cplayer] Run command: script-binding, flags=73, args=[name="osc/__keybinding9"]
+[  18.331][d][cplayer] Run command: script-binding, flags=73, args=[name="osc/__keybinding9"]
+[  18.331][d][cplayer] Run command: script-binding, flags=73, args=[name="osc/__keybinding9"]
+[  18.331][d][cplayer] Run command: script-binding, flags=73, args=[name="osc/__keybinding9"]
+[  18.332][v][osd/libass] fontselect: (mpv-osd-symbols, 400, 0) -> mpv-osd-symbols-Regular, 0, mpv-osd-symbols-Regular
+[  18.333][v][vo/gpu] Reallocating OSD texture to 1024x256.
+[  18.333][d][cplayer] Run command: add, flags=65, args=[name="volume", value="5.000000"]
+[  18.333][v][cplayer] Set property: volume -> 1
+[  18.334][d][cplayer] Run command: add, flags=65, args=[name="volume", value="5.000000"]
+[  18.334][v][cplayer] Set property: volume -> 1
+[  18.334][d][cplayer] Run command: add, flags=65, args=[name="volume", value="5.000000"]
+[  18.334][v][cplayer] Set property: volume -> 1
+[  18.364][d][cplayer] Run command: script-binding, flags=73, args=[name="osc/__keybinding9"]
+[  18.364][d][cplayer] Run command: script-binding, flags=73, args=[name="osc/__keybinding9"]
+[  18.364][d][cplayer] Run command: script-binding, flags=73, args=[name="osc/__keybinding9"]
+[  18.364][d][cplayer] Run command: script-binding, flags=73, args=[name="osc/__keybinding9"]
+[  18.365][d][cplayer] Run command: add, flags=65, args=[name="volume", value="5.000000"]
+[  18.365][v][cplayer] Set property: volume -> 1
+[  18.365][d][cplayer] Run command: add, flags=65, args=[name="volume", value="5.000000"]
+[  18.365][v][cplayer] Set property: volume -> 1
+[  18.651][d][cplayer] Run command: script-binding, flags=73, args=[name="osc/__keybinding9"]
+[  18.651][d][cplayer] Run command: script-binding, flags=73, args=[name="osc/__keybinding9"]
+[  18.651][d][cplayer] Run command: script-binding, flags=73, args=[name="osc/__keybinding9"]
+[  18.651][d][cplayer] Run command: script-binding, flags=73, args=[name="osc/__keybinding9"]
+[  18.651][d][cplayer] Run command: script-binding, flags=73, args=[name="osc/__keybinding9"]
+[  18.651][d][cplayer] Run command: script-binding, flags=73, args=[name="osc/__keybinding9"]
+[  18.652][d][cplayer] Run command: add, flags=65, args=[name="volume", value="5.000000"]
+[  18.652][v][cplayer] Set property: volume -> 1
+[  18.652][d][cplayer] Run command: add, flags=65, args=[name="volume", value="5.000000"]
+[  18.652][v][cplayer] Set property: volume -> 1
+[  18.653][d][cplayer] Run command: add, flags=65, args=[name="volume", value="5.000000"]
+[  18.653][v][cplayer] Set property: volume -> 1
+[  18.684][d][cplayer] Run command: script-binding, flags=73, args=[name="osc/__keybinding9"]
+[  18.684][d][cplayer] Run command: script-binding, flags=73, args=[name="osc/__keybinding9"]
+[  18.684][d][cplayer] Run command: script-binding, flags=73, args=[name="osc/__keybinding9"]
+[  18.684][d][cplayer] Run command: script-binding, flags=73, args=[name="osc/__keybinding9"]
+[  18.684][d][cplayer] Run command: script-binding, flags=73, args=[name="osc/__keybinding9"]
+[  18.684][d][cplayer] Run command: script-binding, flags=73, args=[name="osc/__keybinding9"]
+[  18.684][d][cplayer] Run command: add, flags=65, args=[name="volume", value="5.000000"]
+[  18.684][v][cplayer] Set property: volume -> 1
+[  18.685][d][cplayer] Run command: add, flags=65, args=[name="volume", value="5.000000"]
+[  18.685][v][cplayer] Set property: volume -> 1
+[  18.686][d][cplayer] Run command: add, flags=65, args=[name="volume", value="5.000000"]
+[  18.686][v][cplayer] Set property: volume -> 1
+[  18.715][d][cplayer] Run command: script-binding, flags=73, args=[name="osc/__keybinding9"]
+[  18.715][d][cplayer] Run command: script-binding, flags=73, args=[name="osc/__keybinding9"]
+[  18.968][d][cplayer] Run command: script-binding, flags=73, args=[name="osc/__keybinding9"]
+[  18.968][d][cplayer] Run command: script-binding, flags=73, args=[name="osc/__keybinding9"]
+[  18.968][d][cplayer] Run command: script-binding, flags=73, args=[name="osc/__keybinding9"]
+[  18.968][d][cplayer] Run command: script-binding, flags=73, args=[name="osc/__keybinding9"]
+[  18.968][d][cplayer] Run command: script-binding, flags=73, args=[name="osc/__keybinding9"]
+[  18.968][d][cplayer] Run command: script-binding, flags=73, args=[name="osc/__keybinding9"]
+[  18.969][d][cplayer] Run command: add, flags=65, args=[name="volume", value="5.000000"]
+[  18.969][v][cplayer] Set property: volume -> 1
+[  18.969][d][cplayer] Run command: add, flags=65, args=[name="volume", value="5.000000"]
+[  18.969][v][cplayer] Set property: volume -> 1
+[  18.970][d][cplayer] Run command: add, flags=65, args=[name="volume", value="5.000000"]
+[  18.970][v][cplayer] Set property: volume -> 1
+[  18.999][d][cplayer] Run command: script-binding, flags=73, args=[name="osc/__keybinding9"]
+[  18.999][d][cplayer] Run command: script-binding, flags=73, args=[name="osc/__keybinding9"]
+[  18.999][d][cplayer] Run command: script-binding, flags=73, args=[name="osc/__keybinding9"]
+[  18.999][d][cplayer] Run command: script-binding, flags=73, args=[name="osc/__keybinding9"]
+[  18.999][d][cplayer] Run command: script-binding, flags=73, args=[name="osc/__keybinding9"]
+[  18.999][d][cplayer] Run command: script-binding, flags=73, args=[name="osc/__keybinding9"]
+[  19.000][d][cplayer] Run command: add, flags=65, args=[name="volume", value="5.000000"]
+[  19.000][v][cplayer] Set property: volume -> 1
+[  19.001][d][cplayer] Run command: add, flags=65, args=[name="volume", value="5.000000"]
+[  19.001][v][cplayer] Set property: volume -> 1
+[  19.001][d][cplayer] Run command: add, flags=65, args=[name="volume", value="5.000000"]
+[  19.001][v][cplayer] Set property: volume -> 1
+[  19.032][d][cplayer] Run command: script-binding, flags=73, args=[name="osc/__keybinding9"]
+[  19.032][d][cplayer] Run command: script-binding, flags=73, args=[name="osc/__keybinding9"]
+[  19.033][d][cplayer] Run command: add, flags=65, args=[name="volume", value="5.000000"]
+[  19.033][v][cplayer] Set property: volume -> 1
+[  19.493][d][cplayer] Run command: script-binding, flags=73, args=[name="osc/__keybinding5"]
+[  19.560][d][cplayer] Run command: script-binding, flags=73, args=[name="osc/__keybinding5"]
+[  19.560][d][cplayer] Run command: cycle, flags=64, args=[name="mute", value="1.000000"]
+[  19.560][v][cplayer] Set property: mute -> 1
+[  21.360][d][cplayer] Run command: script-binding, flags=73, args=[name="osc/__keybinding2"]
+[  21.360][d][cplayer] Run command: script-binding, flags=73, args=[name="osc/__keybinding4"]
+[  21.575][d][cplayer] Run command: change-list, flags=64, args=[name="shared-script-properties", operation="append", value="osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[  21.575][v][cplayer] Set property: shared-script-properties -> 1
+[  21.575][d][cplayer] Run command: disable-section, flags=64, args=[name="input"]
+[  24.096][v][af] filter input EOF
+[  24.096][v][af] filter output EOF
+[  24.096][v][cplayer] audio filter EOF
+[  24.096][v][cplayer] audio draining
+[  24.096][v][cplayer] audio EOF reached
+[  24.309][v][ao/pulse] audio end or underrun
+[  24.354][v][vf] filter input EOF
+[  24.354][v][vf] filter output EOF
+[  24.387][v][cplayer] EOF code: 1  
+[  24.387][d][ad] Uninit decoder.
+[  24.387][d][vd] Uninit decoder.
+[  24.388][d][cplayer] Terminating demuxers...
+[  24.388][d][ffmpeg] AVIOContext: Statistics: 2362213 bytes read, 2 seeks
+[  24.388][d][cplayer] Done terminating demuxers.
+[  24.388][v][cplayer] finished playback, success (reason 0)
+[  24.389][i][cplayer] 
+[  24.389][i][cplayer] Playing: https://static.bumpworthy.com/bumps/6733.d.mp4
+[  24.389][v][cplayer] Running hook: ytdl_hook/on_load
+[  24.389][v][ytdl_hook] ytdl:// hook 
+[  24.389][v][ytdl_hook] not a ytdl:// url 
+[  24.389][v][ffmpeg] Opening https://static.bumpworthy.com/bumps/6733.d.mp4
+[  24.393][d][ffmpeg] tcp: Starting connection attempt to 64.90.40.121 port 443
+[  24.418][d][ffmpeg] tcp: Successfully connected to 64.90.40.121 port 443
+[  24.418][d][osc] osc_init 
+[  24.419][d][cplayer] Run command: change-list, flags=64, args=[name="shared-script-properties", operation="append", value="osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[  24.419][v][cplayer] Set property: shared-script-properties -> 1
+[  24.420][v][vo/gpu/x11] Enabling screensaver.
+[  24.437][v][ao/pulse] audio end or underrun
+[  24.992][d][ffmpeg] resize stream to 131072 bytes, drop 0 bytes
+[  24.992][v][ffmpeg] Mime-type: 'video/mp4'
+[  24.992][d][ffmpeg] Stream opened successfully.
+[  24.992][v][demux] Trying demuxers for level=normal.
+[  24.992][d][demux] Trying demuxer: disc (force-level: normal)
+[  24.992][d][demux] Trying demuxer: edl (force-level: normal)
+[  25.136][d][demux] Trying demuxer: cue (force-level: normal)
+[  25.136][d][demux] Trying demuxer: rawaudio (force-level: normal)
+[  25.136][d][demux] Trying demuxer: rawvideo (force-level: normal)
+[  25.136][d][demux] Trying demuxer: mkv (force-level: normal)
+[  25.136][d][demux] Trying demuxer: libarchive (force-level: normal)
+[  25.136][d][demux] Trying demuxer: lavf (force-level: normal)
+[  25.139][v][lavf] Found 'mov,mp4,m4a,3gp,3g2,mj2' at score=100 size=2048.
+[  25.139][v][ffmpeg] stream level seek from 16384 to 812720
+[  25.141][d][ffmpeg] tcp: Starting connection attempt to 64.90.40.121 port 443
+[  25.166][d][ffmpeg] tcp: Successfully connected to 64.90.40.121 port 443
+[  25.884][v][demux] Detected file format: mov,mp4,m4a,3gp,3g2,mj2 (libavformat)
+[  25.884][v][cplayer] Opening done: https://static.bumpworthy.com/bumps/6733.d.mp4
+[  25.884][d][global] config path: 'sub' -/-> '/home/jd/.config/mpv/sub'
+[  25.884][d][global] config path: 'sub' -/-> '/home/jd/.mpv/sub'
+[  25.884][d][global] config path: 'sub' -/-> '/etc/mpv/sub'
+[  25.884][v][cplayer] Running hook: ytdl_hook/on_preloaded
+[  25.884][d][osc] osc_init 
+[  25.884][v][lavf] select track 0
+[  25.884][v][lavf] select track 1
+[  25.884][i][cplayer]  (+) Video --vid=1 (*) (h264 640x360 29.970fps)
+[  25.884][i][cplayer]  (+) Audio --aid=1 --alang=eng (*) (aac 2ch 48000Hz)
+[  25.884][v][vd] Container reported FPS: 29.970030
+[  25.885][v][vd] Codec list:
+[  25.885][v][vd]     h264 - H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10
+[  25.885][v][vd]     h264_v4l2m2m (h264) - V4L2 mem2mem H.264 decoder wrapper
+[  25.885][v][vd]     h264_qsv (h264) - H264 video (Intel Quick Sync Video acceleration)
+[  25.885][v][vd]     h264_cuvid (h264) - Nvidia CUVID H264 decoder
+[  25.885][v][vd] Opening decoder h264
+[  25.885][v][vd] No hardware decoding requested.
+[  25.885][v][vd] Using software decoding.
+[  25.885][v][vd] Detected 8 logical cores.
+[  25.885][v][vd] Requesting 9 threads for decoding.
+[  25.885][v][vd] Selected codec: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10)
+[  25.885][v][vf] User filter list:
+[  25.885][v][vf]   (empty)
+[  25.885][v][ad] Codec list:
+[  25.885][v][ad]     aac - AAC (Advanced Audio Coding)
+[  25.885][v][ad]     aac_fixed (aac) - AAC (Advanced Audio Coding)
+[  25.885][v][ad] Opening decoder aac
+[  25.886][v][ad] Requesting 1 threads for decoding.
+[  25.886][v][ad] Selected codec: aac (AAC (Advanced Audio Coding))
+[  25.886][v][af] User filter list:
+[  25.886][v][af]   (empty)
+[  25.886][v][cplayer] Starting playback...
+[  25.886][v][ffmpeg] stream level seek from 826854 to 48
+[  25.886][d][cplayer] Run command: change-list, flags=64, args=[name="shared-script-properties", operation="append", value="osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[  25.886][v][cplayer] Set property: shared-script-properties -> 1
+[  25.892][d][ffmpeg] tcp: Starting connection attempt to 64.90.40.121 port 443
+[  25.913][d][ffmpeg] tcp: Successfully connected to 64.90.40.121 port 443
+[  25.917][d][osc] osc_init 
+[  25.917][d][cplayer] Run command: change-list, flags=64, args=[name="shared-script-properties", operation="append", value="osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[  25.917][v][cplayer] Set property: shared-script-properties -> 1
+[  26.482][d][lavf] stream 1: resize index to 128
+[  26.482][v][af] [in] 48000Hz stereo 2ch floatp
+[  26.482][v][af] [userspeed] 48000Hz stereo 2ch floatp
+[  26.482][v][af] [userspeed] (disabled)
+[  26.482][v][af] [convert] 48000Hz stereo 2ch floatp
+[  26.483][d][ffmpeg/video] h264: Reinit context to 640x368, pix_fmt: yuv420p
+[  26.483][d][vd] DR parameter change to 640x386 yuv420p align=64
+[  26.483][d][vd] Allocating new DR image...
+[  26.483][d][vd] Allocating new DR image...
+[  26.483][d][vd] Allocating new DR image...
+[  26.484][d][vd] Allocating new DR image...
+[  26.484][d][vd] Allocating new DR image...
+[  26.484][v][autoconvert] inserting resampler
+[  26.484][v][swresample] format change, reinitializing resampler
+[  26.484][v][swresample] 48000Hz stereo floatp -> 48000Hz stereo float
+[  26.484][v][af] [out] 48000Hz stereo 2ch float
+[  26.485][d][vd] Allocating new DR image...
+[  26.587][d][cplayer] Run command: change-list, flags=64, args=[name="shared-script-properties", operation="append", value="osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[  26.587][v][cplayer] Set property: shared-script-properties -> 1
+[  26.588][d][cplayer] Run command: enable-section, flags=64, args=[name="input", flags=""]
+[  26.640][d][vd] Allocating new DR image...
+[  26.640][d][vd] Allocating new DR image...
+[  26.640][d][vd] Allocating new DR image...
+[  26.641][d][vd] Allocating new DR image...
+[  26.641][v][vd] Using software decoding.
+[  26.641][d][vd] Allocating new DR image...
+[  26.641][v][vd] Decoder format: 640x360 yuv420p auto/auto/auto/auto/auto CL=mpeg2/4/h264
+[  26.641][v][vf] [in] 640x360 yuv420p bt.601/bt.709/bt.1886/limited/display SP=1.000000 CL=mpeg2/4/h264
+[  26.641][v][vf] [userdeint] 640x360 yuv420p bt.601/bt.709/bt.1886/limited/display SP=1.000000 CL=mpeg2/4/h264
+[  26.641][v][vf] [userdeint] (disabled)
+[  26.641][v][vf] [autorotate] 640x360 yuv420p bt.601/bt.709/bt.1886/limited/display SP=1.000000 CL=mpeg2/4/h264
+[  26.641][v][vf] [autorotate] (disabled)
+[  26.641][v][vf] [convert] 640x360 yuv420p bt.601/bt.709/bt.1886/limited/display SP=1.000000 CL=mpeg2/4/h264
+[  26.641][v][vf] [convert] (disabled)
+[  26.641][v][vf] [out] 640x360 yuv420p bt.601/bt.709/bt.1886/limited/display SP=1.000000 CL=mpeg2/4/h264
+[  26.644][d][vd] Allocating new DR image...
+[  26.646][v][cplayer] first video frame after restart shown
+[  26.646][v][cplayer] audio ready
+[  26.646][d][cplayer] starting video playback
+[  26.646][v][cplayer] starting audio playback
+[  26.646][v][cplayer] playback restart complete @ 0.000000, audio=playing, video=playing
+[  26.646][v][vo/gpu/x11] Disabling screensaver.
+[  26.647][v][ao/pulse] starting AO
+[  26.647][d][vd] Allocating new DR image...
+[  26.729][d][vd] Allocating new DR image...
+[  26.779][d][vd] Allocating new DR image...
+[  26.971][d][lavf] stream 0: resize index to 128
+[  27.003][d][vd] Allocating new DR image...
+[  27.323][v][lavf] EOF reached.
+[  27.516][d][cplayer] Run command: change-list, flags=64, args=[name="shared-script-properties", operation="append", value="osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[  27.516][v][cplayer] Set property: shared-script-properties -> 1
+[  27.516][d][cplayer] Run command: disable-section, flags=64, args=[name="input"]
+[  27.837][d][cplayer] Run command: change-list, flags=64, args=[name="shared-script-properties", operation="append", value="osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[  27.837][v][cplayer] Set property: shared-script-properties -> 1
+[  27.837][d][cplayer] Run command: enable-section, flags=64, args=[name="input", flags=""]
+[  29.045][d][cplayer] Run command: script-binding, flags=73, args=[name="osc/__keybinding2"]
+[  29.045][d][cplayer] Run command: script-binding, flags=73, args=[name="osc/__keybinding4"]
+[  32.268][d][cplayer] Run command: script-binding, flags=73, args=[name="osc/__keybinding5"]
+[  32.368][d][cplayer] Run command: script-binding, flags=73, args=[name="osc/__keybinding5"]
+[  32.368][d][cplayer] Run command: playlist-next, flags=64, args=[flags="weak"]
+[  32.368][v][cplayer] EOF code: 3  
+[  32.369][d][ad] Uninit decoder.
+[  32.369][d][vd] Uninit decoder.
+[  32.371][d][cplayer] Terminating demuxers...
+[  32.371][d][ffmpeg] AVIOContext: Statistics: 846518 bytes read, 2 seeks
+[  32.372][d][cplayer] Done terminating demuxers.
+[  32.372][v][cplayer] finished playback, success (reason 2)
+[  32.372][i][cplayer] 
+[  32.372][i][cplayer] Playing: https://static.bumpworthy.com/bumps/5544.d.mp4
+[  32.372][v][cplayer] Running hook: ytdl_hook/on_load
+[  32.372][v][ytdl_hook] ytdl:// hook 
+[  32.372][v][ytdl_hook] not a ytdl:// url 
+[  32.372][v][ffmpeg] Opening https://static.bumpworthy.com/bumps/5544.d.mp4
+[  32.376][d][ffmpeg] tcp: Starting connection attempt to 64.90.40.121 port 443
+[  32.397][d][osc] osc_init 
+[  32.397][d][cplayer] Run command: change-list, flags=64, args=[name="shared-script-properties", operation="append", value="osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[  32.397][v][cplayer] Set property: shared-script-properties -> 1
+[  32.400][v][vo/gpu/x11] Enabling screensaver.
+[  32.404][d][ffmpeg] tcp: Successfully connected to 64.90.40.121 port 443
+[  33.018][d][ffmpeg] resize stream to 131072 bytes, drop 0 bytes
+[  33.019][v][ffmpeg] Mime-type: 'video/mp4'
+[  33.019][d][ffmpeg] Stream opened successfully.
+[  33.019][v][demux] Trying demuxers for level=normal.
+[  33.019][d][demux] Trying demuxer: disc (force-level: normal)
+[  33.019][d][demux] Trying demuxer: edl (force-level: normal)
+[  33.128][d][demux] Trying demuxer: cue (force-level: normal)
+[  33.128][d][demux] Trying demuxer: rawaudio (force-level: normal)
+[  33.128][d][demux] Trying demuxer: rawvideo (force-level: normal)
+[  33.128][d][demux] Trying demuxer: mkv (force-level: normal)
+[  33.128][d][demux] Trying demuxer: libarchive (force-level: normal)
+[  33.128][d][demux] Trying demuxer: lavf (force-level: normal)
+[  33.130][v][lavf] Found 'mov,mp4,m4a,3gp,3g2,mj2' at score=100 size=2048.
+[  33.130][v][ffmpeg] stream level seek from 16384 to 1034693
+[  33.133][d][ffmpeg] tcp: Starting connection attempt to 64.90.40.121 port 443
+[  33.156][d][ffmpeg] tcp: Successfully connected to 64.90.40.121 port 443
+[  33.875][v][demux] Detected file format: mov,mp4,m4a,3gp,3g2,mj2 (libavformat)
+[  33.875][v][cplayer] Opening done: https://static.bumpworthy.com/bumps/5544.d.mp4
+[  33.875][d][global] config path: 'sub' -/-> '/home/jd/.config/mpv/sub'
+[  33.875][d][global] config path: 'sub' -/-> '/home/jd/.mpv/sub'
+[  33.875][d][global] config path: 'sub' -/-> '/etc/mpv/sub'
+[  33.875][v][cplayer] Running hook: ytdl_hook/on_preloaded
+[  33.875][v][lavf] select track 0
+[  33.875][v][lavf] select track 1
+[  33.875][i][cplayer]  (+) Video --vid=1 (*) (h264 640x360 29.970fps)
+[  33.875][i][cplayer]  (+) Audio --aid=1 (*) (aac 2ch 44100Hz)
+[  33.876][v][vd] Container reported FPS: 29.970030
+[  33.876][v][vd] Codec list:
+[  33.876][v][vd]     h264 - H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10
+[  33.876][v][vd]     h264_v4l2m2m (h264) - V4L2 mem2mem H.264 decoder wrapper
+[  33.876][v][vd]     h264_qsv (h264) - H264 video (Intel Quick Sync Video acceleration)
+[  33.876][v][vd]     h264_cuvid (h264) - Nvidia CUVID H264 decoder
+[  33.876][v][vd] Opening decoder h264
+[  33.876][v][vd] No hardware decoding requested.
+[  33.876][v][vd] Using software decoding.
+[  33.876][v][vd] Detected 8 logical cores.
+[  33.876][v][vd] Requesting 9 threads for decoding.
+[  33.877][v][vd] Selected codec: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10)
+[  33.877][v][vf] User filter list:
+[  33.877][v][vf]   (empty)
+[  33.878][v][ad] Codec list:
+[  33.878][v][ad]     aac - AAC (Advanced Audio Coding)
+[  33.878][v][ad]     aac_fixed (aac) - AAC (Advanced Audio Coding)
+[  33.878][v][ad] Opening decoder aac
+[  33.878][v][ad] Requesting 1 threads for decoding.
+[  33.878][v][ad] Selected codec: aac (AAC (Advanced Audio Coding))
+[  33.878][v][af] User filter list:
+[  33.878][v][af]   (empty)
+[  33.878][v][cplayer] Starting playback...
+[  33.878][v][ffmpeg] stream level seek from 1047900 to 48
+[  33.879][d][osc] osc_init 
+[  33.879][d][cplayer] Run command: change-list, flags=64, args=[name="shared-script-properties", operation="append", value="osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[  33.879][v][cplayer] Set property: shared-script-properties -> 1
+[  33.881][d][ffmpeg] tcp: Starting connection attempt to 64.90.40.121 port 443
+[  33.907][d][ffmpeg] tcp: Successfully connected to 64.90.40.121 port 443
+[  33.910][d][osc] osc_init 
+[  33.911][d][cplayer] Run command: change-list, flags=64, args=[name="shared-script-properties", operation="append", value="osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[  33.911][v][cplayer] Set property: shared-script-properties -> 1
+[  34.475][d][lavf] stream 1: resize index to 128
+[  34.475][v][af] [in] 44100Hz stereo 2ch floatp
+[  34.475][v][af] [userspeed] 44100Hz stereo 2ch floatp
+[  34.475][v][af] [userspeed] (disabled)
+[  34.475][v][af] [convert] 44100Hz stereo 2ch floatp
+[  34.475][d][ffmpeg/video] h264: Reinit context to 640x368, pix_fmt: yuv420p
+[  34.476][d][vd] DR parameter change to 640x386 yuv420p align=64
+[  34.476][d][vd] Allocating new DR image...
+[  34.476][d][vd] Allocating new DR image...
+[  34.477][d][vd] Allocating new DR image...
+[  34.477][d][vd] Allocating new DR image...
+[  34.477][d][vd] Allocating new DR image...
+[  34.478][d][vd] Allocating new DR image...
+[  34.478][d][vd] Allocating new DR image...
+[  34.479][v][ao] Trying audio driver 'pulse'
+[  34.479][v][ao/pulse] requested format: 44100 Hz, stereo channels, floatp
+[  34.479][v][ao/pulse] Library version: 15.0.0
+[  34.479][v][ao/pulse] Proto: 35
+[  34.479][v][ao/pulse] Server proto: 4294967295
+[  34.481][v][ao/pulse] Channel layouts:
+[  34.481][v][ao/pulse]  - #fl
+[  34.481][v][ao/pulse]  - #fr
+[  34.481][v][ao/pulse]  - #fc
+[  34.481][v][ao/pulse]  - #lfe
+[  34.481][v][ao/pulse]  - #bl
+[  34.481][v][ao/pulse]  - #br
+[  34.481][v][ao/pulse]  - #flc
+[  34.481][v][ao/pulse]  - #frc
+[  34.481][v][ao/pulse]  - #bc
+[  34.481][v][ao/pulse]  - #sl
+[  34.481][v][ao/pulse]  - #sr
+[  34.481][v][ao/pulse]  - #tc
+[  34.481][v][ao/pulse]  - #tfl
+[  34.481][v][ao/pulse]  - #tfc
+[  34.481][v][ao/pulse]  - #tfr
+[  34.481][v][ao/pulse]  - #tbl
+[  34.481][v][ao/pulse]  - #tbc
+[  34.481][v][ao/pulse]  - #tbr
+[  34.481][v][ao/pulse] result: stereo
+[  34.486][v][ao/pulse] device buffer: 4410 samples.
+[  34.486][v][ao/pulse] using soft-buffer of 8820 samples.
+[  34.486][i][cplayer] AO: [pulse] 44100Hz stereo 2ch float
+[  34.486][v][cplayer] AO: Description: PulseAudio audio output
+[  34.486][v][autoconvert] inserting resampler
+[  34.486][v][swresample] format change, reinitializing resampler
+[  34.486][v][swresample] 44100Hz stereo floatp -> 44100Hz stereo float
+[  34.486][v][af] [out] 44100Hz stereo 2ch float
+[  34.634][d][vd] Allocating new DR image...
+[  34.634][d][vd] Allocating new DR image...
+[  34.634][d][vd] Allocating new DR image...
+[  34.634][v][vd] Using software decoding.
+[  34.635][v][vd] Decoder format: 640x360 yuv420p auto/auto/auto/auto/auto CL=mpeg2/4/h264
+[  34.635][d][vd] Allocating new DR image...
+[  34.635][v][vf] [in] 640x360 yuv420p bt.601/bt.709/bt.1886/limited/display SP=1.000000 CL=mpeg2/4/h264
+[  34.635][v][vf] [userdeint] 640x360 yuv420p bt.601/bt.709/bt.1886/limited/display SP=1.000000 CL=mpeg2/4/h264
+[  34.635][v][vf] [userdeint] (disabled)
+[  34.635][v][vf] [autorotate] 640x360 yuv420p bt.601/bt.709/bt.1886/limited/display SP=1.000000 CL=mpeg2/4/h264
+[  34.635][v][vf] [autorotate] (disabled)
+[  34.635][v][vf] [convert] 640x360 yuv420p bt.601/bt.709/bt.1886/limited/display SP=1.000000 CL=mpeg2/4/h264
+[  34.635][v][vf] [convert] (disabled)
+[  34.635][v][vf] [out] 640x360 yuv420p bt.601/bt.709/bt.1886/limited/display SP=1.000000 CL=mpeg2/4/h264
+[  34.635][d][vd] Allocating new DR image...
+[  34.637][v][cplayer] first video frame after restart shown
+[  34.637][v][cplayer] audio ready
+[  34.637][d][cplayer] starting video playback
+[  34.637][v][cplayer] delaying audio start 0.023220 vs. 0.000000, diff=0.023220
+[  34.637][v][cplayer] playback restart complete @ 0.000000, audio=ready, video=playing
+[  34.637][v][vo/gpu/x11] Disabling screensaver.
+[  34.637][d][vd] Allocating new DR image...
+[  34.638][v][cplayer] starting audio playback
+[  34.638][v][ao/pulse] starting AO
+[  34.640][d][vd] Allocating new DR image...
+[  34.974][d][lavf] stream 0: resize index to 128
+[  35.080][d][vd] Allocating new DR image...
+[  35.459][v][lavf] EOF reached.
+[  35.900][d][vd] Allocating new DR image...
+[  37.929][d][cplayer] Run command: script-binding, flags=73, args=[name="osc/__keybinding5"]
+[  38.028][d][cplayer] Run command: script-binding, flags=73, args=[name="osc/__keybinding5"]
+[  38.029][d][cplayer] Run command: playlist-next, flags=64, args=[flags="weak"]
+[  38.029][v][cplayer] EOF code: 3  
+[  38.030][d][ad] Uninit decoder.
+[  38.030][d][vd] Uninit decoder.
+[  38.031][d][cplayer] Terminating demuxers...
+[  38.032][d][ffmpeg] AVIOContext: Statistics: 1069591 bytes read, 2 seeks
+[  38.032][d][osc] osc_init 
+[  38.033][d][cplayer] Done terminating demuxers.
+[  38.033][v][cplayer] finished playback, success (reason 2)
+[  38.033][i][cplayer] 
+[  38.033][i][cplayer] Playing: /mnt/sshfs_3rdimpact/Videos/Anime/Sonny Boy/[tan] Sonny Boy - 02 [WEBRip 1080p Hi10p AAC] [46A6A2C3].mkv
+[  38.033][v][cplayer] Running hook: ytdl_hook/on_load
+[  38.033][v][ytdl_hook] ytdl:// hook 
+[  38.033][v][ytdl_hook] not a ytdl:// url 
+[  38.033][d][cplayer] Run command: change-list, flags=64, args=[name="shared-script-properties", operation="append", value="osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[  38.033][v][cplayer] Set property: shared-script-properties -> 1
+[  38.033][v][ifo_dvdnav] Opening /mnt/sshfs_3rdimpact/Videos/Anime/Sonny Boy/[tan] Sonny Boy - 02 [WEBRip 1080p Hi10p AAC] [46A6A2C3].mkv
+[  38.062][v][vo/gpu/x11] Enabling screensaver.
+[  38.064][d][osc] osc_init 
+[  38.064][d][cplayer] Run command: change-list, flags=64, args=[name="shared-script-properties", operation="append", value="osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[  38.064][v][cplayer] Set property: shared-script-properties -> 1
+[  38.176][v][bdmv/bluray] Opening /mnt/sshfs_3rdimpact/Videos/Anime/Sonny Boy/[tan] Sonny Boy - 02 [WEBRip 1080p Hi10p AAC] [46A6A2C3].mkv
+[  38.176][v][file] Opening /mnt/sshfs_3rdimpact/Videos/Anime/Sonny Boy/[tan] Sonny Boy - 02 [WEBRip 1080p Hi10p AAC] [46A6A2C3].mkv
+[  38.230][d][file] resize stream to 131072 bytes, drop 0 bytes
+[  38.230][d][file] Stream opened successfully.
+[  38.230][v][demux] Trying demuxers for level=normal.
+[  38.230][d][demux] Trying demuxer: disc (force-level: normal)
+[  38.230][d][demux] Trying demuxer: edl (force-level: normal)
+[  38.347][d][demux] Trying demuxer: cue (force-level: normal)
+[  38.347][d][demux] Trying demuxer: rawaudio (force-level: normal)
+[  38.347][d][demux] Trying demuxer: rawvideo (force-level: normal)
+[  38.347][d][demux] Trying demuxer: mkv (force-level: normal)
+[  38.347][d][mkv] Found the head...
+[  38.347][d][mkv] + a segment...
+[  38.347][d][mkv] Parsing seek head...
+[  38.347][d][mkv] |+ segment information...
+[  38.347][d][mkv] float 1469952.000000
+[  38.347][d][mkv] | + muxing app: libebml v1.4.2 + libmatroska v1.6.4
+[  38.347][d][mkv] | + writing app: mkvmerge v57.0.0 ('Till The End') 64-bit
+[  38.347][d][mkv] | + timecode scale: 1000000
+[  38.347][d][mkv] | + duration: 1469.952s
+[  38.347][d][mkv] | + segment uid 1e 70 a6 f3 4e 9b 15 96 ea fe 93 73 2a e5 78 41
+[  38.347][d][mkv] |+ segment tracks...
+[  38.347][d][mkv] Ignoring unrecognized subelement. ID: 22b59d size: 2
+[  38.347][d][mkv] Ignoring unrecognized subelement. ID: 22b59d size: 2
+[  38.347][d][mkv] float 48000.000000
+[  38.347][d][mkv] Ignoring unrecognized subelement. ID: 22b59d size: 2
+[  38.347][d][mkv] | + a track...
+[  38.347][d][mkv] |  + Track number: 1
+[  38.347][d][mkv] |  + Track type: Video
+[  38.347][d][mkv] |  + Video track
+[  38.347][d][mkv] |   + Display width: 1920
+[  38.347][d][mkv] |   + Display height: 1080
+[  38.347][d][mkv] |   + Pixel width: 1920
+[  38.347][d][mkv] |   + Pixel height: 1080
+[  38.347][d][mkv] |  + Codec ID: V_MPEG4/ISO/AVC
+[  38.347][d][mkv] |  + CodecPrivate, length 48
+[  38.347][d][mkv] |  + Language: jpn
+[  38.347][d][mkv] |  + Default duration: 41.708ms ( = 23.976 fps)
+[  38.347][d][mkv] | + a track...
+[  38.347][d][mkv] |  + Track number: 2
+[  38.347][d][mkv] |  + Track type: Audio
+[  38.347][d][mkv] |  + Audio track
+[  38.347][d][mkv] |   + Sampling frequency: 48000.000000
+[  38.347][d][mkv] |   + Channels: 2
+[  38.347][d][mkv] |  + Codec ID: A_AAC
+[  38.347][d][mkv] |  + CodecPrivate, length 2
+[  38.347][d][mkv] |  + Language: jpn
+[  38.347][d][mkv] |  + Default duration: 21.333ms ( = 46.875 fps)
+[  38.347][d][mkv] | + a track...
+[  38.347][d][mkv] |  + Track number: 3
+[  38.347][d][mkv] |  + Track type: Subtitle
+[  38.347][d][mkv] |  + Codec ID: S_TEXT/ASS
+[  38.347][d][mkv] |  + CodecPrivate, length 13768
+[  38.347][d][mkv] Parsing attachments...
+[  38.716][d][mkv] Attachment: Marker SD.ttf, application/x-truetype-font, 46204 bytes
+[  38.716][d][mkv] Attachment: NotoSans-Regular.ttf, application/x-truetype-font, 455188 bytes
+[  38.716][d][mkv] Attachment: PWChalk.ttf, application/x-truetype-font, 48564 bytes
+[  38.716][d][mkv] Attachment: CommieSans-Medium.ttf, application/x-truetype-font, 55700 bytes
+[  38.716][d][mkv] Attachment: DAYROM.ttf, application/x-truetype-font, 83160 bytes
+[  38.716][d][mkv] Attachment: erasdust_0.ttf, application/x-truetype-font, 98456 bytes
+[  38.717][d][mkv] Attachment: Marker Felt.ttf, application/x-truetype-font, 83056 bytes
+[  38.717][d][mkv] Attachment: Square 721 Blk-Normal.ttf, application/x-truetype-font, 47736 bytes
+[  38.717][d][mkv] Attachment: square_comic.ttf, application/x-truetype-font, 157144 bytes
+[  38.781][d][mkv] Parsing chapters...
+[  38.781][d][mkv] Ignoring unrecognized subelement. ID: 437d size: 3
+[  38.781][d][mkv] Ignoring unrecognized subelement. ID: 437d size: 3
+[  38.781][d][mkv] Ignoring unrecognized subelement. ID: 437d size: 3
+[  38.781][v][mkv] New edition 0
+[  38.781][d][mkv] Chapter 0 from 00:00:00.000 to 00:00:00.000, Part A
+[  38.781][d][mkv] Chapter 1 from 00:12:22.951000000 to 00:00:00.000, Part B
+[  38.781][d][mkv] Chapter 2 from 00:22:59.920000000 to 00:00:00.000, Ending
+[  38.781][d][mkv] |+ found cluster
+[  38.781][v][mkv] Seeking to 1391231604 to read header element 0x1c53bb6b.
+[  38.781][v][file] stream level seek from 1226359 to 1391231604
+[  38.851][v][mkv] Parsing cues...
+[  38.853][v][mkv] Seeking to 1391318370 to read header element 0x1254c367.
+[  38.853][v][file] stream level seek from 1391319379 to 1095534
+[  38.853][v][mkv] All headers are parsed!
+[  38.853][v][demux] Detected file format: Matroska
+[  38.854][v][cplayer] Opening done: /mnt/sshfs_3rdimpact/Videos/Anime/Sonny Boy/[tan] Sonny Boy - 02 [WEBRip 1080p Hi10p AAC] [46A6A2C3].mkv
+[  38.854][d][osc] osc_init 
+[  38.855][v][find_files] Loading external files in /mnt/sshfs_3rdimpact/Videos/Anime/Sonny Boy/
+[  38.918][d][global] config path: 'sub' -/-> '/home/jd/.config/mpv/sub'
+[  38.918][d][global] config path: 'sub' -/-> '/home/jd/.mpv/sub'
+[  38.918][d][global] config path: 'sub' -/-> '/etc/mpv/sub'
+[  38.919][v][cplayer] Running hook: ytdl_hook/on_preloaded
+[  38.919][v][mkv] select track 0
+[  38.919][v][mkv] select track 1
+[  38.919][v][mkv] select track 2
+[  38.919][i][cplayer]  (+) Video --vid=1 (*) (h264 1920x1080 23.976fps)
+[  38.919][i][cplayer]  (+) Audio --aid=1 --alang=jpn (*) (aac 2ch 48000Hz)
+[  38.919][i][cplayer]  (+) Subs  --sid=1 --slang=eng (*) (ass)
+[  38.919][v][vd] Container reported FPS: 23.976024
+[  38.919][v][vd] Codec list:
+[  38.919][v][vd]     h264 - H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10
+[  38.919][v][vd]     h264_v4l2m2m (h264) - V4L2 mem2mem H.264 decoder wrapper
+[  38.919][v][vd]     h264_qsv (h264) - H264 video (Intel Quick Sync Video acceleration)
+[  38.919][v][vd]     h264_cuvid (h264) - Nvidia CUVID H264 decoder
+[  38.919][v][vd] Opening decoder h264
+[  38.919][v][vd] No hardware decoding requested.
+[  38.919][v][vd] Using software decoding.
+[  38.919][v][vd] Detected 8 logical cores.
+[  38.919][v][vd] Requesting 9 threads for decoding.
+[  38.920][d][ffmpeg/video] h264: Reinit context to 1920x1088, pix_fmt: yuv420p10le
+[  38.920][d][vd] DR parameter change to 1920x1090 yuv420p10 align=64
+[  38.920][d][vd] Allocating new DR image...
+[  38.927][v][vd] Selected codec: h264 (H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10)
+[  38.927][v][vf] User filter list:
+[  38.927][v][vf]   (empty)
+[  38.927][v][ad] Codec list:
+[  38.927][v][ad]     aac - AAC (Advanced Audio Coding)
+[  38.927][v][ad]     aac_fixed (aac) - AAC (Advanced Audio Coding)
+[  38.927][v][ad] Opening decoder aac
+[  38.927][v][ad] Requesting 1 threads for decoding.
+[  38.927][v][ad] Selected codec: aac (AAC (Advanced Audio Coding))
+[  38.928][v][af] User filter list:
+[  38.928][v][af]   (empty)
+[  38.928][d][global] config path: 'fonts' -/-> '/home/jd/.config/mpv/fonts'
+[  38.928][d][global] config path: 'fonts' -/-> '/home/jd/.mpv/fonts'
+[  38.928][d][global] config path: 'fonts' -/-> '/etc/mpv/fonts'
+[  38.928][d][sub/ass] ASS library version: 0x1500000 (runtime 0x1501000)
+[  38.928][v][sub/ass] libass API version: 0x1501000
+[  38.928][v][sub/ass] libass source: commit: 0.15.1-0-g5447214643eacef71776350e779adf4b6c07bb3b-dirty
+[  38.929][v][sub/ass] Shaper: FriBidi 1.0.10 (SIMPLE) HarfBuzz-ng 2.9.0 (COMPLEX)
+[  38.929][d][global] config path: 'subfont.ttf' -/-> '/home/jd/.config/mpv/subfont.ttf'
+[  38.929][d][global] config path: 'subfont.ttf' -/-> '/home/jd/.mpv/subfont.ttf'
+[  38.929][d][global] config path: 'subfont.ttf' -/-> '/etc/mpv/subfont.ttf'
+[  38.929][d][global] config path: 'fonts.conf' -/-> '/home/jd/.config/mpv/fonts.conf'
+[  38.929][d][global] config path: 'fonts.conf' -/-> '/home/jd/.mpv/fonts.conf'
+[  38.929][d][global] config path: 'fonts.conf' -/-> '/etc/mpv/fonts.conf'
+[  38.929][v][sub/ass] Setting up fonts...
+[  38.932][v][sub/ass] Using font provider fontconfig
+[  38.932][v][sub/ass] Done.
+[  38.932][v][cplayer] Starting playback...
+[  38.932][d][mkv] stream 1: resize index to 128
+[  38.932][v][af] [in] 48000Hz stereo 2ch floatp
+[  38.932][v][af] [userspeed] 48000Hz stereo 2ch floatp
+[  38.933][v][af] [userspeed] (disabled)
+[  38.933][d][ffmpeg/video] h264: Reinit context to 1920x1088, pix_fmt: yuv420p10le
+[  38.933][v][af] [convert] 48000Hz stereo 2ch floatp
+[  38.933][d][vd] Allocating new DR image...
+[  38.938][d][vd] Allocating new DR image...
+[  38.942][d][vd] Allocating new DR image...
+[  38.946][d][vd] Allocating new DR image...
+[  38.950][d][vd] Allocating new DR image...
+[  38.954][d][vd] Allocating new DR image...
+[  38.958][d][vd] Allocating new DR image...
+[  38.962][d][vd] Allocating new DR image...
+[  38.963][d][cplayer] Run command: change-list, flags=64, args=[name="shared-script-properties", operation="append", value="osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[  38.963][v][cplayer] Set property: shared-script-properties -> 1
+[  38.964][v][ao] Trying audio driver 'pulse'
+[  38.964][v][ao/pulse] requested format: 48000 Hz, stereo channels, floatp
+[  38.965][v][ao/pulse] Library version: 15.0.0
+[  38.965][v][ao/pulse] Proto: 35
+[  38.965][v][ao/pulse] Server proto: 4294967295
+[  38.968][v][ao/pulse] Channel layouts:
+[  38.968][v][ao/pulse]  - #fl
+[  38.968][v][ao/pulse]  - #fr
+[  38.968][v][ao/pulse]  - #fc
+[  38.968][v][ao/pulse]  - #lfe
+[  38.968][v][ao/pulse]  - #bl
+[  38.968][v][ao/pulse]  - #br
+[  38.968][v][ao/pulse]  - #flc
+[  38.968][v][ao/pulse]  - #frc
+[  38.968][v][ao/pulse]  - #bc
+[  38.968][v][ao/pulse]  - #sl
+[  38.968][v][ao/pulse]  - #sr
+[  38.968][v][ao/pulse]  - #tc
+[  38.968][v][ao/pulse]  - #tfl
+[  38.968][v][ao/pulse]  - #tfc
+[  38.968][v][ao/pulse]  - #tfr
+[  38.968][v][ao/pulse]  - #tbl
+[  38.968][v][ao/pulse]  - #tbc
+[  38.969][v][ao/pulse]  - #tbr
+[  38.969][v][ao/pulse] result: stereo
+[  38.975][v][ao/pulse] device buffer: 4800 samples.
+[  38.975][v][ao/pulse] using soft-buffer of 9600 samples.
+[  38.975][i][cplayer] AO: [pulse] 48000Hz stereo 2ch float
+[  38.975][v][cplayer] AO: Description: PulseAudio audio output
+[  38.976][v][autoconvert] inserting resampler
+[  38.976][v][swresample] format change, reinitializing resampler
+[  38.976][v][swresample] 48000Hz stereo floatp -> 48000Hz stereo float
+[  38.976][v][af] [out] 48000Hz stereo 2ch float
+[  39.007][d][osc] osc_init 
+[  39.008][d][cplayer] Run command: change-list, flags=64, args=[name="shared-script-properties", operation="append", value="osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[  39.008][v][cplayer] Set property: shared-script-properties -> 1
+[  39.008][d][vd] Allocating new DR image...
+[  39.012][v][vd] Using software decoding.
+[  39.012][v][vd] Decoder format: 1920x1080 [0:1] yuv420p10 bt.709/bt.709/bt.1886/limited/auto CL=mpeg2/4/h264
+[  39.012][v][vd] Using container aspect ratio.
+[  39.012][d][vd] Allocating new DR image...
+[  39.012][v][vf] [in] 1920x1080 yuv420p10 bt.709/bt.709/bt.1886/limited/display SP=1.000000 CL=mpeg2/4/h264
+[  39.015][v][vf] [userdeint] 1920x1080 yuv420p10 bt.709/bt.709/bt.1886/limited/display SP=1.000000 CL=mpeg2/4/h264
+[  39.015][v][vf] [userdeint] (disabled)
+[  39.015][v][vf] [autorotate] 1920x1080 yuv420p10 bt.709/bt.709/bt.1886/limited/display SP=1.000000 CL=mpeg2/4/h264
+[  39.015][v][vf] [autorotate] (disabled)
+[  39.015][v][vf] [convert] 1920x1080 yuv420p10 bt.709/bt.709/bt.1886/limited/display SP=1.000000 CL=mpeg2/4/h264
+[  39.015][v][vf] [convert] (disabled)
+[  39.015][v][vf] [out] 1920x1080 yuv420p10 bt.709/bt.709/bt.1886/limited/display SP=1.000000 CL=mpeg2/4/h264
+[  39.015][i][cplayer] VO: [gpu] 1920x1080 yuv420p10
+[  39.016][v][cplayer] VO: Description: Shader-based GPU Renderer
+[  39.016][v][vo/gpu] reconfig to 1920x1080 yuv420p10 bt.709/bt.709/bt.1886/limited/display SP=1.000000 CL=mpeg2/4/h264
+[  39.016][d][vd] Allocating new DR image...
+[  39.016][d][vo/gpu] screen size: 1366x768
+[  39.016][v][vo/gpu] Resize: 706x723
+[  39.016][v][vo/gpu] Window size: 706x723 (Borders: l=0 t=0 r=0 b=0)
+[  39.016][v][vo/gpu] Video source: 1920x1080 (1:1)
+[  39.016][v][vo/gpu] Video display: (0, 0) 1920x1080 -> (0, 163) 706x397
+[  39.016][v][vo/gpu] Video scale: 0.367708/0.367593
+[  39.016][v][vo/gpu] OSD borders: l=0 t=163 r=0 b=163
+[  39.016][v][vo/gpu] Video borders: l=0 t=163 r=0 b=163
+[  39.016][v][vo/gpu] Reported display depth: 8
+[  39.016][v][vo/gpu] Texture for plane 0: 1920x1080
+[  39.016][v][vo/gpu] Texture for plane 1: 960x540
+[  39.016][v][vo/gpu] Texture for plane 2: 960x540
+[  39.016][v][vo/gpu] Testing FBO format rgba16f
+[  39.016][d][vo/gpu] Resizing texture: 16x16
+[  39.016][v][vo/gpu] Using FBO format rgba16f.
+[  39.016][v][vo/gpu] No advanced processing required. Enabling dumb mode.
+[  39.022][v][cplayer] first video frame after restart shown
+[  39.023][v][cplayer] audio ready
+[  39.023][d][cplayer] starting video playback
+[  39.023][v][cplayer] delaying audio start 0.000000 vs. 0.000000, diff=0.000000
+[  39.023][v][cplayer] playback restart complete @ 0.000000, audio=ready, video=playing
+[  39.024][v][vo/gpu/x11] Disabling screensaver.
+[  39.042][v][cplayer] starting audio playback
+[  39.042][v][ao/pulse] starting AO
+[  39.044][d][vd] Allocating new DR image...
+[  39.068][d][vd] Allocating new DR image...
+[  39.092][d][vd] Allocating new DR image...
+[  39.183][d][vd] Allocating new DR image...
+[  39.227][d][vd] Allocating new DR image...
+[  39.304][d][vd] Allocating new DR image...
+[  39.347][d][vd] Allocating new DR image...
+[  39.421][d][vd] Allocating new DR image...
+[  39.464][d][vd] Allocating new DR image...
+[  39.546][d][vd] Allocating new DR image...
+[  39.592][d][vd] Allocating new DR image...
+[  39.636][d][vd] Allocating new DR image...
+[  39.680][d][vd] Allocating new DR image...
+[  39.990][d][vd] Allocating new DR image...
+[  41.281][d][mkv] stream 0: resize index to 128
+[  41.694][d][cplayer] Run command: quit, flags=73, args=[code="0"]
+[  41.694][v][cplayer] EOF code: 5  
+[  41.694][d][ad] Uninit decoder.
+[  41.694][v][vo/gpu/x11] Enabling screensaver.
+[  41.695][d][vd] Uninit decoder.
+[  41.697][d][cplayer] Terminating demuxers...
+[  41.731][d][cplayer] Done terminating demuxers.
+[  41.731][v][cplayer] finished playback, success (reason 3)
+[  41.731][i][cplayer] 
+[  41.732][i][cplayer] Exiting... (Quit)
+[  41.732][d][ytdl_hook] Exiting...
+[  41.732][d][console] Exiting...
+[  41.732][d][stats] Exiting...
+[  41.732][d][cplayer] Run command: change-list, flags=64, args=[name="shared-script-properties", operation="remove", value="osc-margins"]
+[  41.732][v][cplayer] Set property: shared-script-properties -> 1
+[  41.732][d][webm_autoloader] Exiting...
+[  41.732][d][osc] Exiting...
+[  41.734][d][vo/gpu] flushing shader cache
+[  41.742][d][vo/gpu/x11] uninit ...
