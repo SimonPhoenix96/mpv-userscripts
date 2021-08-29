@@ -1,4 +1,3 @@
-<<<<<<< HEAD:bump-loader/README.md
 #  Description [wsg] / bumpworthy.com loader
 This script streams or downloads all [wsg] or [bumpworthy.com](https://www.bumpworthy.com/) webm/mp4 files found in  [bump-links](https://github.com/SimonPhoenix96/random/tree/main/bump-links) repo depending on which option you set.
 
