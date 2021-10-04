@@ -111,8 +111,8 @@ function downloadWebms()
          -- print("wget -P " .. webmDir ..  " -nd -nc -r -l 1 -H -D i.4cdn.org -A webm " .. webUrl)
 
          -- os.execute("wget -P " .. webmDir ..  " -nd -nc -r -l 1 -H -D i.4cdn.org -A webm " .. webUrl)  -- change i.4cdn.org to wtv if you want to use different website, dont axe me
-         print("wget https://raw.githubusercontent.com/SimonPhoenix96/random/main/bump-links/bumpworthy/bumpworthy-links.txt " .."-O " .. streamLinksPath )
-         os.execute("wget https://raw.githubusercontent.com/SimonPhoenix96/random/main/bump-links/bumpworthy/bumpworthy-links.txt " .."-O " .. streamLinksPath )
+         print("wget -nc https://raw.githubusercontent.com/SimonPhoenix96/random/main/bump-links/bumpworthy/bumpworthy-links.txt " .."-O " .. streamLinksPath )
+         os.execute("wget -nc https://raw.githubusercontent.com/SimonPhoenix96/random/main/bump-links/bumpworthy/bumpworthy-links.txt " .."-O " .. streamLinksPath )
       
       end
       --
