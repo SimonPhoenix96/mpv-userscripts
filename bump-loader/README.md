@@ -15,19 +15,20 @@ copy the .lua & .ps1 file to your scripts folder (usually `~/.config/mpv/scripts
 Change following variables in webm-autoloader.lua to your liking:
 
 **`webmDir`** 
-defines where to save webm files on windows seperate folders with `\\` default location is `%HOMEDRIVE%\\%HOMEPATH%\\Videos\\bumps` aka. `C:\\Users\\simonphoenix96\\Videos\\bumps`
+defines where to save webm files.
+on windows seperate folders with `\\` default location is `%HOMEDRIVE%\\%HOMEPATH%\\Videos\\bumps` aka. `C:\\Users\\simonphoenix96\\Videos\\bumps`
+
+**`bumpCount`** 
+defines amount of webms to be played after episode finishes || default is 3
+
+**`streamMode`** 
+streaming mode streams bumps instead of downloading them directly, if online mode false then itll use available links automatically generated in webmDir\streamLinks.txt
 
 **`bumpWorthy`** 
 change this to true if u want adult swim bumps instead
 
 **`onlineMode`** 
 change this to false if u just want to use available files in webmDir
-
-**`streamMode`** 
-streaming mode streams bumps instead of downloading them directly, if online mode false then itll use available links automatically generated in webmDir\streamLinks.txt
-
-**`bumpCount`** 
-defines ammount of webms to be played after episode finishes || default is 3
 
 
 # **Dev Info** 
