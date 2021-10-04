@@ -8,7 +8,7 @@ Playlist will be generated in the background while the webms are downloaded/link
 If using streamMode, the script will get [bump-links](https://github.com/SimonPhoenix96/random/tree/main/bump-links) updates if the file hasnt been updated in 5 days.
 
 # Installation
-copy the .lua & .ps1 file to your scripts folder (usually `"~/.config/mpv/scripts/"` or if using Windows `%APPDATA%\mpv\scripts`)
+copy the .lua & .ps1 file to your scripts folder (usually `~/.config/mpv/scripts/` or if using Windows `%APPDATA%\mpv\scripts`)
 
 # Usage (yuki.la seems to be down atm so i made the default bump source bumpworthy.com)
 
