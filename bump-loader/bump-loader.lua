@@ -34,7 +34,7 @@ webmDir = "%HOMEDRIVE%\\%HOMEPATH%\\Videos\\bumps"
 --
 --
 --
--- !!! DONT change these !!!
+-- !!! DONT change the following !!!
 --
 --
 usingLinux = false
