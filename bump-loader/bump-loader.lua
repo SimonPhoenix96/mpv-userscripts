@@ -27,10 +27,17 @@ bumpWorthy = true
 --
 --
 --
-homedrive = os.getenv("HOMEDRIVE")
-homepath = os.getenv("HOMEPATH")
--- defines where to save webm files (on windows seperate folders with `\\` instead of '/') default location is `%HOMEDRIVE%\\%HOMEPATH%\\Videos\\bumps` aka. `C:\\Users\\simonphoenix96\\Videos\\bumps`
+--
+homedrive = os.getenv("HOMEDRIVE") -- DO NOT CHANGE
+homepath = os.getenv("HOMEPATH") -- DO NOT CHANGE
+--
+-- defines where to save webm files (on windows seperate folders with `\\` instead of '/') 
+-- default location is `%HOMEDRIVE%\\%HOMEPATH%\\Videos\\bumps` 
+-- aka. `C:\\Users\\simonphoenix96\\Videos\\bumps`
+--
 webmDir = "%HOMEDRIVE%\\%HOMEPATH%\\Videos\\bumps"
+--
+--
 --
 --
 --
