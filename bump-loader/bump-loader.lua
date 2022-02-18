@@ -17,26 +17,33 @@
 --
 --
 --
-onlineMode = true
---
-streamMode = true
---
-bumpCount = 3
---
-bumpWorthy = true
---
---
---
---
-homedrive = os.getenv("HOMEDRIVE") -- DO NOT CHANGE
-homepath = os.getenv("HOMEPATH") -- DO NOT CHANGE
---
--- defines where to save webm files (on windows seperate folders with `\\` instead of '/') 
--- default location is `%HOMEDRIVE%\\%HOMEPATH%\\Videos\\bumps` 
--- aka. `C:\\Users\\simonphoenix96\\Videos\\bumps`
---
-webmDir = "%HOMEDRIVE%\\%HOMEPATH%\\Videos\\bumps"
---
+-- CONFIG AREA------------------------------------------------------------------------------------------------------------------------------------------------
+--                                                                                                                                                           |
+--                                                                                                                                                           |
+--                                                                                                                                                           |
+onlineMode = true                                                                                                                                            |
+--                                                                                                                                                           |
+streamMode = true                                                                                                                                            |
+--                                                                                                                                                           |                                                                                                                                                           |
+bumpCount = 3                                                                                                                                                |
+--                                                                                                                                                           |
+bumpWorthy = true                                                                                                                                            |
+--                                                                                                                                                           |
+--                                                                                                                                                           |
+--                                                                                                                                                           |
+--                                                                                                                                                           |
+homedrive = os.getenv("HOMEDRIVE") -- DO NOT CHANGE                                                                                                          |
+homepath = os.getenv("HOMEPATH") -- DO NOT CHANGE                                                                                                            |
+--                                                                                                                                                           |
+-- defines where to save webm files (on windows seperate folders with `\\` instead of '/')                                                                   | 
+-- default location is `%HOMEDRIVE%\\%HOMEPATH%\\Videos\\bump                                                                                                |
+-- aka. `C:\\Users\\simonphoenix96\\Videos\\bumps`                                                                                                           |
+--                                                                                                                                                           |                                                                                                                                                          |
+webmDir = "%HOMEDRIVE%\\%HOMEPATH%\\Videos\\bumps"                                                                                                           |
+--                                                                                                                                                           |
+--                                                                                                                                                           |
+--                                                                                                                                                           |
+-- END CONFIG AREA -------------------------------------------------------------------------------------------------------------------------------------------
 --
 --
 --
