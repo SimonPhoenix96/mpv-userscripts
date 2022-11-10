@@ -30,16 +30,31 @@ bumpCount = 3
 bumpWorthy = true                                                                                                                                            
 --                                                                                                                                                           
 --                                                                                                                                                           
+--
+usingLinux = false
+if (package.config:sub(1,1) ~= "\\") then
+   print("using linux: true")
+   usingLinux = true
+end
 --                                                                                                                                                           
---                                                                                                                                                           
-homedrive = os.getenv("HOMEDRIVE") -- DO NOT CHANGE                                                                                                          
-homepath = os.getenv("HOMEPATH") -- DO NOT CHANGE                                                                                                            
+                                                                                                           
 --                                                                                                                                                           
 -- defines where to save webm files (on windows seperate folders with `\\` instead of '/')                                                                    
 -- default location is `%HOMEDRIVE%\\%HOMEPATH%\\Videos\\bump                                                                                                
 -- aka. `C:\\Users\\simonphoenix96\\Videos\\bumps`                                                                                                           
---                                                                                                                                                                                                                                                                                                                     |
-webmDir = "%HOMEDRIVE%\\%HOMEPATH%\\Videos\\bumps"                                                                                                           
+-- or on linux '/home/simonphoenix96/Videos/bumps/' 
+--
+if not usingLinux then
+    homedrive = os.getenv("HOMEDRIVE") -- DO NOT CHANGE                                                                                                          
+    homepath = os.getenv("HOMEPATH") -- DO NOT CHANGE 
+    webmDir = homedrive .. homepath .. "/Videos/bumps/"
+ else 
+    -- linux compatibilty
+    homepath = os.getenv("HOME") -- DO NOT CHANGE 
+    webmDir = homepath .. "/Videos/bumps/"                                                                                                           
+
+ end
+--                                                                                                                                                                                                                                                                                                                   |
 --                                                                                                                                                           
 --                                                                                                                                                           
 --                                                                                                                                                           
@@ -51,11 +66,6 @@ webmDir = "%HOMEDRIVE%\\%HOMEPATH%\\Videos\\bumps"
 -- !!! DONT change the following !!!
 --
 --
-usingLinux = false
-if (package.config:sub(1,1) ~= "\\") then
-   print("using linux: true")
-   usingLinux = true
-end
 
 if(bumpWorthy ) then
    if not usingLinux then
