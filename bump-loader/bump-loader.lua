@@ -45,15 +45,15 @@ end
 -- or on linux '/home/simonphoenix96/Videos/bumps/' 
 --
 if not usingLinux then
-    homedrive = os.getenv("HOMEDRIVE") -- DO NOT CHANGE                                                                                                          
-    homepath = os.getenv("HOMEPATH") -- DO NOT CHANGE 
-    webmDir = homedrive .. homepath .. "/Videos/bumps/"
+    homedrive = os.getenv("HOMEDRIVE") -- DO NOT CHANGE unless you know what you're doing                                                                                                         
+    homepath = os.getenv("HOMEPATH") -- DO NOT CHANGE unless you know what you're doing
+    webmDir = homedrive .. homepath .. "/Videos/bumps/" -- Change to what you want
  else 
     -- linux compatibilty
-    homepath = os.getenv("HOME") -- DO NOT CHANGE 
-    webmDir = homepath .. "/Videos/bumps/"                                                                                                           
+    homepath = os.getenv("HOME") -- DO NOT CHANGE unless you know what you're doing
+    webmDir = homepath .. "/Videos/bumps/"  -- Change to what you want                                                                                                         
 
- end
+end
 --                                                                                                                                                                                                                                                                                                                   |
 --                                                                                                                                                           
 --                                                                                                                                                           
@@ -63,7 +63,7 @@ if not usingLinux then
 --
 --
 --
--- !!! DONT change the following !!!
+--
 --
 --
 
